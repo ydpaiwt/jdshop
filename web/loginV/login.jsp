@@ -1,7 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>登录商城</title>
 	<link rel="stylesheet" href="../style/base.css" type="text/css">
 	<link rel="stylesheet" href="../style/global.css" type="text/css">
@@ -18,7 +19,7 @@
 			</div>
 			<div class="topnav_right fr">
 				<ul>
-					<li>您好，欢迎来到京西！[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </li>
+					<li>您好，欢迎来到京西！[<a href="loginServlet?method=toLogin">登录</a>] [<a href="../registerServlet?method=toRegister">免费注册</a>] </li>
 					<li class="line">|</li>
 					<li>我的订单</li>
 					<li class="line">|</li>
@@ -51,26 +52,26 @@
 				<form action="" method="post">
 					<ul>
 						<li>
-							<label for="">用户名：</label>
+							<label >用户名：</label>
 							<input type="text" class="txt" name="username" />
 						</li>
 						<li>
-							<label for="">密码：</label>
+							<label >密码：</label>
 							<input type="password" class="txt" name="password" />
 							<a href="">忘记密码?</a>
 						</li>
 						<li class="checkcode">
-							<label for="">验证码：</label>
+							<label >验证码：</label>
 							<input type="text"  name="checkcode" />
 							<img src="../images/checkcode1.jpg" alt="" />
 							<span>看不清？<a href="">换一张</a></span>
 						</li>
 						<li>
-							<label for="">&nbsp;</label>
+							<label >&nbsp;</label>
 							<input type="checkbox" class="chb"  /> 保存登录信息
 						</li>
 						<li>
-							<label for="">&nbsp;</label>
+							<label >&nbsp;</label>
 							<input type="submit" value="" class="login_btn" />
 						</li>
 					</ul>
@@ -94,7 +95,7 @@
 				<h3>还不是商城用户</h3>
 				<p>现在免费注册成为商城用户，便能立刻享受便宜又放心的购物乐趣，心动不如行动，赶紧加入吧!</p>
 
-				<a href="regist.html" class="reg_btn">免费注册 >></a>
+				<a href="../registerServlet?method=toRegister" class="reg_btn">免费注册 >></a>
 			</div>
 
 		</div>
@@ -121,10 +122,10 @@
 			 © 2005-2013 京东网上商城 版权所有，并保留所有权利。  ICP备案证书号:京ICP证070359号 
 		</p>
 		<p class="auth">
-			<a href=""><img src="../images/xin.png" alt="" /></a>
-			<a href=""><img src="../images/kexin.jpg" alt="" /></a>
-			<a href=""><img src="../images/police.jpg" alt="" /></a>
-			<a href=""><img src="../images/beian.gif" alt="" /></a>
+			<a href=""><img src="images/xin.png" alt="" /></a>
+			<a href=""><img src="images/kexin.jpg" alt="" /></a>
+			<a href=""><img src="images/police.jpg" alt="" /></a>
+			<a href=""><img src="images/beian.gif" alt="" /></a>
 		</p>
 	</div>
 	<!-- 底部版权 end -->

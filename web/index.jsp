@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<html>
 <head>
 
   <title>京东商城</title>
@@ -71,7 +71,7 @@
 
 				<span>您好，欢迎来到京东！
 
-				<a href="">[登陆]</a><a href="">[免费注册]</a>
+				<a href="loginServlet?method=toLogin">[登陆]</a><a href="registerServlet?method=toRegister">[免费注册]</a>
 
 				</span>
 

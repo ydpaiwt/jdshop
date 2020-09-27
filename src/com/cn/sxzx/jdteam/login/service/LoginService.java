@@ -1,8 +1,7 @@
 package com.cn.sxzx.jdteam.login.service;
 
-/**
- * @Author:ydp
- * @Date:2020/9/27 15:07
- */
-public class LoginService {
+import com.cn.sxzx.jdteam.javaBean.pojo.User;
+
+public interface LoginService {
+    User login(String name, String pwd);
 }

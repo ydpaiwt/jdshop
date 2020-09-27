@@ -6,9 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>成功提交订单</title>
     <link rel="stylesheet" href="style/base.css" type="text/css">
     <link rel="stylesheet" href="style/global.css" type="text/css">
