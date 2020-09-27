@@ -11,8 +11,8 @@ import java.io.IOException;
  * @Date:2020/9/27 15:12
  */
 public class AddServlet extends HttpServlet {
-    HttpServletRequest request;
-    HttpServletResponse response;
+    HttpServletRequest request = null;
+    HttpServletResponse response =null;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.request = request;
