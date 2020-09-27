@@ -4,7 +4,7 @@ package com.cn.sxzx.jdteam.javaBean.pojo;
 public class Property_value {
     private int id;      //唯一的索引ID
     private int product_id;        //对应产品ID
-    private int property_id;       //对应属性ID
+    private int property_id;       //类的ID
     private String value;          //产品的具体属性值
 
     public Property_value() {

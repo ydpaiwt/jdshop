@@ -1,6 +1,6 @@
 package com.cn.sxzx.jdteam.javaBean.pojo;
 
-//产品名称 产品对应的分类ID
+//二级列表  产品名称 产品对应的分类ID
 public class Property {
     private int id;           //唯一索引ID
     private String name;      //属性名称

@@ -2,6 +2,7 @@ package com.cn.sxzx.jdteam.javaBean.pojo;
 
 import com.sun.org.apache.xpath.internal.objects.XString;
 
+//管理员
 public class Admin {
     private int id;
     private String name;

@@ -1,6 +1,6 @@
 package com.cn.sxzx.jdteam.javaBean.pojo;
 
-//订单对应的产品表
+//购物车
 public class Order_item {
     private int id;     //唯一索引ID
     private int product_id;    //对应产品ID
