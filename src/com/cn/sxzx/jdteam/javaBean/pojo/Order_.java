@@ -4,6 +4,7 @@ package com.cn.sxzx.jdteam.javaBean.pojo;
 public class Order_ {
     private int id;        //唯一索引ID
     private String order_code;      //订单号
+    private String address_id;      //地址id
     private String user_message;      //用户备注的信息
     private String create_date;        //订单创建时间
     private String pay_date;        //订单支付时间
@@ -15,9 +16,11 @@ public class Order_ {
     public Order_() {
     }
 
-    public Order_(int id, String order_code, String user_message, String create_date, String pay_date, String delivery_date, String confirm_date, int user_id, String status) {
+
+    public Order_(int id, String order_code, String address_id, String user_message, String create_date, String pay_date, String delivery_date, String confirm_date, int user_id, String status) {
         this.id = id;
         this.order_code = order_code;
+        this.address_id = address_id;
         this.user_message = user_message;
         this.create_date = create_date;
         this.pay_date = pay_date;
@@ -41,6 +44,14 @@ public class Order_ {
 
     public void setOrder_code(String order_code) {
         this.order_code = order_code;
+    }
+
+    public String getAddress_id() {
+        return address_id;
+    }
+
+    public void setAddress_id(String address_id) {
+        this.address_id = address_id;
     }
 
     public String getUser_message() {

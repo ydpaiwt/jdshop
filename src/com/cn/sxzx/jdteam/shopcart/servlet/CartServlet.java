@@ -1,5 +1,7 @@
 package com.cn.sxzx.jdteam.shopcart.servlet;
 
+import com.cn.sxzx.jdteam.javaBean.pojo.Product;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +20,14 @@ public class CartServlet extends HttpServlet {
         this.request=req;
         this.response=resp;
         String method = request.getParameter("method");
+        if (method.equals("toCart")){
+            toShopCart();
+        }
+    }
+
+    private void toShopCart() {
+        Product product = (Product) request.getAttribute("product");
+
     }
 
     @Override

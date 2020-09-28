@@ -21,6 +21,7 @@ public class JDBC {
     public static DataSource getDataSource(){
         return dataSource;
     }
+
     public static void  close(Statement statement,Connection connection){
         close(null,statement,connection);
 
