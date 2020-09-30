@@ -1,22 +1,24 @@
 package com.cn.sxzx.jdteam.register.dao;
 
 import com.cn.sxzx.jdteam.utils.JDBC;
-import com.mysql.jdbc.PreparedStatement;
-import com.mysql.jdbc.Statement;
+
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class RegisterDao {
     Connection conn = null;
     PreparedStatement prepStat = null;
     Statement state = null;
 
-    public boolean register(String name, String pwd) {
-        String sql = "insert into users (name,password,realname,phone,state,birthday,userInfo) values (?,?,?,?,?,?,?)";
-        conn = (Connection) JDBC.getDataSource();
+    public boolean register(String name, String pwd){
+        String sql = "insert into user (name,password) values (?,?)";
+
         try {
-            prepStat = (PreparedStatement) conn.prepareStatement(sql);
+            conn = JDBC.getConnection();
+            prepStat = conn.prepareStatement(sql);
             prepStat.setString(1,name);
             prepStat.setString(2,pwd);
             int i = prepStat.executeUpdate();
