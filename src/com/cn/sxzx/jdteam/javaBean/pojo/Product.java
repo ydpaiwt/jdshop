@@ -9,8 +9,42 @@ public class Product {
     private int sale;    //销量
     private int stock;      //库存
     private int category_id;     //对应的分类ID
+    private String color;
+    private String size;
 
     public Product() {
+    }
+
+    public Product(int id,String name,float price,int category_id) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.category_id = category_id;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public Product(String color, String size, int id, String name, float price, int category_id) {
+        this.color = color;
+        this.size = size;
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.category_id = category_id;
     }
 
     public Product(int id, String name, String sub_title, float price, int sale, int stock, int category_id) {
@@ -89,6 +123,8 @@ public class Product {
                 ", sale=" + sale +
                 ", stock=" + stock +
                 ", category_id=" + category_id +
+                ", color='" + color + '\'' +
+                ", size='" + size + '\'' +
                 '}';
     }
 }

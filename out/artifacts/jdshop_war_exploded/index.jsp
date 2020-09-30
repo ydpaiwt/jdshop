@@ -291,28 +291,6 @@
 
     </div>
 
-    <div class="reci">
-
-      <span>热门搜索:</span>
-
-      <a href="" style="color:red">校园之星</a>
-
-      <a href="">影院到家</a>
-
-      <a href="">JD制暖节</a>
-
-      <a href="">腕表领券</a>
-
-      <a href="">自营满减</a>
-
-      <a href="">N3抢购</a>
-
-      <a href="">图书换购</a>
-
-      <a href="">12.12</a>
-
-    </div>
-
   </div>
 
   <div class="myjd">
@@ -447,9 +425,9 @@
 
           <div class="mulu">
 
-            <a href="">服装</a>、
+            <a href="">服装</a>/
 
-            <a href="">上衣</a>
+            <a href="">女装</a>
 
             <div class="jian"></div>
 
@@ -463,11 +441,17 @@
 
               <dl class="dl1">
 
-                <dt><a href="">　服装</a></dt>
+                <dt><a href="">女装</a></dt>
 
-                <dd><a href="">男装</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">当季热卖</a></dd>
 
-                <dd><a href="">女装</a></dd>
+                <dd><a href="">新品推荐</a></dd>
+
+                <dd><a href="">商场同款</a></dd>
+
+                <dd><a href="">时尚套装</a></dd>
+
+                <dd><a href="">设计师/潮牌</a></dd>
 
               </dl>
 
@@ -520,9 +504,9 @@
 
           <div class="mulu">
 
-            <a href="">服装</a>、
+            <a href="mainServlet?method=toGoods">服装</a>/
 
-            <a href="">下装</a>
+            <a href="mainServlet?method=toGoods">男装</a>
 
             <div class="jian"></div>
 
@@ -536,13 +520,17 @@
 
               <dl class="dl1">
 
-                <dt><a href="">服装</a></dt>
+                <dt><a href="mainServlet?method=toGoods">男装</a></dt>
 
+                <dd><a href="mainServlet?method=toGoods&id=1&product_id=1">衬衫</a></dd>
 
+                <dd><a href="mainServlet?method=toGoods">牛仔衣</a></dd>
 
-                <dd><a href="">男装</a></dd>
+                <dd><a href="">POLO衫</a></dd>
 
-                <dd><a href="">女装</a></dd>
+                <dd><a href="mainServlet?method=toGoods">真皮皮衣</a></dd>
+
+                <dd><a href="mainServlet?method=toGoods">唐装/中山装</a></dd>
 
               </dl>
 
@@ -587,17 +575,54 @@
               </div>
 
             </div>
+
+        <li></li>
+
+        <li class="li3">
+
+          <div class="mulu">
+
+            <a href="">配饰</a>/
+
+            <a href="">帽子</a>
+
+            <div class="jian"></div>
+
+            <div class="bai"></div>
+
           </div>
 
-        </li>
+          <div class="hidemenu2">
+
+            <div class="hideleft">
+
+              <dl class="dl1">
+
+                <dt><a href="">帽子</a></dt>
+
+
+                <dd><a href="mainServlet?method=toGoods&id=3&product_id=3">鸭舌帽</a></dd>
+
+                <dd><a href="">棒球帽</a></dd>
+
+                <dd><a href="">毛线帽</a></dd>
+
+                <dd><a href="">贝雷帽</a></dd>
+
+                <dd><a href="">遮阳帽</a></dd>
+
+              </dl>
+
+            </div>
+
 
         <li class="li4">
 
           <div class="mulu">
 
-            <a href="">配饰</a>、
+            <a href="">配饰</a>/
 
-            <a href="">五金</a>
+            <a href="">眼镜</a>
 
             <div class="jian"></div>
 
@@ -611,13 +636,21 @@
 
               <dl class="dl2">
 
-                <dt><a href="">配饰</a></dt>
+                <dt><a href="">眼镜</a></dt>
 
-                <dd><a href="">帽子</a></dd>
+                <dd><a href="">太阳镜</a></dd>
 
-                <dd><a href="">眼镜</a></dd>
+                <dd><a href="">游泳镜</a></dd>
+
+                <dd><a href="">光学镜架</a></dd>
+
+                <dd><a href="">防辐射眼镜</a></dd>
+
+                <dd><a href="">老花镜</a></dd>
 
               </dl>
+
+            </div>
 
             </div>
 
@@ -652,20 +685,9 @@
 
               </dl>
 
-              <div class="tu3">
 
-                <a href=""><img width="194px" height="70px" src="images/b9.jpg" alt="" /></a>
-
-              </div>
-
-              <div class="tu1">
-
-                <a href=""><img width="194px" height="70px" src="images/b10.jpg" alt="" /></a>
-
-              </div>
 
             </div>
-          </div>
         </li>
       </ul>
     </div>
@@ -1356,1001 +1378,11 @@
 
     </div>
 
-    <div class="tuarea9"><img src="images/e10.jpg" alt="" /></div>
-
-    <div class="tuarea9"><img src="images/e11.jpg" alt="" /></div>
-
-    <div class="tuarea9"><img src="images/e12.jpg" alt="" /></div>
-
   </div>
 
 </div>
 
 <!-- 商品展示区结束 -->
-<!-- 3楼开始 -->
-
-<div id="threefloor">
-
-  <!-- 1楼顶部开始 -->
-
-  <div class="one_top">
-
-    <div class="louceng">
-
-      <h2>服饰鞋包</h2>
-
-      <div class="lou"><span></span></div>
-
-    </div>
-
-    <ul>
-
-      <li><h3 style="color:#E4393C">品牌男装</h3></li>
-
-      <li><h3>品牌女装</h3></li>
-
-      <div class="huakuai"></div>
-
-    </ul>
-
-    <div class="haiwaigou"></div>
-
-  </div>
-
-  <!-- 1楼顶部结束 -->
-
-  <div class="onemain">
-
-    <!-- 1楼左边开始 -->
-
-    <div class="mainleft">
-
-      <ul class="xiebao">
-
-        <li><a href="">男装</a></li>
-
-        <li><a href="">女装</a></li>
-
-        <li><a href="">服装配饰</a></li>
-
-
-      </ul>
-
-      <div class="f_left">
-
-        <img src="images/3fleft.jpg" alt="" />
-
-      </div>
-
-    </div>
-
-    <!-- 1楼左边结束 -->
-
-
-
-    <!-- 1楼中间开始 -->
-
-    <div class="maincenter">
-
-
-      <!-- 3楼品牌男装开始 -->
-
-      <div class="cent1">
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f8.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 Dickies 男式修身工装长裤</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">269</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f9.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 战地吉普 男装外套 连帽棉衣</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">288</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f10.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 北极绒 男士绒羽绒服</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">498</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f11.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 劲霸男装 白鸭绒羽绒服外套</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">599</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f12.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 海澜之家男装 羊毛呢大衣外套</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">428</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f13.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 千纸鹤男装 水晶绒休闲裤长裤子</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">138</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f14.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 秋鹿男女睡衣 家居服睡衣两件套</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">129</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f15.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 花笙记男汉服式针织开衫交领</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f16.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 波司登 男款大众气质毛领款</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">519</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f17.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 七匹狼男装 男士商务直筒长裤</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">279</b>.00</span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- 3楼品牌男装结束 -->
-
-
-
-      <!-- 3楼品牌女装开始 -->
-
-      <div class="cent1">
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f18.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 三枪女士秋冬保暖内衣套装</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">125</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f19.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 波司登保暖内衣 护肩护膝</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">99</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f20.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 哥弟女装 圆领蓝绿拼色毛衣针织衫</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">520</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f21.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 咔琦娜 女装超大貉子毛领</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">799</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f22.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 tune tune 七分袖毛呢外套大衣</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">419</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f23.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 雪莲羊绒 樽高领女款</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">389</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f24.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 名人瑞裳 女装立领奢华毛呢大衣</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">208</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f25.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 华歌尔 包容大胸 蕾丝全罩杯文胸</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">360</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f26.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 Ochirly欧时力高腰半身短裙伞裙</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">285</b>.00</span>
-
-          </div>
-
-        </div>
-
-        <div class="centu">
-
-          <div class="tu">
-
-            <img src="images/3f27.jpg" alt="" />
-
-          </div>
-
-          <div class="p_name">
-
-            <a href="">12.12 思诺芙德毛衣 雪莲时尚纯山羊绒衫</a>
-
-          </div>
-
-          <div class="price">
-
-            <span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- 3楼品牌女装结束 -->
-
-    </div>
-
-    <!-- 3楼中间结束 -->
-
-
-
-    <!-- 3楼右侧开始 -->
-
-    <div class="mainright">
-
-      <ul>
-
-        <li><img src="images/3f48.gif" alt="" /></li>
-
-        <li><img src="images/3f49.gif" alt="" /></li>
-
-        <li><img src="images/3f50.gif" alt="" /></li>
-
-        <li><img src="images/3f51.gif" alt="" /></li>
-
-        <li><img src="images/3f52.gif" alt="" /></li>
-
-        <li><img src="images/3f53.gif" alt="" /></li>
-
-        <li><img src="images/3f54.gif" alt="" /></li>
-
-        <li><img src="images/3f55.gif" alt="" /></li>
-
-        <li><img src="images/3f56.jpg" alt="" /></li>
-
-        <li><img src="images/3f57.jpg" alt="" /></li>
-
-      </ul>
-
-      <div class="righttu">
-
-        <div class="rightlun">
-
-          <img src="images/3f58.jpg" alt="" />
-
-          <img src="images/3f59.jpg" alt="" />
-
-        </div>
-
-        <ul>
-
-          <li style="background:#7ABD54"></li>
-
-          <li></li>
-
-        </ul>
-
-      </div>
-
-    </div>
-
-    <!-- 1楼右侧结束 -->
-
-  </div>
-
-</div>
-
-<!-- 3楼结束 -->
-
-
-
-<!-- hot热门区开始 -->
-
-<div id="hot">
-
-  <!-- 左边开始 -->
-
-  <div class="hotleft">
-
-    <!-- 热门晒单区域开始 -->
-
-    <div class="shaidan">
-
-      <div class="dan_top">
-
-        <h2>热门晒单</h2>
-
-      </div>
-
-      <div class="shaimain">
-
-        <ul>
-
-          <li>
-
-            <div class="dantu">
-
-              <img width="50px" height="50px" src="images/s1.jpg" alt="" />
-
-              <div class="shai"></div>
-
-            </div>
-
-            <div class="hotname"><a href="">[晒单帖]服务态度好</a></div>
-
-            <div class="hotlun">
-
-              <a href="">客服很好，买东西服务很重要，产品不错，服务满意</a>
-
-              <div class="dou"></div>
-
-            </div>
-
-          </li>
-
-          <li>
-
-
-
-
-
-            <div class="dantu">
-
-              <img width="50px" height="50px" src="images/s2.jpg" alt="" />
-
-              <div class="shai"></div>
-
-            </div>
-
-            <div class="hotname"><a href="">[晒单帖]眼镜舒适感极佳</a></div>
-
-            <div class="hotlun">
-
-              <a href="">看评价说眼镜腿有问题，可是在我手里的非常优秀，给商家一个赞</a>
-
-              <div class="dou"></div>
-
-            </div>
-
-          </li>
-
-          <li>
-
-            <div class="dantu">
-
-              <img width="50px" height="50px" src="images/s3.jpg" alt="" />
-
-              <div class="shai"></div>
-
-            </div>
-
-            <div class="hotname"><a href="">[晒单帖]很棒的东西</a></div>
-
-            <div class="hotlun">
-
-              <a href="">给媳妇买的。感觉很不错。拆包以后就试了下。帽子很舒服。</a>
-
-              <div class="dou"></div>
-
-            </div>
-
-          </li>
-
-          <li>
-
-            <div class="dantu">
-
-              <img width="50px" height="50px" src="images/s4.jpg" alt="" />
-
-              <div class="shai"></div>
-
-            </div>
-
-            <div class="hotname"><a href="">[晒单帖]儿子喜欢这种风格的衣服！</a></div>
-
-            <div class="hotlun">
-
-              <a href="">质量很好，外观漂亮，儿子喜欢！</a>
-
-              <div class="dou"></div>
-
-            </div>
-
-          </li>
-
-          <li>
-
-            <div class="dantu">
-
-              <img width="50px" height="50px" src="images/s5.jpg" alt="" />
-
-              <div class="shai"></div>
-
-            </div>
-
-            <div class="hotname"><a href="">[晒单帖]颜色好、做工好</a></div>
-
-            <div class="hotlun">
-
-              <a href="">京东配送还是很给力的，下单两天就收到货了 我买的米白色衣服，看外观没有色差，跟描述的一样</a>
-
-              <div class="dou"></div>
-
-            </div>
-
-          </li>
-
-          <li>
-
-            <div class="dantu">
-
-              <img width="50px" height="50px" src="images/s6.jpg" alt="" />
-
-              <div class="shai"></div>
-
-            </div>
-
-
-
-
-
-            <div class="hotname"><a href="">[晒单帖]王俊凯同款眼镜</a></div>
-
-            <div class="hotlun">
-
-              <a href="">不愧是凯凯代言的眼镜，好棒！好喜欢！</a>
-
-              <div class="dou"></div>
-
-            </div>
-
-          </li>
-
-        </ul>
-
-      </div>
-
-    </div>
-
-    <!-- 热门晒单区域结束 -->
-
-
-
-    <!-- 热门活动区域开始 -->
-
-    <div class="shaidan1">
-
-      <div class="dan_top">
-
-        <h2>热门活动</h2>
-
-      </div>
-
-      <div class="shaimain">
-
-        <ul>
-
-          <li>
-
-            <div class="dantu">
-
-              <img width="50px" height="50px" src="images/s7.jpg" alt="" />
-
-              <div class="re"></div>
-
-            </div>
-
-            <div class="hotname"><a href="">佳贝艾特金装150克2、3段0元试用！</a></div>
-
-            <div class="hotlun">
-
-              <a href="">全球同步销售：佳贝艾特金装150克2、3段0元试用，零风险！快来报名！</a>
-
-              <div class="dou"></div>
-
-            </div>
-
-          </li>
-
-          <li>
-
-            <div class="dantu">
-
-              <img width="50px" height="50px" src="images/s8.jpg" alt="" />
-
-              <div class="re"></div>
-
-            </div>
-
-            <div class="hotname"><a href="">一枪在手生活无琐事-惠泽热熔胶枪</a></div>
-
-            <div class="hotlun">
-
-              <a href="">惠泽热熔胶枪京东首发，邀您0元试用啦~~</a>
-
-              <div class="dou"></div>
-
-            </div>
-
-          </li>
-
-          <li>
-
-            <div class="dantu">
-
-              <img width="50px" height="50px" src="images/s9.jpg" alt="" />
-
-              <div class="re"></div>
-
-            </div>
-
-            <div class="hotname"><a href="">I’m cool系列彩色冰箱0元试用</a></div>
-
-            <div class="hotlun">
-
-              <a href="">奥马I’m cool系列彩色冰箱0元试用啦！冷藏/冷冻双温区，欧盟质控标准，太空舱检漏技术，年轻人的冰箱</a>
-
-              <div class="dou"></div>
-
-            </div>
-
-          </li>
-
-          <li>
-
-            <div class="dantu">
-
-              <img width="50px" height="50px" src="images/s10.jpg" alt="" />
-
-              <div class="re"></div>
-
-            </div>
-
-            <div class="hotname"><a href="">华为荣耀6plus0元试用</a></div>
-
-            <div class="hotlun">
-
-              <a href="">为了庆祝华为荣耀新品横空出世，也为了答谢各位花粉的支持与厚爱，我们从研发童鞋那里抢到了50台崭</a>
-
-              <div class="dou"></div>
-
-            </div>
-
-          </li>
-
-          <li>
-
-            <div class="dantu">
-
-              <img width="50px" height="50px" src="images/s11.jpg" alt="" />
-
-              <div class="re"></div>
-
-            </div>
-
-            <div class="hotname"><a href="">《Win8平板最佳伴侣》有奖问答活动</a></div>
-
-            <div class="hotlun">
-
-              <a href="">今年双12来京东，参加《Win8平板最佳伴侣》有奖问答活动，就有机会把Win8平板“伴侣”带回家！</a>
-
-              <div class="dou"></div>
-
-            </div>
-
-          </li>
-
-          <li>
-
-            <div class="dantu">
-
-              <img width="50px" height="50px" src="images/s12.jpg" alt="" />
-
-              <div class="re"></div>
-
-            </div>
-
-            <div class="hotname"><a href="">许愿望，赢周生生Charme苹果串珠免单</a></div>
-
-            <div class="hotlun">
-
-              <a href="">2015年即将到来，你有什么愿望？留下你的愿望，有机会赢取周生生Charme苹果串珠免单权，祈愿明年平</a>
-
-              <div class="dou"></div>
-
-            </div>
-
-          </li>
-
-        </ul>
-
-      </div>
-
-    </div>
-
-    <!-- 热门活动区域结束 -->
-
-  </div>
-
-  <!-- 左边结束 -->
-
-
-
-  <!-- 右边开始 -->
-
-  <div class="hotright">
-
-    <div class="readtop">
-
-      <div class="read">
-
-        <h2>热门同款</h2>
-
-        <a href="">更多网红同款></a>
-
-      </div>
-
-      <div class="readmain">
-
-        <div class="readleft">
-
-          <img src="images/s13.jpg" alt="" />
-
-        </div>
-
-        <div class="readright">
-
-          <a href="">[太阳镜]100元特价</a>
-
-          <a href="">小众豹纹衬衣外穿</a>
-
-          <a href="">显脸小，素颜遮脸渔夫帽</a>
-
-          <a href="">哈伦日系宽松纯色休闲裤</a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <h3>订阅促销信息</h3>
-
-    <div class="readbottom">
-
-      <div class="youjian"></div>
-
-      <input class="shuru" type="text" name="" id="" value="请输入您的Email地址" />
-
-      <input  class="ding"  type="button" value="订阅"/>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- 右边结束 -->
-
-</div>
-
-<!-- hot热门区结束 -->
-
-
-
 <!-- 网站详情开始 -->
 
 <div id="xiang">
