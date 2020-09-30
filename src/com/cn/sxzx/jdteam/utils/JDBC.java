@@ -18,8 +18,15 @@ public class JDBC {
         dataSource = new ComboPooledDataSource();
     }
 
-    public static DataSource getDataSource(){
-        return dataSource;
+    public static Connection getConnection(){
+        Connection conn= null;
+        try {
+            conn = dataSource.getConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return conn;
+
     }
     public static void  close(Statement statement,Connection connection){
         close(null,statement,connection);

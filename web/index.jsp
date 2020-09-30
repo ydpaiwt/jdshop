@@ -443,7 +443,7 @@
 
                 <dt><a href="">女装</a></dt>
 
-                <dd><a href="">当季热卖</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">当季热卖</a></dd>
 
                 <dd><a href="">新品推荐</a></dd>
 
@@ -504,9 +504,9 @@
 
           <div class="mulu">
 
-            <a href="">服装</a>/
+            <a href="mainServlet?method=toGoods">服装</a>/
 
-            <a href="">男装</a>
+            <a href="mainServlet?method=toGoods">男装</a>
 
             <div class="jian"></div>
 
@@ -520,18 +520,17 @@
 
               <dl class="dl1">
 
-                <dt><a href="">男装</a></dt>
+                <dt><a href="mainServlet?method=toGoods">男装</a></dt>
 
+                <dd><a href="mainServlet?method=toGoods&id=1&product_id=1">衬衫</a></dd>
 
-                <dd><a href="">衬衫</a></dd>
-
-                <dd><a href="">牛仔衣</a></dd>
+                <dd><a href="mainServlet?method=toGoods">牛仔衣</a></dd>
 
                 <dd><a href="">POLO衫</a></dd>
 
-                <dd><a href="">真皮皮衣</a></dd>
+                <dd><a href="mainServlet?method=toGoods">真皮皮衣</a></dd>
 
-                <dd><a href="">唐装/中山装</a></dd>
+                <dd><a href="mainServlet?method=toGoods">唐装/中山装</a></dd>
 
               </dl>
 
@@ -602,7 +601,7 @@
                 <dt><a href="">帽子</a></dt>
 
 
-                <dd><a href="">鸭舌帽</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=3&product_id=3">鸭舌帽</a></dd>
 
                 <dd><a href="">棒球帽</a></dd>
 

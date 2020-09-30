@@ -1,7 +1,8 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%
+    String path = request.getContextPath();
+%>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -165,12 +166,7 @@
                 <div class="cat">
                     <div class="cat_detail"></div>
                 </div>
-
-
-
-
             </div>
-
         </div>
         <!--  商品分类部分 end-->
 
@@ -206,7 +202,6 @@
             <div class="leftbar_wrap">
                 <ul>
                     <li><a href="">眼镜</a></li>
-
                 </ul>
             </div>
         </div>
@@ -238,75 +233,6 @@
                 </ul>
             </div>
         </div>
-        <!-- 热销排行 end -->
-
-
-        <!-- 浏览过该商品的人还浏览了  start 注：因为和list页面newgoods样式相同，故加入了该class -->
-        <div class="related_view newgoods leftbar mt10">
-            <h2><strong>浏览了该商品的用户还浏览了</strong></h2>
-            <div class="leftbar_wrap">
-                <ul>
-                    <li>
-                        <dl>
-                            <dt><a href=""><img src="images/relate_view1.jpg" alt="" /></a></dt>
-                            <dd><a href="">2020春秋新款卫衣男士港风潮牌长袖宽松韩版百搭学生男装加绒上衣</a></dd>
-                            <dd><strong>￥75</strong></dd>
-                        </dl>
-                    </li>
-
-                    <li>
-                        <dl>
-                            <dt><a href=""><img src="images/relate_view2.jpg" alt="" /></a></dt>
-                            <dd><a href="">南极人秋冬款卫衣男韩版潮流宽松嘻哈青少年加绒加厚连帽上衣外套 </a></dd>
-                            <dd><strong>￥199.00</strong></dd>
-                        </dl>
-                    </li>
-
-                    <li>
-                        <dl>
-                            <dt><a href=""><img src="images/relate_view3.jpg" alt="" /></a></dt>
-                            <dd><a href="">ins超火情侣装小哥哥长袖秋冬款加绒宽松潮牌圆领卫衣男打底上衣 </a></dd>
-                            <dd><strong>￥99</strong></dd>
-                        </dl>
-                    </li>
-
-                    <li>
-                        <dl>
-                            <dt><a href=""><img src="images/relate_view4.jpg" alt="" /></a></dt>
-                            <dd><a href="">卫衣男士春秋款圆领体恤港风韩版宽松大码ins情侣装休闲打底上衣 </a></dd>
-                            <dd><strong>￥105.00</strong></dd>
-                        </dl>
-                    </li>
-
-                    <li class="last">
-                        <dl>
-                            <dt><a href=""><img src="images/relate_view5.jpg" alt="" /></a></dt>
-                            <dd><a href="">秋冬季圆领卫衣男青少年假两件外套港风潮流ins百搭初中生上衣服</a></dd>
-                            <dd><strong>￥89.9</strong></dd>
-                        </dl>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- 浏览过该商品的人还浏览了  end -->
-
-        <!-- 最近浏览 start -->
-        <div class="viewd leftbar mt10">
-            <h2><a href="">清空</a><strong>最近浏览过的商品</strong></h2>
-            <div class="leftbar_wrap">
-                <dl>
-                    <dt><a href=""><img src="images/hpG4.jpg" alt="" /></a></dt>
-                    <dd><a href="">慵懒风连帽套头卫衣男士秋冬季</a></dd>
-                </dl>
-
-                <dl class="last">
-                    <dt><a href=""><img src="images/crazy4.jpg" alt="" /></a></dt>
-                    <dd><a href="">直降200元！潮牌帅气圆领卫衣</a></dd>
-                </dl>
-            </div>
-        </div>
-        <!-- 最近浏览 end -->
-
     </div>
     <!-- 主体页面左侧内容 end -->
 
@@ -314,13 +240,13 @@
     <div class="goods_content fl mt10 ml10">
         <!-- 商品概要信息 start -->
         <div class="summary">
-            <h3><strong>连帽印花卫衣男秋冬季宽松cec外套慵懒风ins潮流百搭学生休闲上衣</strong></h3>
-
+            <h3><strong>${sessionScope.productXi.name}</strong></h3>
+<%--            <c:forEach items="${sessionScope.imgList}" var="img" begin="0" end="0">--%>
             <!-- 图片预览区域 start -->
             <div class="preview fl">
                 <div class="midpic">
-                    <a href="images/preview_l1.jpg" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
-                        <img src="images/preview_m1.jpg" alt="" />               <!-- 第一幅图片的中图 -->
+                    <a href="images/${requestScope.imgList[0]}" style="width: 800px;height: 800px;"  class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
+                        <img src="images/${requestScope.imgList[0]}" style="width: 350px;height: 350px;" alt="" />               <!-- 第一幅图片的中图 -->
                     </a>
                 </div>
 
@@ -329,19 +255,31 @@
                 <div class="smallpic">
                     <a href="javascript:;" id="backward" class="off"></a>
                     <a href="javascript:;" id="forward" class="on"></a>
-                    <div class="smallpic_wrap">
-                        <ul>
-                            <li class="cur">
-                                <a class="zoomThumbActive" href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: 'images/preview_m1.jpg',largeimage: 'images/preview_l1.jpg'}"><img src="images/preview_s1.jpg"></a>
-                            </li>
 
+                    <script type="text/javascript">
+                        $(function () {
+                            $("#imgUL li:first").attr("class","cur");
+                            $("#imgUL li:first a").attr("class","zoomThumbActive");
+                        })
+                    </script>
+
+
+                    <div class="smallpic_wrap">
+                        <ul id="imgUL">
+                            <c:forEach items="${requestScope.imgList}" var="img" varStatus="i">
+                            <li>
+                                <a href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: '<%=path%>/images/${img}',largeimage: '<%=path%>/images/${img}'}">
+                                    <img style="width: 50px; height: 50px;" src="<%=path%>/images/${img}">
+                                </a>
+                            </li>
+                            </c:forEach>
                         </ul>
                     </div>
 
                 </div>
             </div>
             <!-- 图片预览区域 end -->
-
+<%--            </c:forEach>--%>
             <!-- 商品基本信息区域 start -->
             <div class="goodsinfo fl ml10">
                 <ul>
@@ -402,200 +340,7 @@
 
         <div style="clear:both;"></div>
 
-        <!-- 商品详情 start -->
-        <div class="detail">
-            <div class="detail_hd">
-                <ul>
-                    <li class="on"><span>商品评价</span></li>
-                    <li><span>售后保障</span></li>
-                </ul>
-            </div>
-            <div class="detail_bd">
-
-                <!-- 商品评论 start -->
-                <div class="comment detail_div mt10">
-                    <div class="comment_summary">
-                        <div class="rate fl">
-                            <strong><em>90</em>%</strong> <br />
-                            <span>好评度</span>
-                        </div>
-                        <div class="percent fl">
-                            <dl>
-                                <dt>好评（90%）</dt>
-                                <dd><div style="width:90px;"></div></dd>
-                            </dl>
-                            <dl>
-                                <dt>中评（5%）</dt>
-                                <dd><div style="width:5px;"></div></dd>
-                            </dl>
-                            <dl>
-                                <dt>差评（5%）</dt>
-                                <dd><div style="width:5px;" ></div></dd>
-                            </dl>
-                        </div>
-                        <div class="buyer fl">
-                            <dl>
-                                <dt>买家印象：</dt>
-                                <dd><span>码数大</span><em>(1953)</em></dd>
-                                <dd><span>外观漂亮</span><em>(786)</em></dd>
-                                <dd><span>物流快</span><em>(659)</em></dd>
-
-                            </dl>
-                        </div>
-                    </div>
-
-                    <div class="comment_items mt10">
-                        <div class="user_pic">
-                            <dl>
-                                <dt><a href=""><img src="images/user1.gif" alt="" /></a></dt>
-                                <dd><a href="">乖乖</a></dd>
-                            </dl>
-                        </div>
-                        <div class="item">
-                            <div class="title">
-                                <span>2013-03-11 22:18</span>
-                                <strong class="star star5"></strong> <!-- star5表示5星级 start4表示4星级，以此类推 -->
-                            </div>
-                            <div class="comment_content">
-                                <dl>
-                                    <dt>心得：</dt>
-                                    <dd>东西挺好，挺满意的！</dd>
-                                </dl>
-                                <dl>
-                                    <dt>优点：</dt>
-                                    <dd>颜色挺喜欢的</dd>
-                                </dl>
-                                <dl>
-                                    <dt>不足：</dt>
-                                    <dd>暂时还没发现缺点哦！</dd>
-                                </dl>
-                                <dl>
-                                    <dt>购买日期：</dt>
-                                    <dd>2013-11-24</dd>
-                                </dl>
-                            </div>
-                            <div class="btns">
-                                <a href="" class="reply">回复(0)</a>
-                                <a href="" class="useful">有用(0)</a>
-                            </div>
-                        </div>
-                        <div class="cornor"></div>
-                    </div>
-
-                    <div class="comment_items mt10">
-                        <div class="user_pic">
-                            <dl>
-                                <dt><a href=""><img src="images/user2.jpg" alt="" /></a></dt>
-                                <dd><a href="">小宝贝</a></dd>
-                            </dl>
-                        </div>
-                        <div class="item">
-                            <div class="title">
-                                <span>2013-10-01 14:10</span>
-                                <strong class="star star4"></strong> <!-- star5表示5星级 start4表示4星级，以此类推 -->
-                            </div>
-                            <div class="comment_content">
-                                <dl>
-                                    <dt>心得：</dt>
-                                    <dd>外观漂亮。</dd>
-                                </dl>
-                                <dl>
-                                    <dt>颜色：</dt>
-                                    <dd>白色</dd>
-                                </dl>
-                                <dl>
-                                    <dt>购买日期：</dt>
-                                    <dd>2013-11-20</dd>
-                                </dl>
-                            </div>
-                            <div class="btns">
-                                <a href="" class="reply">回复(0)</a>
-                                <a href="" class="useful">有用(0)</a>
-                            </div>
-                        </div>
-                        <div class="cornor"></div>
-                    </div>
-
-                    <div class="comment_items mt10">
-                        <div class="user_pic">
-                            <dl>
-                                <dt><a href=""><img src="images/user3.jpg" alt="" /></a></dt>
-                                <dd><a href="">天使</a></dd>
-                            </dl>
-                        </div>
-                        <div class="item">
-                            <div class="title">
-                                <span>2013-03-11 22:18</span>
-                                <strong class="star star5"></strong> <!-- star5表示5星级 start4表示4星级，以此类推 -->
-                            </div>
-                            <div class="comment_content">
-                                <dl>
-                                    <dt>心得：</dt>
-                                    <dd>挺好的，物超所值，速度挺好。</dd>
-                                </dl>
-                                <dl>
-                                    <dt>优点：</dt>
-                                    <dd>颜色很正</dd>
-                                </dl>
-                                <dl>
-                                    <dt>不足：</dt>
-                                    <dd>暂时还没发现缺点哦！</dd>
-                                </dl>
-                                <dl>
-                                    <dt>购买日期：</dt>
-                                    <dd>2013-11-24</dd>
-                                </dl>
-                            </div>
-                            <div class="btns">
-                                <a href="" class="reply">回复(0)</a>
-                                <a href="" class="useful">有用(0)</a>
-                            </div>
-                        </div>
-                        <div class="cornor"></div>
-                    </div>
-
-                    <!-- 分页信息 start -->
-                    <div class="page mt20">
-                        <a href="">首页</a>
-                        <a href="">上一页</a>
-                        <a href="">1</a>
-                        <a href="">2</a>
-                        <a href="" class="cur">3</a>
-                        <a href="">4</a>
-                        <a href="">5</a>
-                        <a href="">下一页</a>
-                        <a href="">尾页</a>
-                    </div>
-                    <!-- 分页信息 end -->
-
-                    <!--  评论表单 start-->
-                    <div class="comment_form mt20">
-                        <form action="">
-                            <ul>
-                                <li>
-                                    <label for=""> 评分：</label>
-                                    <input type="radio" name="grade"/> <strong class="star star5"></strong>
-                                    <input type="radio" name="grade"/> <strong class="star star4"></strong>
-                                    <input type="radio" name="grade"/> <strong class="star star3"></strong>
-                                    <input type="radio" name="grade"/> <strong class="star star2"></strong>
-                                    <input type="radio" name="grade"/> <strong class="star star1"></strong>
-                                </li>
-
-                                <li>
-                                    <label for="">评价内容：</label>
-                                    <textarea name="" id="" cols="" rows=""></textarea>
-                                </li>
-                                <li>
-                                    <label for="">&nbsp;</label>
-                                    <input type="submit" value="提交评论"  class="comment_btn"/>
-                                </li>
-                            </ul>
-                        </form>
-                    </div>
-                    <!--  评论表单 end-->
-
-                </div>
-                <!-- 商品评论 end -->
+        </div>
 
                 <!-- 售后保障 start -->
                 <div class="after_sale mt15 none detail_div">

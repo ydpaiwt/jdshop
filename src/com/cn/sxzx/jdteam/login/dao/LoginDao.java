@@ -12,7 +12,7 @@ public class LoginDao {
 
         public User login(String name, String pwd) {
             String sql = "select * from users where uname = ? and pwd = ?";
-            conn = (Connection) JDBC.getDataSource();
+            conn = JDBC.getConnection();
             try {
                 prepStat = conn.prepareStatement(sql);
                 prepStat.setString(1, name);
