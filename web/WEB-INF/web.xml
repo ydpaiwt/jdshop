@@ -15,6 +15,7 @@
         <servlet-name>loginServlet</servlet-name>
         <url-pattern>/loginServlet</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>registerServlet</servlet-name>
         <servlet-class>com.cn.sxzx.jdteam.register.servlet.RegisterServlet</servlet-class>
@@ -23,4 +24,6 @@
         <servlet-name>registerServlet</servlet-name>
         <url-pattern>/registerServlet</url-pattern>
     </servlet-mapping>
+
+
 </web-app>

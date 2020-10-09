@@ -9,15 +9,17 @@ public class Cart {
     private int product_id;
     private int property_id;
     private int number;
+    private int user_id;
 
     public Cart() {
     }
 
-    public Cart(int id, int product_id, int property_id, int number) {
+    public Cart(int id, int product_id, int property_id, int number, int user_id) {
         this.id = id;
         this.product_id = product_id;
         this.property_id = property_id;
         this.number = number;
+        this.user_id = user_id;
     }
 
     public int getId() {
@@ -50,6 +52,14 @@ public class Cart {
 
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     @Override

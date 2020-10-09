@@ -14,7 +14,7 @@ public class RegisterDao {
 
     public boolean register(String name, String pwd) {
         String sql = "insert into users (name,password,realname,phone,state,birthday,userInfo) values (?,?,?,?,?,?,?)";
-        conn = (Connection) JDBC.getDataSource();
+        conn = JDBC.getConnection();
         try {
             prepStat = (PreparedStatement) conn.prepareStatement(sql);
             prepStat.setString(1,name);

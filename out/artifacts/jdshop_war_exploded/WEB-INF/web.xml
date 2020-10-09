@@ -3,6 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+<!--    <welcome-file-list>-->
+<!--        <welcome-file>flow1.jsp</welcome-file>-->
+<!--    </welcome-file-list>-->
 
     <servlet>
         <servlet-name>loginServlet</servlet-name>
@@ -12,6 +15,7 @@
         <servlet-name>loginServlet</servlet-name>
         <url-pattern>/loginServlet</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>registerServlet</servlet-name>
         <servlet-class>com.cn.sxzx.jdteam.register.servlet.RegisterServlet</servlet-class>
@@ -20,4 +24,6 @@
         <servlet-name>registerServlet</servlet-name>
         <url-pattern>/registerServlet</url-pattern>
     </servlet-mapping>
+
+
 </web-app>
