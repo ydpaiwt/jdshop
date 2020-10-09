@@ -29,7 +29,7 @@
         </div>
         <div class="topnav_right fr">
             <ul>
-                <li>您好，欢迎来到京西！[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </li>
+                <li>您好，欢迎来到京西！[<a href="login.jsp">登录</a>] [<a href="register.jsp">免费注册</a>] </li>
                 <li class="line">|</li>
                 <li>我的订单</li>
                 <li class="line">|</li>
@@ -46,7 +46,7 @@
 <!-- 页面头部 start -->
 <div class="header w990 bc mt15">
     <div class="logo w990">
-        <h2 class="fl"><a href="index.html"><img src="images/logo.png" alt="京西商城"></a></h2>
+        <h2 class="fl"><a href="index.jsp"><img src="images/logo.png" alt="京西商城"></a></h2>
         <div class="flow fr">
             <ul>
                 <li class="cur">1.我的购物车</li>
@@ -75,52 +75,30 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td class="col1"><a href=""><img src="images/cart_goods1.jpg" alt="" /></a>  <strong><a href="">【1111购物狂欢节】惠JackJones杰克琼斯纯羊毛菱形格</a></strong></td>
-            <td class="col2"> <p>颜色：073深红</p> <p>尺码：170/92A/S</p> </td>
-            <td class="col3">￥<span>499.00</span></td>
-            <td class="col4">
-                <a href="javascript:;" class="reduce_num"></a>
-                <input type="text" name="amount" value="1" class="amount"/>
-                <a href="javascript:;" class="add_num"></a>
-            </td>
-            <td class="col5">￥<span>499.00</span></td>
-            <td class="col6"><a href="">删除</a></td>
-        </tr>
-        <tr>
-            <td class="col1"><a href=""><img src="images/cart_goods2.jpg" alt="" /></a> <strong><a href="">九牧王王正品新款时尚休闲中长款茄克EK01357200</a></strong></td>
-            <td class="col2"> <p>颜色：淡蓝色</p> <p>尺码：165/88</p></td>
-            <td class="col3">￥<span>1102.00</span></td>
-            <td class="col4">
-                <a href="javascript:;" class="reduce_num"></a>
-                <input type="text" name="amount" value="1" class="amount"/>
-                <a href="javascript:;" class="add_num"></a>
-            </td>
-            <td class="col5">￥<span>1102.00</span></td>
-            <td class="col6"><a href="">删除</a></td>
-        </tr>
-        <tr>
-            <td class="col1"><a href=""><img src="images/cart_goods3.jpg" alt="" /></a> <strong><a href="">【1111购物狂欢节】捷王纯手工缝制休闲男鞋大头皮鞋 头层牛</a></strong></td>
-            <td class="col2"> <p>颜色：0922红棕现货</p> <p>尺码：40现货</p></td>
-            <td class="col3">￥<span>269.00</span></td>
-            <td class="col4">
-                <a href="javascript:;" class="reduce_num"></a>
-                <input type="text" name="amount" value="1" class="amount"/>
-                <a href="javascript:;" class="add_num"></a>
-            </td>
-            <td class="col5">￥<span>269.00</span></td>
-            <td class="col6"><a href="">删除</a></td>
-        </tr>
+        <c:forEach items="${requestScope.cartList}" var="cart">
+            <tr>
+                <td class="col1"><a href=""><img src="images/cart_goods1.jpg" alt="" /></a>  <strong><a href="">${cart.product_name}</a></strong></td>
+                <td class="col2"> <p>颜色：${cart.color}</p> <p>尺码：${cart.size}</p> </td>
+                <td class="col3">￥<span>${cart.price}</span></td>
+                <td class="col4">
+                    <a href="javascript:;" class="reduce_num"></a>
+                    <input type="text" name="amount" value="1" class="amount"/>
+                    <a href="javascript:;" class="add_num"></a>
+                </td>
+                <td class="col5">￥<span>${cart.price}</span></td>
+                <td class="col6"><a href="cartServlet?method=deleteCart&id=${cart.id}">删除</a></td>
+            </tr>
+        </c:forEach>
         </tbody>
         <tfoot>
         <tr>
-            <td colspan="6">购物金额总计： <strong>￥ <span id="total">1870.00</span></strong></td>
+            <td colspan="6">购物金额总计： <strong>￥ <span id="total"></span></strong></td>
         </tr>
         </tfoot>
     </table>
     <div class="cart_btn w990 bc mt10">
-        <a href="" class="continue">继续购物</a>
-        <a href="" class="checkout">结 算</a>
+        <a href="index.jsp" class="continue">继续购物</a>
+        <a href="cartServlet?method=tocheck" class="checkout">结 算</a>
     </div>
 </div>
 <!-- 主体部分 end -->

@@ -2,6 +2,7 @@ package com.cn.sxzx.jdteam.shopcart.servlet;
 
 import com.cn.sxzx.jdteam.javaBean.pojo.Cart;
 import com.cn.sxzx.jdteam.javaBean.pojo.Product;
+import com.cn.sxzx.jdteam.javaBean.pojo.User;
 import com.cn.sxzx.jdteam.javaBean.vo.ProductXi;
 import com.cn.sxzx.jdteam.shopcart.service.CartService;
 import com.cn.sxzx.jdteam.shopcart.service.imp.CarServiceImp;
@@ -31,27 +32,35 @@ public class CartServlet extends HttpServlet {
             this.showCart();
         }else if(method.equals("deleteCart")){
             this.deleteCart();
+            this.showCart();
         }
     }
     //展示购物车
-    private void showCart() throws IOException {
-        Integer user_id = Integer.parseInt(request.getParameter("user_id"));
-        service.showCart(user_id);
-        response.sendRedirect("flow1.jsp");
+    private void showCart() throws IOException, ServletException {
+//        int user_id = Integer.parseInt(request.getParameter("user_id"));
+        User user = (User)request.getSession().getAttribute("user");
+        int user_id = user.getId();
+        List<Cart> cartList = service.showCart(user_id);
+        request.setAttribute("cartList",cartList);
+        request.getRequestDispatcher("/flow1.jsp").forward(request,response);
+
     }
     //添加购物车
     private void addCart() {
         String name = request.getParameter("name");
         String color = request.getParameter("color");
         String size = request.getParameter("size");
-        String price = request.getParameter("price");
-        Cart cart = new Cart();
+        double price = Double.parseDouble(request.getParameter("price"));
+        User user = (User)request.getSession().getAttribute("user");
+        int user_id = user.getId();
+        Cart cart = new Cart(name,color,size,price,user_id);
         service.addCart(cart);
     }
     //删除购物车
     private void deleteCart(){
-        int id = 1;
+        int id = Integer.parseInt(request.getParameter("id"));
         service.deleteCart(id);
+
     }
 
 

@@ -24,13 +24,35 @@
         <servlet-name>registerServlet</servlet-name>
         <url-pattern>/registerServlet</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>mainServlet</servlet-name>
-        <url-pattern>/mainServlet</url-pattern>
-    </servlet-mapping>
     <servlet>
         <servlet-name>mainServlet</servlet-name>
         <servlet-class>com.cn.sxzx.jdteam.main.servlet.mainServlet</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>mainServlet</servlet-name>
+        <url-pattern>/mainServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>cartServlet</servlet-name>
+        <servlet-class>com.cn.sxzx.jdteam.shopcart.servlet.CartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cartServlet</servlet-name>
+        <url-pattern>/cartServlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>loginFilter</filter-name>
+        <filter-class>com.cn.sxzx.jdteam.filter.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>loginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+
 
 </web-app>

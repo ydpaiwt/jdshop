@@ -35,6 +35,17 @@
                 zoomWidth:400,
                 zoomHeight:400
             });
+            $("#add_submit").click(function () {
+                var user = "${sessionScope.user.name}";
+                if (user){
+                    alert(5615);
+                    $("#myform").submit(function () {
+                        alert("添加成功");
+                    });
+                }else {
+                    alert("请先登录！");
+                }
+            });
         })
     </script>
 </head>
@@ -206,32 +217,32 @@
         </div>
         <!-- 相关分类 end -->
 
-        <!-- 相关品牌 start -->
-        <div class="related_cat	leftbar mt10">
-            <h2><strong>同类品牌</strong></h2>
-            <div class="leftbar_wrap">
-                <ul>
-                    <li><a href="">GAP</a></li>
-                    <li><a href="">DIOR</a></li>
-                    <li><a href="">热风</a></li>
-                    <li><a href="">嘻哈</a></li>
-                    <li><a href="">硬糖</a></li>
-                    <li><a href="">YSL</a></li>
-                    <li><a href="">LV</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- 相关品牌 end -->
+<%--        <!-- 相关品牌 start -->--%>
+<%--        <div class="related_cat	leftbar mt10">--%>
+<%--            <h2><strong>同类品牌</strong></h2>--%>
+<%--            <div class="leftbar_wrap">--%>
+<%--                <ul>--%>
+<%--                    <li><a href="">GAP</a></li>--%>
+<%--                    <li><a href="">DIOR</a></li>--%>
+<%--                    <li><a href="">热风</a></li>--%>
+<%--                    <li><a href="">嘻哈</a></li>--%>
+<%--                    <li><a href="">硬糖</a></li>--%>
+<%--                    <li><a href="">YSL</a></li>--%>
+<%--                    <li><a href="">LV</a></li>--%>
+<%--                </ul>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--        <!-- 相关品牌 end -->--%>
 
-        <!-- 热销排行 start -->
-        <div class="hotgoods leftbar mt10">
-            <h2><strong>热销排行榜</strong></h2>
-            <div class="leftbar_wrap">
-                <ul>
-                    <li></li>
-                </ul>
-            </div>
-        </div>
+<%--        <!-- 热销排行 start -->--%>
+<%--        <div class="hotgoods leftbar mt10">--%>
+<%--            <h2><strong>热销排行榜</strong></h2>--%>
+<%--            <div class="leftbar_wrap">--%>
+<%--                <ul>--%>
+<%--                    <li></li>--%>
+<%--                </ul>--%>
+<%--            </div>--%>
+<%--        </div>--%>
     </div>
     <!-- 主体页面左侧内容 end -->
 
@@ -281,17 +292,17 @@
 <%--            </c:forEach>--%>
             <!-- 商品基本信息区域 start -->
             <div class="goodsinfo fl ml10">
-                <form action="" method="get" class="choose">
+                <form action="cartServlet" method="get" class="choose" id="myform">
                     <input type="hidden" name="method" value="toCart">
                     <input type="hidden" name="name" value="${sessionScope.productXi.name}">
                     <input type="hidden" name="price" value="${sessionScope.productXi.price}">
-                <ul>
-                    <li><span>商品编号： </span>971344</li>
-                    <li class="market_price"><span>定价：</span><em>￥499.00</em></li>
-                    <li class="shop_price"><span>本店价：</span> <strong>${sessionScope.productXi.price}</strong> <a>(降价通知)</a></li>
-                    <li><span>销售：</span>${sessionScope.productXi.sale}</li>
-                    <li class="star"><span>商品评分：</span> <strong></strong><a href="">(已有21人评价)</a></li> <!-- 此处的星级切换css即可 默认为5星 star4 表示4星 star3 表示3星 star2表示2星 star1表示1星 -->
-                </ul>
+                    <ul>
+                        <li><span>商品编号： </span>971344</li>
+                        <li class="market_price"><span>定价：</span><em>￥499.00</em></li>
+                        <li class="shop_price"><span>本店价：</span> <strong>${sessionScope.productXi.price}</strong> <a>(降价通知)</a></li>
+                        <li><span>销售：</span>${sessionScope.productXi.sale}</li>
+                        <li class="star"><span>商品评分：</span> <strong></strong><a href="">(已有21人评价)</a></li> <!-- 此处的星级切换css即可 默认为5星 star4 表示4星 star3 表示3星 star2表示2星 star1表示1星 -->
+                    </ul>
 
                     <ul>
                         <li class="product">
@@ -329,7 +340,7 @@
                             <dl>
                                 <dt>&nbsp;</dt>
                                 <dd>
-                                    <input type="submit" class="add_btn" />
+                                    <input type="button" value="&nbsp;" class="add_btn" id="add_submit" />
                                 </dd>
                             </dl>
                         </li>

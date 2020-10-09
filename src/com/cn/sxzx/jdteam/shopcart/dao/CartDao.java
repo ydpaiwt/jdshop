@@ -15,6 +15,7 @@ public class CartDao {
     Connection conn=null;
     Statement state= null;
     PreparedStatement ps = null;
+    //添加商品信息
     public void addCart(Cart cart){
         String sql = "insert into cart(product_name,color,size,price,user_id) values(?,?,?,?,?)";
         conn = JDBC.getConnection();
@@ -39,7 +40,7 @@ public class CartDao {
 
     //删除商品
     public void deleteCart(int id) {
-        String sql = "delete from cart where id =?";
+        String sql = "delete from cart where id = ?";
         conn = JDBC.getConnection();
         int i = 0;
         try {
@@ -58,12 +59,13 @@ public class CartDao {
     }
     //展示购物车商品
     public List<Cart> showCart(int user_id) {
+        ResultSet rest = null;
         List<Cart> cartList = new ArrayList<>();
         String sql = "select * from cart where user_id = ?";
-        ResultSet rest = null;
         conn = JDBC.getConnection();
         try {
             ps = conn.prepareStatement(sql);
+            ps.setInt(1,user_id);
             rest = ps.executeQuery();
             while (rest.next()){
                 int id = rest.getInt("id");

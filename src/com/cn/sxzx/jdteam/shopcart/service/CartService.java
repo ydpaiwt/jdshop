@@ -12,7 +12,7 @@ public interface CartService {
     //删除购物车
     void deleteCart(int id);
 
-    List<Cart> showCart(int usrt_id);
+    List<Cart> showCart(int user_id);
 
     void addCart(Cart cart);
 }
