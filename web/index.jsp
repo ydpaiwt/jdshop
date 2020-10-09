@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.cn.sxzx.jdteam.utils.JDBC" %><%--
   Created by IntelliJ IDEA.
   User: ydp
   Date: 2020/9/27

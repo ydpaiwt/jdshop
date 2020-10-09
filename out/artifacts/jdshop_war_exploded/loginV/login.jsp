@@ -1,4 +1,7 @@
 
+<%
+	String path = request.getContextPath();
+%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
@@ -11,6 +14,7 @@
 	<link rel="stylesheet" href="../style/footer.css" type="text/css">
 </head>
 <body>
+
 	<!-- 顶部导航 start -->
 	<div class="topnav">
 		<div class="topnav_bd w990 bc">
@@ -49,22 +53,17 @@
 		</div>
 		<div class="login_bd">
 			<div class="login_form fl">
-				<form action="" method="post">
+				<form action="<%=path%>/loginServlet" method="get">
+					<input type="hidden" name="method" value="login">
 					<ul>
 						<li>
 							<label >用户名：</label>
-							<input type="text" class="txt" name="username" />
+							<input type="text" class="txt" name="name" />
 						</li>
 						<li>
 							<label >密码：</label>
-							<input type="password" class="txt" name="password" />
+							<input type="password" class="txt" name="pwd" />
 							<a href="">忘记密码?</a>
-						</li>
-						<li class="checkcode">
-							<label >验证码：</label>
-							<input type="text"  name="checkcode" />
-							<img src="../images/checkcode1.jpg" alt="" />
-							<span>看不清？<a href="">换一张</a></span>
 						</li>
 						<li>
 							<label >&nbsp;</label>
@@ -95,7 +94,7 @@
 				<h3>还不是商城用户</h3>
 				<p>现在免费注册成为商城用户，便能立刻享受便宜又放心的购物乐趣，心动不如行动，赶紧加入吧!</p>
 
-				<a href="../registerServlet?method=toRegister" class="reg_btn">免费注册 >></a>
+				<a href="../registerServlet?method=toRegister" class="reg_btn">免费注册 ></a>
 			</div>
 
 		</div>

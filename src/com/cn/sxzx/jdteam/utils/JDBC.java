@@ -19,16 +19,15 @@ public class JDBC {
     }
 
     public static Connection getConnection(){
-        Connection conn= null;
+        Connection conn=null;
         try {
-            conn = dataSource.getConnection();
+            conn=dataSource.getConnection();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         return conn;
-
     }
-
     public static void  close(Statement statement,Connection connection){
         close(null,statement,connection);
 

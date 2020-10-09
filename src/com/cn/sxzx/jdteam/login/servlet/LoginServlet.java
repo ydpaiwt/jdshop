@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class LoginServlet extends HttpServlet {
 
     HttpServletRequest request = null;
     HttpServletResponse response = null;
-
     LoginService service = new LoginServiceImp();
 
     @Override
@@ -28,17 +28,16 @@ public class LoginServlet extends HttpServlet {
         }
         
         if (method.equals("login")){
-            this.login();
+              this.login();
         }
 
     }
 
-    //登录
     private void login() throws IOException {
-//        request.setCharacterEncoding("utf-8");
-        String name = request.getParameter("name");
-        String pwd = request.getParameter("pwd");
-        User users = service.login(name,pwd);
+        //request.setCharacterEncoding("utf-8");
+         String name = request.getParameter("name");
+         String pwd = request.getParameter("pwd");
+         User users = service.login(name,pwd);
         if (users != null){
             //登录成功
             request.getSession().setAttribute("user",users);
@@ -48,6 +47,8 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("loginServlet?method=toLogin");
         }
     }
+
+
 
     //去登录
     private void toLogin() throws IOException {
