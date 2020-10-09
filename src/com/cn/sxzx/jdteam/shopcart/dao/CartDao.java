@@ -2,10 +2,7 @@ package com.cn.sxzx.jdteam.shopcart.dao;
 
 import com.cn.sxzx.jdteam.utils.JDBC;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
  * @Author:ydp
@@ -39,8 +36,15 @@ public class CartDao {
 
     }
     //展示购物车商品
-    public void showCart() {
-        String sql = "select * from cart where user_id = ?";
-
-    }
+//    public void showCart() {
+//        String sql = "select * from cart";
+//        ResultSet rest = null;
+//        conn = JDBC.getConnection();
+//        state = conn.createStatement();
+//        rest = state.executeQuery(sql);
+//        while (rest.next()){
+//            rest.getInt("id");
+//        }
+//
+//    }
 }
