@@ -24,4 +24,13 @@
         <servlet-name>registerServlet</servlet-name>
         <url-pattern>/registerServlet</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>mainServlet</servlet-name>
+        <url-pattern>/mainServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>mainServlet</servlet-name>
+        <servlet-class>com.cn.sxzx.jdteam.main.servlet.mainServlet</servlet-class>
+    </servlet>
+
 </web-app>
