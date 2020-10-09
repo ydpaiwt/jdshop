@@ -47,7 +47,7 @@
         </div>
         <div class="topnav_right fr">
             <ul>
-                <li>您好，欢迎来到京西！[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </li>
+                <li>您好，欢迎来到京西！[<a href="loginServlet?method=toLogin">登录</a>] [<a href="registerServlet?method=toRegister">免费注册</a>] </li>
                 <li class="line">|</li>
                 <li>我的订单</li>
                 <li class="line">|</li>
@@ -65,7 +65,7 @@
 <div class="header w1210 bc mt15">
     <!-- 头部上半部分 start 包括 logo、搜索、用户中心和购物车结算 -->
     <div class="logo w1210">
-        <h1 class="fl"><a href="index.html"><img src="images/logo.png" alt="京西商城"></a></h1>
+        <h1 class="fl"><a><img src="images/logo.png" alt="京西商城"></a></h1>
         <!-- 头部搜索 start -->
         <div class="search fl">
             <div class="search_form">
@@ -80,10 +80,10 @@
 
             <div class="hot_search">
                 <strong>热门搜索:</strong>
-                <a href="">NIKE休闲男装</a>
-                <a href="">条纹卫衣</a>
-                <a href="">暴龙眼睛</a>
-                <a href="">ins风渔夫帽</a>
+                <a href="mainServlet?method=toGoods&id=1&product_id=1">NIKE休闲男装</a>
+                <a href="mainServlet?method=toGoods&id=2&product_id=2">条纹卫衣</a>
+                <a href="mainServlet?method=toGoods&id=4&product_id=4">暴龙眼睛</a>
+                <a href="mainServlet?method=toGoods&id=3&product_id=3">ins风渔夫帽</a>
             </div>
         </div>
         <!-- 头部搜索 end -->
@@ -98,21 +98,16 @@
                 </dt>
                 <dd>
                     <div class="prompt">
-                        您好，请<a href="">登录</a>
+                        您好，请<a href="loginServlet?method=toLogin">登录</a>
                     </div>
                     <div class="uclist mt10">
                         <ul class="list1 fl">
                             <li><a href="">用户信息></a></li>
-                            <li><a href="">我的订单></a></li>
                             <li><a href="">收货地址></a></li>
-                            <li><a href="">我的收藏></a></li>
                         </ul>
 
                         <ul class="fl">
-                            <li><a href="">我的留言></a></li>
-                            <li><a href="">我的红包></a></li>
-                            <li><a href="">我的评论></a></li>
-                            <li><a href="">资金管理></a></li>
+                            <li><a href="">我的订单></a></li>
                         </ul>
 
                     </div>
@@ -158,7 +153,8 @@
                     <h3><a href="">配饰</a> <b></b></h3>
                     <div class="cat_detail none">
                         <dl class="dl_1st">
-                            <dt><a href="">眼镜帽子</a></dt>
+                            <dt><a href="mainServlet?method=toGoods&id=4&product_id=4">眼镜</a></dt>
+                            <dt><a href="mainServlet?method=toGoods&id=3&product_id=3">帽子</a></dt>
                         </dl>
                     </div>
                 </div>
@@ -172,9 +168,9 @@
 
         <div class="navitems fl">
             <ul class="fl">
-                <li class="current"><a href="">首页</a></li>
-                <li><a href="">服饰城</a></li>
-
+                <li ><a href="index.jsp">首页</a></li>
+                <li ><a href="mainServlet?method=toGoods&id=4&product_id=4">眼镜</a></li>
+                <li ><a href="mainServlet?method=toGoods&id=3&product_id=3">帽子</a></li>
             </ul>
             <div class="right_corner fl"></div>
         </div>
@@ -190,7 +186,7 @@
 <div class="main w1210 mt10 bc">
     <!-- 面包屑导航 start -->
     <div class="breadcrumb">
-        <h2>当前位置：<a href="">首页</a> > <a href="">服装上衣</a> > <a href="">男装</a> >卫衣男潮牌2020春秋款外套潮流 </h2>
+        <h2>当前位置：<a href="">首页</a>>${sessionScope.productXi.sub_title}>${sessionScope.productXi.name}</h2>
     </div>
     <!-- 面包屑导航 end -->
 
@@ -201,7 +197,10 @@
             <h2><strong>相关分类</strong></h2>
             <div class="leftbar_wrap">
                 <ul>
-                    <li><a href="">眼镜</a></li>
+                    <li><a href="mainServlet?method=toGoods&id=4&product_id=4">眼镜</a></li>
+                    <li><a href="mainServlet?method=toGoods&id=3&product_id=3">帽子</a></li>
+                    <li><a href="mainServlet?method=toGoods&id=1&product_id=1">男装</a></li>
+                    <li><a href="mainServlet?method=toGoods&id=2&product_id=2">女装</a></li>
                 </ul>
             </div>
         </div>
@@ -284,9 +283,9 @@
             <div class="goodsinfo fl ml10">
                 <ul>
                     <li><span>商品编号： </span>971344</li>
-                    <li class="market_price"><span>定价：</span><em>￥199.00</em></li>
-                    <li class="shop_price"><span>本店价：</span> <strong>￥99.00</strong> <a href="">(降价通知)</a></li>
-                    <li><span>上架时间：</span>2012-09-12</li>
+                    <li class="market_price"><span>定价：</span><em>￥499.00</em></li>
+                    <li class="shop_price"><span>本店价：</span> <strong>${sessionScope.productXi.price}</strong> <a>(降价通知)</a></li>
+                    <li><span>销售：</span>${sessionScope.productXi.sale}</li>
                     <li class="star"><span>商品评分：</span> <strong></strong><a href="">(已有21人评价)</a></li> <!-- 此处的星级切换css即可 默认为5星 star4 表示4星 star3 表示3星 star2表示2星 star1表示1星 -->
                 </ul>
                 <form action="" method="post" class="choose">
@@ -295,7 +294,7 @@
                             <dl>
                                 <dt>颜色：</dt>
                                 <dd>
-                                    <a class="selected" href="javascript:;">白色 <input type="radio" name="color" value="白色" checked="checked" /></a>
+                                    <a class="selected" href="javascript:;">${sessionScope.productXi.value} <input type="radio" name="color" value="白色" checked="checked" /></a>
 
                                     <input type="hidden" name="" value="" />
                                 </dd>
@@ -341,15 +340,46 @@
         <div style="clear:both;"></div>
 
         </div>
+    <!-- 商品详情 start -->
+    <div class="detail">
+        <div class="detail_hd">
+            <ul>
+                <li class="on"><span>商品介绍</span></li>
+                <li ><span>售后保障</span></li>
+            </ul>
+        </div>
+        <div class="detail_bd">
+            <!-- 商品介绍 start -->
+            <div class="introduce detail_div none">
+                
+
+                <div class="attr mt15">
+                    <ul>
+                        <li><span>商品名称：</span>${sessionScope.productXi.name}</li>
+                        <li><span>商品产地：</span>中国大陆</li>
+                        <li><span>商品规格：</span>全型号</li>
+                        <li><span></span></li>
+                    </ul>
+                </div>
+                <div class="desc mt10">
+                    <!-- 此处的内容 一般是通过在线编辑器添加保存到数据库，然后直接从数据库中读出 -->
+                    <img src="images/${requestScope.imgList[3]}" alt="" />
+                    <p style="height:10px;"></p>
+                    <img src="images/${requestScope.imgList[4]}" alt="" />
+                    <p style="height:10px;"></p>
+                    <img src="images/${requestScope.imgList[5]}" alt="" />
+                    <p style="height:10px;"></p>
+                    <img src="images/${requestScope.imgList[6]}" alt="" />
+                    <p style="height:10px;"></p>
+                </div>
+            </div>
+            <!-- 商品介绍 end -->
+
+
+            <!-- 商品评论 end -->
 
                 <!-- 售后保障 start -->
                 <div class="after_sale mt15 none detail_div">
-                    <div>
-                        <p>本产品全国联保，享受三包服务，质保期为：一年质保 <br />如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7日内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！</p>
-                        <p>售后服务电话：800-898-9006 <br />品牌官方网站：http://www.lenovo.com.cn/</p>
-
-                    </div>
-
                     <div>
                         <h3>服务承诺：</h3>
                         <p>本商城向您保证所售商品均为正品行货，京东自营商品自带机打发票，与商品一起寄送。凭质保证书及京东商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由本商城联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。本商城还为您提供具有竞争力的商品价格和运费政策，请您放心购买！</p>
@@ -387,23 +417,23 @@
     <div class="bnav1">
         <h3><b></b> <em>购物指南</em></h3>
         <ul>
-            <li><a href="">购物流程</a></li>
-            <li><a href="">会员介绍</a></li>
-            <li><a href="">团购/机票/充值/点卡</a></li>
-            <li><a href="">常见问题</a></li>
-            <li><a href="">大家电</a></li>
-            <li><a href="">联系客服</a></li>
+            <li><a >购物流程</a></li>
+            <li><a >会员介绍</a></li>
+            <li><a >团购/机票/充值/点卡</a></li>
+            <li><a >常见问题</a></li>
+            <li><a >大家电</a></li>
+            <li><a >联系客服</a></li>
         </ul>
     </div>
 
     <div class="bnav2">
         <h3><b></b> <em>配送方式</em></h3>
         <ul>
-            <li><a href="">上门自提</a></li>
-            <li><a href="">快速运输</a></li>
-            <li><a href="">特快专递（EMS）</a></li>
-            <li><a href="">如何送礼</a></li>
-            <li><a href="">海外购物</a></li>
+            <li><a >上门自提</a></li>
+            <li><a >快速运输</a></li>
+            <li><a >特快专递（EMS）</a></li>
+            <li><a >如何送礼</a></li>
+            <li><a >海外购物</a></li>
         </ul>
     </div>
 
@@ -411,35 +441,35 @@
     <div class="bnav3">
         <h3><b></b> <em>支付方式</em></h3>
         <ul>
-            <li><a href="">货到付款</a></li>
-            <li><a href="">在线支付</a></li>
-            <li><a href="">分期付款</a></li>
-            <li><a href="">邮局汇款</a></li>
-            <li><a href="">公司转账</a></li>
+            <li><a >货到付款</a></li>
+            <li><a >在线支付</a></li>
+            <li><a >分期付款</a></li>
+            <li><a >邮局汇款</a></li>
+            <li><a >公司转账</a></li>
         </ul>
     </div>
 
     <div class="bnav4">
         <h3><b></b> <em>售后服务</em></h3>
         <ul>
-            <li><a href="">退换货政策</a></li>
-            <li><a href="">退换货流程</a></li>
-            <li><a href="">价格保护</a></li>
-            <li><a href="">退款说明</a></li>
-            <li><a href="">返修/退换货</a></li>
-            <li><a href="">退款申请</a></li>
+            <li><a >退换货政策</a></li>
+            <li><a >退换货流程</a></li>
+            <li><a >价格保护</a></li>
+            <li><a >退款说明</a></li>
+            <li><a >返修/退换货</a></li>
+            <li><a >退款申请</a></li>
         </ul>
     </div>
 
     <div class="bnav5">
         <h3><b></b> <em>特色服务</em></h3>
         <ul>
-            <li><a href="">夺宝岛</a></li>
-            <li><a href="">DIY装机</a></li>
-            <li><a href="">延保服务</a></li>
-            <li><a href="">家电下乡</a></li>
-            <li><a href="">京东礼品卡</a></li>
-            <li><a href="">能效补贴</a></li>
+            <li><a >夺宝岛</a></li>
+            <li><a >DIY装机</a></li>
+            <li><a >延保服务</a></li>
+            <li><a >家电下乡</a></li>
+            <li><a >京东礼品卡</a></li>
+            <li><a >能效补贴</a></li>
         </ul>
     </div>
 </div>
@@ -449,26 +479,26 @@
 <!-- 底部版权 start -->
 <div class="footer w1210 bc mt10">
     <p class="links">
-        <a href="">关于我们</a> |
-        <a href="">联系我们</a> |
-        <a href="">人才招聘</a> |
-        <a href="">商家入驻</a> |
-        <a href="">千寻网</a> |
-        <a href="">奢侈品网</a> |
-        <a href="">广告服务</a> |
-        <a href="">移动终端</a> |
-        <a href="">友情链接</a> |
-        <a href="">销售联盟</a> |
-        <a href="">京西论坛</a>
+        <a >关于我们</a> |
+        <a>联系我们</a> |
+        <a >人才招聘</a> |
+        <a >商家入驻</a> |
+        <a >千寻网</a> |
+        <a >奢侈品网</a> |
+        <a >广告服务</a> |
+        <a >移动终端</a> |
+        <a >友情链接</a > |
+        <a >销售联盟</a> |
+        <a >京西论坛</a>
     </p>
     <p class="copyright">
         © 2005-2013 京东网上商城 版权所有，并保留所有权利。  ICP备案证书号:京ICP证070359号
     </p>
     <p class="auth">
-        <a href=""><img src="images/xin.png" alt="" /></a>
-        <a href=""><img src="images/kexin.jpg" alt="" /></a>
-        <a href=""><img src="images/police.jpg" alt="" /></a>
-        <a href=""><img src="images/beian.gif" alt="" /></a>
+        <a ><img src="images/xin.png" alt="" /></a>
+        <a ><img src="images/kexin.jpg" alt="" /></a>
+        <a ><img src="images/police.jpg" alt="" /></a>
+        <a ><img src="images/beian.gif" alt="" /></a>
     </p>
 </div>
 <!-- 底部版权 end -->

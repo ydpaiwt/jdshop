@@ -7,16 +7,37 @@ public class ProductXi {
     private String name;
     private float price;
     private String value;
+    private String sub_title;
     private String product_src;
+    private int sale;
+
 
     public ProductXi() {
     }
 
-    public ProductXi(int id,String name, float price, String value) {
+    public int getSale() {
+        return sale;
+    }
+
+    public void setSale(int sale) {
+        this.sale = sale;
+    }
+
+    public String getSub_title() {
+        return sub_title;
+    }
+
+    public void setSub_title(String sub_title) {
+        this.sub_title = sub_title;
+    }
+
+    public ProductXi(int id, String name, float price, String value, String sub_title,int sale) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.value = value;
+        this.sub_title = sub_title;
+        this.sale = sale;
     }
 
     public int getId() {
@@ -66,7 +87,9 @@ public class ProductXi {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 ", value='" + value + '\'' +
-                ", product_src=" + product_src +
+                ", sub_title='" + sub_title + '\'' +
+                ", product_src='" + product_src + '\'' +
+                ", sale=" + sale +
                 '}';
     }
 }

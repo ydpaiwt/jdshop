@@ -425,9 +425,9 @@
 
           <div class="mulu">
 
-            <a href="">服装</a>/
+            <a href="mainServlet?method=toGoods&id=2&product_id=2">服装</a>/
 
-            <a href="">女装</a>
+            <a href="mainServlet?method=toGoods&id=2&product_id=2">女装</a>
 
             <div class="jian"></div>
 
@@ -441,17 +441,17 @@
 
               <dl class="dl1">
 
-                <dt><a href="">女装</a></dt>
+                <dt><a href="mainServlet?method=toGoods&id=2&product_id=2">女装</a></dt>
 
                 <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">当季热卖</a></dd>
 
-                <dd><a href="">新品推荐</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">新品推荐</a></dd>
 
-                <dd><a href="">商场同款</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">商场同款</a></dd>
 
-                <dd><a href="">时尚套装</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">时尚套装</a></dd>
 
-                <dd><a href="">设计师/潮牌</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">设计师/潮牌</a></dd>
 
               </dl>
 
@@ -477,17 +477,17 @@
 
 
 
-                <dd><a href="">GAP</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">GAP</a></dd>
 
-                <dd><a href="">NIKE</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">NIKE</a></dd>
 
-                <dd><a href="">KAPPA</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">KAPPA</a></dd>
 
-                <dd><a href="">PUMA</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">PUMA</a></dd>
 
-                <dd><a href="">Addides</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">Addides</a></dd>
 
-                <dd><a href="">FAIL</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">FAIL</a></dd>
 
 
               </dl>
@@ -504,9 +504,9 @@
 
           <div class="mulu">
 
-            <a href="mainServlet?method=toGoods">服装</a>/
+            <a href="mainServlet?method=toGoods&id=1&product_id=1">服装</a>/
 
-            <a href="mainServlet?method=toGoods">男装</a>
+            <a href="mainServlet?method=toGoods&id=1&product_id=1">男装</a>
 
             <div class="jian"></div>
 
@@ -520,17 +520,17 @@
 
               <dl class="dl1">
 
-                <dt><a href="mainServlet?method=toGoods">男装</a></dt>
+                <dt><a href="mainServlet?method=toGoods&id=1&product_id=1">男装</a></dt>
 
                 <dd><a href="mainServlet?method=toGoods&id=1&product_id=1">衬衫</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods">牛仔衣</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=1&product_id=1">牛仔衣</a></dd>
 
-                <dd><a href="">POLO衫</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=1&product_id=1">POLO衫</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods">真皮皮衣</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=1&product_id=1">真皮皮衣</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods">唐装/中山装</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=1&product_id=1">唐装/中山装</a></dd>
 
               </dl>
 
@@ -544,17 +544,17 @@
 
               <ul>
 
-                <li><a href="">GAP</a></li>
+                <li><a href="mainServlet?method=toGoods&id=1&product_id=1">GAP</a></li>
 
-                <li><a href="">MIKE</a></li>
+                <li><a href="mainServlet?method=toGoods&id=1&product_id=1">MIKE</a></li>
 
-                <li><a href="">Addides</a></li>
+                <li><a href="mainServlet?method=toGoods&id=1&product_id=1">Addides</a></li>
 
-                <li><a href="">FAIL</a></li>
+                <li><a href="mainServlet?method=toGoods&id=1&product_id=1">FAIL</a></li>
 
-                <li><a href="">PUMA</a></li>
+                <li><a href="mainServlet?method=toGoods&id=1&product_id=1">PUMA</a></li>
 
-                <li><a href="">KAAPA</a></li>
+                <li><a href="mainServlet?method=toGoods&id=1&product_id=1">KAAPA</a></li>
 
               </ul>
 
@@ -582,9 +582,9 @@
 
           <div class="mulu">
 
-            <a href="">配饰</a>/
+            <a href="mainServlet?method=toGoods&id=3&product_id=3">配饰</a>/
 
-            <a href="">帽子</a>
+            <a href="mainServlet?method=toGoods&id=3&product_id=3">帽子</a>
 
             <div class="jian"></div>
 
@@ -598,18 +598,18 @@
 
               <dl class="dl1">
 
-                <dt><a href="">帽子</a></dt>
+                <dt><a href="mainServlet?method=toGoods&id=3&product_id=3">帽子</a></dt>
 
 
                 <dd><a href="mainServlet?method=toGoods&id=3&product_id=3">鸭舌帽</a></dd>
 
-                <dd><a href="">棒球帽</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=3&product_id=3">棒球帽</a></dd>
 
-                <dd><a href="">毛线帽</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=3&product_id=3">毛线帽</a></dd>
 
-                <dd><a href="">贝雷帽</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=3&product_id=3">贝雷帽</a></dd>
 
-                <dd><a href="">遮阳帽</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=3&product_id=3">遮阳帽</a></dd>
 
               </dl>
 
@@ -620,9 +620,9 @@
 
           <div class="mulu">
 
-            <a href="">配饰</a>/
+            <a href="mainServlet?method=toGoods&id=4&product_id=4">配饰</a>/
 
-            <a href="">眼镜</a>
+            <a href="mainServlet?method=toGoods&id=4&product_id=4">眼镜</a>
 
             <div class="jian"></div>
 
@@ -636,17 +636,17 @@
 
               <dl class="dl2">
 
-                <dt><a href="">眼镜</a></dt>
+                <dt><a href="mainServlet?method=toGoods&id=4&product_id=4">眼镜</a></dt>
 
-                <dd><a href="">太阳镜</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=4&product_id=4">太阳镜</a></dd>
 
-                <dd><a href="">游泳镜</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=4&product_id=4">游泳镜</a></dd>
 
-                <dd><a href="">光学镜架</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=4&product_id=4">光学镜架</a></dd>
 
-                <dd><a href="">防辐射眼镜</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=4&product_id=4">防辐射眼镜</a></dd>
 
-                <dd><a href="">老花镜</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=4&product_id=4">老花镜</a></dd>
 
               </dl>
 
@@ -662,21 +662,21 @@
 
               <ul>
 
-                <li><a href="">暴龙旗舰店</a></li>
+                <li><a href="mainServlet?method=toGoods&id=4&product_id=4">暴龙旗舰店</a></li>
 
-                <li><a href="">LV旗舰店</a></li>
+                <li><a href="mainServlet?method=toGoods&id=4&product_id=4">LV旗舰店</a></li>
 
-                <li><a href="">香奈儿旗舰店</a></li>
+                <li><a href="mainServlet?method=toGoods&id=4&product_id=4">香奈儿旗舰店</a></li>
 
-                <li><a href="">HP旗舰店</a></li>
+                <li><a href="mainServlet?method=toGoods&id=4&product_id=4">HP旗舰店</a></li>
 
-                <li><a href="">王大夫旗舰店</a></li>
+                <li><a href="mainServlet?method=toGoods&id=3&product_id=3">王大夫旗舰店</a></li>
 
-                <li><a href="">ThinkPad旗舰店</a></li>
+                <li><a href="mainServlet?method=toGoods&id=3&product_id=3">ThinkPad旗舰店</a></li>
 
-                <li><a href="">周大福旗舰店</a></li>
+                <li><a href="mainServlet?method=toGoods&id=3&product_id=3">周大福旗舰店</a></li>
 
-                <li><a href="">暴雪旗舰店</a></li>
+                <li><a href="mainServlet?method=toGoods&id=3&product_id=3">暴雪旗舰店</a></li>
 
 
               </ul>
@@ -698,9 +698,7 @@
 
     <ul>
 
-      <li><a href="" style="background: #A40000">首页</a></li>
-
-      <li><a href="">服装城</a></li>
+      <li><a href="index.jsp" style="background: #A40000">首页</a></li>
 
     </ul>
 
@@ -782,17 +780,17 @@
 
         <ul>
 
-          <li><a href=""><img src="images/c1.jpg" alt="" /></a></li>
+          <li><a href="mainServlet?method=toGoods&id=2&product_id=2"><img src="images/c1.jpg" alt="" /></a></li>
 
-          <li><a href=""><img src="images/c2.jpg" alt="" /></a></li>
+          <li><a href="mainServlet?method=toGoods&id=1&product_id=1"><img src="images/c2.jpg" alt="" /></a></li>
 
-          <li style="border-right:none"><a href=""><img src="images/c3.jpg" alt="" /></a></li>
+          <li style="border-right:none"><a href="mainServlet?method=toGoods&id=2&product_id=2"><img src="images/c3.jpg" alt="" /></a></li>
 
-          <li><a href=""><img src="images/c10.jpg" alt="" /></a></li>
+          <li><img src="images/c10.jpg" alt="" /></li>
 
-          <li><a href=""><img src="images/c11.jpg" alt="" /></a></li>
+          <li><img src="images/c11.jpg" alt="" /></li>
 
-          <li style="border-right:none"><a href=""><img src="images/c12.jpg" alt="" /></a></li>
+          <li style="border-right:none"><img src="images/c12.jpg" alt="" /></li>
 
         </ul>
 
@@ -812,7 +810,7 @@
 
     <div class="baotu">
 
-      <a href=""><img src="images/b30.jpg" alt="" /></a>
+      <img src="images/b30.jpg" alt="" />
 
     </div>
 
@@ -820,29 +818,27 @@
 
       <span>京东快报</span>
 
-      <a href="">更多快报></a>
-
     </div>
 
     <div class="baomain">
 
       <ul>
 
-        <li><a href="">美妆年度盛典 要你好看！</a></li>
+        <li><a href="index.jsp">美妆年度盛典 要你好看！</a></li>
 
-        <li><a href="">集美们都爱的美包</a></li>
+        <li><a href="index.jsp">集美们都爱的美包</a></li>
 
-        <li><a href="">京东值得买 9.9元购了</a></li>
+        <li><a href="index.jsp">京东值得买 9.9元购了</a></li>
 
-        <li><a href="">搭配神器美得冒泡</a></li>
+        <li><a href="index.jsp">搭配神器美得冒泡</a></li>
 
-        <li><a href="">福利捡漏天天红包有好货</a></li>
+        <li><a href="index.jsp">福利捡漏天天红包有好货</a></li>
 
-        <li><a href="">百亿补贴爆品低价</a></li>
+        <li><a href="index.jsp">百亿补贴爆品低价</a></li>
 
-        <li><a href="">狂欢不落幕，好奇一整年</a></li>
+        <li><a href="index.jsp">狂欢不落幕，好奇一整年</a></li>
 
-        <li><a href="">专享大额优惠卷狂享五折</a></li>
+        <li><a href="index.jsp">专享大额优惠卷狂享五折</a></li>
 
       </ul>
 
@@ -856,7 +852,7 @@
 
           <div class="tubiao_1"></div>
 
-          <a href="">话费</a>
+          <a href="index.jsp">话费</a>
 
           <div class="tubiao_9"></div>
 
@@ -866,7 +862,7 @@
 
           <div class="tubiao_2"></div>
 
-          <a href="">机票</a>
+          <a href="index.jsp">机票</a>
 
           <div class="tubiao_9"></div>
 
@@ -876,7 +872,7 @@
 
           <div class="tubiao_3"></div>
 
-          <a href="">彩票</a>
+          <a href="index.jsp">彩票</a>
 
           <div class="tubiao_9"></div>
 
@@ -886,7 +882,7 @@
 
           <div class="tubiao_4"></div>
 
-          <a href="">游戏</a>
+          <a href="index.jsp">游戏</a>
 
           <div class="tubiao_9"></div>
 
@@ -896,7 +892,7 @@
 
           <div class="tubiao_5"></div>
 
-          <a href="">旅行</a>
+          <a href="index.jsp">旅行</a>
 
         </li>
 
@@ -904,7 +900,7 @@
 
           <div class="tubiao_6"></div>
 
-          <a href="">电影票</a>
+          <a href="index.jsp">电影票</a>
 
         </li>
 
@@ -912,7 +908,7 @@
 
           <div class="tubiao_7"></div>
 
-          <a href="">理财</a>
+          <a href="index.jsp">理财</a>
 
         </li>
 
@@ -920,7 +916,7 @@
 
           <div class="tubiao_8"></div>
 
-          <a href="">水电煤</a>
+          <a href="index.jsp">水电煤</a>
 
         </li>
 
@@ -930,13 +926,13 @@
 
             <ul>
 
-              <li><a href="">话费</a></li>
+              <li><a href="index.jsp">话费</a></li>
 
-              <li><a href="">机票</a></li>
+              <li><a href="index.jsp">机票</a></li>
 
-              <li><a href="">彩票</a></li>
+              <li><a href="index.jsp">彩票</a></li>
 
-              <li style="border-right:none"><a href="">游戏</a></li>
+              <li style="border-right:none"><a href="index.jsp">游戏</a></li>
 
             </ul>
 
@@ -1158,9 +1154,9 @@
 
                 <div class="xiazhu">
 
-                  <a href="">[机选一注]</a>
+                  <a href="index.jsp">[机选一注]</a>
 
-                  <a href="">[自助选号]</a>
+                  <a href="index.jsp">[自助选号]</a>
 
                 </div>
 
@@ -1178,11 +1174,11 @@
 
                 <ul>
 
-                  <li><a href="">点卡</a></li>
+                  <li><a href="index.jsp">点卡</a></li>
 
-                  <li><a href="">QQ</a></li>
+                  <li><a href="index.jsp">QQ</a></li>
 
-                  <li><a href="">页游</a></li>
+                  <li><a href="index.jsp">页游</a></li>
 
                 </ul>
 
@@ -1234,17 +1230,17 @@
 
         <h3>品牌街</h3>
 
-        <div class="life1"><a href="">基础通勤款</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=2&product_id=2">基础通勤款</a></div>
 
-        <div class="life1"><a href="" style="color:#E4393C">全场低至4折</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=2&product_id=2" style="color:#E4393C">全场低至4折</a></div>
 
         <ul>
 
-          <li><a href="">更多品牌</a></li>
+        <li><a href="mainServlet?method=toGoods&id=2&product_id=2">更多品牌</a></li>
 
-          <li><a href="">进入品牌街</a></li>
+        <li><a href="mainServlet?method=toGoods&id=2&product_id=2">进入品牌街</a></li>
 
-        </ul>
+      </ul>
 
       </div>
 
@@ -1258,9 +1254,9 @@
 
         <h3>天天低价</h3>
 
-        <div class="life1"><a href="">时尚街拍墨镜</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=4&product_id=4">时尚街拍墨镜</a></div>
 
-        <div class="life1"><a href="" style="background:red;color:white;padding:2px 2px">直降100元</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=4&product_id=4" style="background:red;color:white;padding:2px 2px">直降100元</a></div>
 
       </div>
 
@@ -1274,15 +1270,15 @@
 
         <h3>好东西</h3>
 
-        <div class="life1"><a href="">嘻哈卫衣</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=1&product_id=1">嘻哈卫衣</a></div>
 
-        <div class="life1"><a href="" style="color:#E4393C;font-size:12px">欧美潮牌</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=1&product_id=1" style="color:#E4393C;font-size:12px">欧美潮牌</a></div>
 
         <ul>
 
-          <li><a href="">更多品牌</a></li>
+          <li><a href="mainServlet?method=toGoods&id=1&product_id=1">更多品牌</a></li>
 
-          <li><a href="">逛更多></a></li>
+          <li><a href="mainServlet?method=toGoods&id=1&product_id=1">逛更多></a></li>
 
         </ul>
 
@@ -1298,7 +1294,7 @@
 
         <h3>今日团购</h3>
 
-        <div class="life1"><a href="">秋冬必备</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=3&product_id=3">秋冬必备</a></div>
 
         <div class="life1" style="margin-top:20px">贝雷帽<span style="font-size:25px;color:red;font-weight:700">￥45</span></div>
 
@@ -1318,9 +1314,9 @@
 
         <h3>京东首发</h3>
 
-        <div class="life1"><a href="">保暖时尚</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=3&product_id=3">保暖时尚</a></div>
 
-        <div class="life1"><a href="" style="background:red;color:white;padding:2px 2px">明星同款</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=3&product_id=3" style="background:red;color:white;padding:2px 2px">明星同款</a></div>
 
       </div>
 
@@ -1334,9 +1330,9 @@
 
         <h3>潮牌</h3>
 
-        <div class="life1"><a href="">中国风醒狮</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=1&product_id=1">中国风醒狮</a></div>
 
-        <div class="life1"><a href="" style="color:#E4393C">免费疯抢ing</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=1&product_id=1" style="color:#E4393C">免费疯抢ing</a></div>
 
       </div>
 
@@ -1350,9 +1346,9 @@
 
         <h3>京东预售</h3>
 
-        <div class="life1"><a href="">显瘦墨镜</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=4&product_id=4">显瘦墨镜</a></div>
 
-        <div class="life1"><a href="" style="background:red;color:white;padding:2px 2px">网红同款</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=4&product_id=4" style="background:red;color:white;padding:2px 2px">网红同款</a></div>
 
       </div>
 
@@ -1368,9 +1364,9 @@
 
           <h3>条纹长袖</h3>
 
-          <div class="life1"><a href="">挂脖心机</a></div>
+          <div class="life1"><a href="mainServlet?method=toGoods&id=2&product_id=2">挂脖心机</a></div>
 
-          <div class="life1"><a href="" style="color:red">露肩显瘦</a></div>
+          <div class="life1"><a href="mainServlet?method=toGoods&id=2&product_id=2" style="color:red">露肩显瘦</a></div>
 
         </div>
 
@@ -1395,17 +1391,17 @@
 
       <h3>购物指南</h3>
 
-      <div class="bao"><a href="">购物流程</a></div>
+      <div class="bao">购物流程</div>
 
-      <div class="bao"><a href="">会员介绍</a></div>
+      <div class="bao">会员介绍</div>
 
-      <div class="bao"><a href="">团购/机票</a></div>
+      <div class="bao">团购/机票</div>
 
-      <div class="bao"><a href="">常见问题</a></div>
+      <div class="bao">常见问题</div>
 
-      <div class="bao"><a href="">大家电</a></div>
+      <div class="bao">大家电</div>
 
-      <div class="bao"><a href="">联系客服</a></div>
+      <div class="bao">联系客服</div>
 
     </div><div class="bao"></div>
 
@@ -1415,15 +1411,15 @@
 
       <h3>配送方式</h3>
 
-      <div class="bao"><a href="">上门自提</a></div>
+      <div class="bao">上门自提</div>
 
-      <div class="bao"><a href="">211限时达</a></div>
+      <div class="bao">211限时达</div>
 
-      <div class="bao"><a href="">配送服务查询</a></div>
+      <div class="bao">配送服务查询</div>
 
-      <div class="bao"><a href="">配送费收取标准</a></div>
+      <div class="bao">配送费收取标准</div>
 
-      <div class="bao"><a href="">海外配送</a></div>
+      <div class="bao">海外配送</div>
 
     </div>
 
@@ -1433,15 +1429,15 @@
 
       <h3>支付方式</h3>
 
-      <div class="bao"><a href="">货到付款</a></div>
+      <div class="bao">货到付款</div>
 
-      <div class="bao"><a href="">在线支付</a></div>
+      <div class="bao">在线支付</div>
 
-      <div class="bao"><a href="">分期付款</a></div>
+      <div class="bao">分期付款</div>
 
-      <div class="bao"><a href="">邮局汇款</a></div>
+      <div class="bao">邮局汇款</div>
 
-      <div class="bao"><a href="">公司转账</a></div>
+      <div class="bao">公司转账</div>
 
     </div>
 
@@ -1451,15 +1447,15 @@
 
       <h3>售后服务</h3>
 
-      <div class="bao"><a href="">售后政策</a></div>
+      <div class="bao">售后政策</div>
 
-      <div class="bao"><a href="">价格保护</a></div>
+      <div class="bao">价格保护</div>
 
-      <div class="bao"><a href="">退款说明</a></div>
+      <div class="bao">退款说明</div>
 
-      <div class="bao"><a href="">返修/退换货</a></div>
+      <div class="bao">返修/退换货</div>
 
-      <div class="bao"><a href="">取消订单</a></div>
+      <div class="bao">取消订单</div>
 
     </div>
 
@@ -1469,17 +1465,17 @@
 
       <h3>特色服务</h3>
 
-      <div class="bao"><a href="">夺宝岛</a></div>
+      <div class="bao">夺宝岛</div>
 
-      <div class="bao"><a href="">DIY装机</a></div>
+      <div class="bao">DIY装机</div>
 
-      <div class="bao"><a href="">延保服务</a></div>
+      <div class="bao">延保服务</div>
 
-      <div class="bao"><a href="">京东E卡</a></div>
+      <div class="bao">京东E卡</div>
 
-      <div class="bao"><a href="">节能补贴</a></div>
+      <div class="bao">节能补贴</div>
 
-      <div class="bao"><a href="">京东通信</a></div>
+      <div class="bao">京东通信</div>
 
     </div>
 
@@ -1491,7 +1487,7 @@
 
     <span>京东已向全国1864个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</span>
 
-    <a href="">查看详情></a>
+
 
   </div>
 
@@ -1507,37 +1503,37 @@
 
   <div class="down_top">
 
-    <a href="">关于我们</a>
+    <a href="index.jsp">关于我们</a>
 
-    <a href="">联系我们</a>
+    <a href="index.jsp">联系我们</a>
 
-    <a href="">商家入驻</a>
+    <a href="index.jsp">商家入驻</a>
 
-    <a href="">营销中心</a>
+    <a href="index.jsp">营销中心</a>
 
-    <a href="">手机京东</a>
+    <a href="index.jsp">手机京东</a>
 
-    <a href="">友情链接</a>
+    <a href="index.jsp">友情链接</a>
 
-    <a href="">销售联盟</a>
+    <a href="index.jsp">销售联盟</a>
 
-    <a href="">京东社区</a>
+    <a href="index.jsp">京东社区</a>
 
-    <a href="">京东公益</a>
+    <a href="index.jsp">京东公益</a>
 
-    <a href="" style="border-right:none">English Site</a>
+    <a href="index.jsp" style="border-right:none">English Site</a>
 
   </div>
 
   <div class="down_center">
 
-    <span>北京市公安局朝阳分局备案编号110105014669  |  京ICP证070359号  |  <a href="">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a>  |  新出发京零 字第大120007号</span>
+    <span>北京市公安局朝阳分局备案编号110105014669  |  京ICP证070359号  |  互联网药品信息服务资格证编号(京)-经营性-2014-0008  |  新出发京零 字第大120007号</span>
 
-    <span><a href="">音像制品经营许可证苏宿批005号</a>  |  出版物经营许可证编号新出发(苏)批字第N-012号  |  互联网出版许可证编号新出网证(京)字150号</span>
+    <span>音像制品经营许可证苏宿批005号  |  出版物经营许可证编号新出发(苏)批字第N-012号  |  互联网出版许可证编号新出网证(京)字150号</span>
 
-    <span><a href="">网络文化经营许可证京网文[2011]0168-061号</a>  违法和不良信息举报电话：4006561155  Copyright © 2004-2014  京东JD.com 版权所有</span>
+    <span>网络文化经营许可证京网文[2011]0168-061号  违法和不良信息举报电话：4006561155  Copyright © 2004-2014  京东JD.com 版权所有</span>
 
-    <span>京东旗下网站：<a href="">360TOP</a>  <a href="">拍拍网</a> <a href="">网银在线</a> </span>
+    <span>京东旗下网站：360TOP  拍拍网 网银在线 </span>
 
   </div>
 

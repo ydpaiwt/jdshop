@@ -47,7 +47,7 @@ public class mainServlet extends HttpServlet {
             ProductXi productXi = service.getGoods(id);
             List<String> imgList=service.getGoodImgs(product_id);
             request.setAttribute("imgList",imgList);
-            request.setAttribute("productXi",productXi);
+            request.getSession().setAttribute("productXi",productXi);
             request.getRequestDispatcher("goods.jsp").forward(request,response);
         }
 //        private void toGoods2() throws IOException, ServletException {

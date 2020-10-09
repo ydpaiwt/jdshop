@@ -17,7 +17,7 @@ public class mainDao {
     Statement state = null;
     //根据id查找产品信息
     public ProductXi getGoods (int id) {
-        String sql = "SELECT p.id,p.name,p.price,v.value,g.product_src FROM product p,product_image g,property_value v WHERE p.id = g.product_id AND p.id = ? AND p.id= v.product_id";
+        String sql = "SELECT p.id,p.name,p.price,p.sub_title,p.sale,v.value,g.product_src FROM product p,product_image g,property_value v WHERE p.id = g.product_id AND p.id = ? AND p.id= v.product_id";
         conn = JDBC.getConnection();
         try {
             prepStat = conn.prepareStatement(sql);
@@ -27,8 +27,10 @@ public class mainDao {
                 int ids = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 float price = resultSet.getFloat("price");
-                String value = resultSet.getString("value");;
-                ProductXi productXi = new ProductXi(ids,name,price,value);
+                String sub_title = resultSet.getString("sub_title");
+                String value = resultSet.getString("value");
+                int sale = resultSet.getInt("sale");
+                ProductXi productXi = new ProductXi(ids,name,price,value,sub_title,sale);
                 return productXi;
             }
         } catch (SQLException e) {
