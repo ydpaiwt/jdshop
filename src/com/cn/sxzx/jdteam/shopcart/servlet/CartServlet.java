@@ -2,6 +2,7 @@ package com.cn.sxzx.jdteam.shopcart.servlet;
 
 import com.cn.sxzx.jdteam.javaBean.pojo.Cart;
 import com.cn.sxzx.jdteam.javaBean.pojo.Product;
+import com.cn.sxzx.jdteam.javaBean.vo.ProductXi;
 import com.cn.sxzx.jdteam.shopcart.service.CartService;
 import com.cn.sxzx.jdteam.shopcart.service.imp.CarServiceImp;
 
@@ -26,19 +27,24 @@ public class CartServlet extends HttpServlet {
         this.response=resp;
         String method = request.getParameter("method");
         if (method.equals("toCart")){
-            addCart();
+            this.addCart();
             this.showCart();
         }else if(method.equals("deleteCart")){
             this.deleteCart();
         }
     }
     //展示购物车
-    private void showCart() {
+    private void showCart() throws IOException {
         Integer user_id = Integer.parseInt(request.getParameter("user_id"));
         service.showCart(user_id);
+        response.sendRedirect("flow1.jsp");
     }
     //添加购物车
     private void addCart() {
+        String name = request.getParameter("name");
+        String color = request.getParameter("color");
+        String size = request.getParameter("size");
+        String price = request.getParameter("price");
         Cart cart = new Cart();
         service.addCart(cart);
     }
