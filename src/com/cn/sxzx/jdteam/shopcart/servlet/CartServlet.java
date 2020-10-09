@@ -1,5 +1,6 @@
 package com.cn.sxzx.jdteam.shopcart.servlet;
 
+import com.cn.sxzx.jdteam.javaBean.pojo.Cart;
 import com.cn.sxzx.jdteam.javaBean.pojo.Product;
 import com.cn.sxzx.jdteam.shopcart.service.CartService;
 import com.cn.sxzx.jdteam.shopcart.service.imp.CarServiceImp;
@@ -25,7 +26,7 @@ public class CartServlet extends HttpServlet {
         this.response=resp;
         String method = request.getParameter("method");
         if (method.equals("toCart")){
-//            addCart();
+            addCart();
             this.showCart();
         }else if(method.equals("deleteCart")){
             this.deleteCart();
@@ -33,12 +34,14 @@ public class CartServlet extends HttpServlet {
     }
     //展示购物车
     private void showCart() {
-        service.showCart();
+        Integer user_id = Integer.parseInt(request.getParameter("user_id"));
+        service.showCart(user_id);
     }
-    /*//添加购物车
+    //添加购物车
     private void addCart() {
-        service.addCart();
-    }*/
+        Cart cart = new Cart();
+        service.addCart(cart);
+    }
     //删除购物车
     private void deleteCart(){
         int id = 1;

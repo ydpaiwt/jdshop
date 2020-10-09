@@ -4,6 +4,8 @@ import com.cn.sxzx.jdteam.javaBean.pojo.Cart;
 import com.cn.sxzx.jdteam.shopcart.dao.CartDao;
 import com.cn.sxzx.jdteam.shopcart.service.CartService;
 
+import java.util.List;
+
 /**
  * @Author:ydp
  * @Date:2020/9/27 15:00
@@ -17,7 +19,12 @@ public class CarServiceImp implements CartService {
     }
 
     @Override
-    public void showCart() {
-        dao.showCart();
+    public List<Cart> showCart(int user_id) {
+        return dao.showCart(user_id);
+    }
+
+    @Override
+    public void addCart(Cart cart) {
+        dao.addCart(cart);
     }
 }

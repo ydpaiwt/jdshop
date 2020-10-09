@@ -6,19 +6,21 @@ package com.cn.sxzx.jdteam.javaBean.pojo;
  */
 public class Cart {
     private int id;
-    private int product_id;
-    private int property_id;
-    private int number;
+    private String product_name;
+    private String color;
+    private String size;
+    private double price;
     private int user_id;
 
     public Cart() {
     }
 
-    public Cart(int id, int product_id, int property_id, int number, int user_id) {
+    public Cart(int id, String product_name, String color, String size, double price, int user_id) {
         this.id = id;
-        this.product_id = product_id;
-        this.property_id = property_id;
-        this.number = number;
+        this.product_name = product_name;
+        this.color = color;
+        this.size = size;
+        this.price = price;
         this.user_id = user_id;
     }
 
@@ -30,28 +32,36 @@ public class Cart {
         this.id = id;
     }
 
-    public int getProduct_id() {
-        return product_id;
+    public String getProduct_name() {
+        return product_name;
     }
 
-    public void setProduct_id(int product_id) {
-        this.product_id = product_id;
+    public void setProduct_name(String product_name) {
+        this.product_name = product_name;
     }
 
-    public int getProperty_id() {
-        return property_id;
+    public String getColor() {
+        return color;
     }
 
-    public void setProperty_id(int property_id) {
-        this.property_id = property_id;
+    public void setColor(String color) {
+        this.color = color;
     }
 
-    public int getNumber() {
-        return number;
+    public String getSize() {
+        return size;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public int getUser_id() {
@@ -66,9 +76,11 @@ public class Cart {
     public String toString() {
         return "Cart{" +
                 "id=" + id +
-                ", product_id=" + product_id +
-                ", property_id=" + property_id +
-                ", number=" + number +
+                ", product_name='" + product_name + '\'' +
+                ", color='" + color + '\'' +
+                ", size='" + size + '\'' +
+                ", price=" + price +
+                ", user_id=" + user_id +
                 '}';
     }
 }
