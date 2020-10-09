@@ -1,7 +1,8 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%
+    String path = request.getContextPath();
+%>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -46,7 +47,7 @@
         </div>
         <div class="topnav_right fr">
             <ul>
-                <li>您好，欢迎来到京西！[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </li>
+                <li>您好，欢迎来到京西！[<a href="loginServlet?method=toLogin">登录</a>] [<a href="registerServlet?method=toRegister">免费注册</a>] </li>
                 <li class="line">|</li>
                 <li>我的订单</li>
                 <li class="line">|</li>
@@ -64,7 +65,7 @@
 <div class="header w1210 bc mt15">
     <!-- 头部上半部分 start 包括 logo、搜索、用户中心和购物车结算 -->
     <div class="logo w1210">
-        <h1 class="fl"><a href="index.html"><img src="images/logo.png" alt="京西商城"></a></h1>
+        <h1 class="fl"><a><img src="images/logo.png" alt="京西商城"></a></h1>
         <!-- 头部搜索 start -->
         <div class="search fl">
             <div class="search_form">
@@ -79,10 +80,10 @@
 
             <div class="hot_search">
                 <strong>热门搜索:</strong>
-                <a href="">NIKE休闲男装</a>
-                <a href="">条纹卫衣</a>
-                <a href="">暴龙眼睛</a>
-                <a href="">ins风渔夫帽</a>
+                <a href="mainServlet?method=toGoods&id=1&product_id=1">NIKE休闲男装</a>
+                <a href="mainServlet?method=toGoods&id=2&product_id=2">条纹卫衣</a>
+                <a href="mainServlet?method=toGoods&id=4&product_id=4">暴龙眼睛</a>
+                <a href="mainServlet?method=toGoods&id=3&product_id=3">ins风渔夫帽</a>
             </div>
         </div>
         <!-- 头部搜索 end -->
@@ -97,21 +98,16 @@
                 </dt>
                 <dd>
                     <div class="prompt">
-                        您好，请<a href="">登录</a>
+                        您好，请<a href="loginServlet?method=toLogin">登录</a>
                     </div>
                     <div class="uclist mt10">
                         <ul class="list1 fl">
                             <li><a href="">用户信息></a></li>
-                            <li><a href="">我的订单></a></li>
                             <li><a href="">收货地址></a></li>
-                            <li><a href="">我的收藏></a></li>
                         </ul>
 
                         <ul class="fl">
-                            <li><a href="">我的留言></a></li>
-                            <li><a href="">我的红包></a></li>
-                            <li><a href="">我的评论></a></li>
-                            <li><a href="">资金管理></a></li>
+                            <li><a href="">我的订单></a></li>
                         </ul>
 
                     </div>
@@ -157,7 +153,8 @@
                     <h3><a href="">配饰</a> <b></b></h3>
                     <div class="cat_detail none">
                         <dl class="dl_1st">
-                            <dt><a href="">眼镜帽子</a></dt>
+                            <dt><a href="mainServlet?method=toGoods&id=4&product_id=4">眼镜</a></dt>
+                            <dt><a href="mainServlet?method=toGoods&id=3&product_id=3">帽子</a></dt>
                         </dl>
                     </div>
                 </div>
@@ -165,20 +162,15 @@
                 <div class="cat">
                     <div class="cat_detail"></div>
                 </div>
-
-
-
-
             </div>
-
         </div>
         <!--  商品分类部分 end-->
 
         <div class="navitems fl">
             <ul class="fl">
-                <li class="current"><a href="">首页</a></li>
-                <li><a href="">服饰城</a></li>
-
+                <li ><a href="index.jsp">首页</a></li>
+                <li ><a href="mainServlet?method=toGoods&id=4&product_id=4">眼镜</a></li>
+                <li ><a href="mainServlet?method=toGoods&id=3&product_id=3">帽子</a></li>
             </ul>
             <div class="right_corner fl"></div>
         </div>
@@ -194,7 +186,7 @@
 <div class="main w1210 mt10 bc">
     <!-- 面包屑导航 start -->
     <div class="breadcrumb">
-        <h2>当前位置：<a href="">首页</a> > <a href="">服装上衣</a> > <a href="">男装</a> >卫衣男潮牌2020春秋款外套潮流 </h2>
+        <h2>当前位置：<a href="">首页</a>>${sessionScope.productXi.sub_title}>${sessionScope.productXi.name}</h2>
     </div>
     <!-- 面包屑导航 end -->
 
@@ -205,8 +197,10 @@
             <h2><strong>相关分类</strong></h2>
             <div class="leftbar_wrap">
                 <ul>
-                    <li><a href="">眼镜</a></li>
-
+                    <li><a href="mainServlet?method=toGoods&id=4&product_id=4">眼镜</a></li>
+                    <li><a href="mainServlet?method=toGoods&id=3&product_id=3">帽子</a></li>
+                    <li><a href="mainServlet?method=toGoods&id=1&product_id=1">男装</a></li>
+                    <li><a href="mainServlet?method=toGoods&id=2&product_id=2">女装</a></li>
                 </ul>
             </div>
         </div>
@@ -238,75 +232,6 @@
                 </ul>
             </div>
         </div>
-        <!-- 热销排行 end -->
-
-
-        <!-- 浏览过该商品的人还浏览了  start 注：因为和list页面newgoods样式相同，故加入了该class -->
-        <div class="related_view newgoods leftbar mt10">
-            <h2><strong>浏览了该商品的用户还浏览了</strong></h2>
-            <div class="leftbar_wrap">
-                <ul>
-                    <li>
-                        <dl>
-                            <dt><a href=""><img src="images/relate_view1.jpg" alt="" /></a></dt>
-                            <dd><a href="">2020春秋新款卫衣男士港风潮牌长袖宽松韩版百搭学生男装加绒上衣</a></dd>
-                            <dd><strong>￥75</strong></dd>
-                        </dl>
-                    </li>
-
-                    <li>
-                        <dl>
-                            <dt><a href=""><img src="images/relate_view2.jpg" alt="" /></a></dt>
-                            <dd><a href="">南极人秋冬款卫衣男韩版潮流宽松嘻哈青少年加绒加厚连帽上衣外套 </a></dd>
-                            <dd><strong>￥199.00</strong></dd>
-                        </dl>
-                    </li>
-
-                    <li>
-                        <dl>
-                            <dt><a href=""><img src="images/relate_view3.jpg" alt="" /></a></dt>
-                            <dd><a href="">ins超火情侣装小哥哥长袖秋冬款加绒宽松潮牌圆领卫衣男打底上衣 </a></dd>
-                            <dd><strong>￥99</strong></dd>
-                        </dl>
-                    </li>
-
-                    <li>
-                        <dl>
-                            <dt><a href=""><img src="images/relate_view4.jpg" alt="" /></a></dt>
-                            <dd><a href="">卫衣男士春秋款圆领体恤港风韩版宽松大码ins情侣装休闲打底上衣 </a></dd>
-                            <dd><strong>￥105.00</strong></dd>
-                        </dl>
-                    </li>
-
-                    <li class="last">
-                        <dl>
-                            <dt><a href=""><img src="images/relate_view5.jpg" alt="" /></a></dt>
-                            <dd><a href="">秋冬季圆领卫衣男青少年假两件外套港风潮流ins百搭初中生上衣服</a></dd>
-                            <dd><strong>￥89.9</strong></dd>
-                        </dl>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- 浏览过该商品的人还浏览了  end -->
-
-        <!-- 最近浏览 start -->
-        <div class="viewd leftbar mt10">
-            <h2><a href="">清空</a><strong>最近浏览过的商品</strong></h2>
-            <div class="leftbar_wrap">
-                <dl>
-                    <dt><a href=""><img src="images/hpG4.jpg" alt="" /></a></dt>
-                    <dd><a href="">慵懒风连帽套头卫衣男士秋冬季</a></dd>
-                </dl>
-
-                <dl class="last">
-                    <dt><a href=""><img src="images/crazy4.jpg" alt="" /></a></dt>
-                    <dd><a href="">直降200元！潮牌帅气圆领卫衣</a></dd>
-                </dl>
-            </div>
-        </div>
-        <!-- 最近浏览 end -->
-
     </div>
     <!-- 主体页面左侧内容 end -->
 
@@ -314,13 +239,13 @@
     <div class="goods_content fl mt10 ml10">
         <!-- 商品概要信息 start -->
         <div class="summary">
-            <h3><strong>连帽印花卫衣男秋冬季宽松cec外套慵懒风ins潮流百搭学生休闲上衣</strong></h3>
-
+            <h3><strong>${sessionScope.productXi.name}</strong></h3>
+<%--            <c:forEach items="${sessionScope.imgList}" var="img" begin="0" end="0">--%>
             <!-- 图片预览区域 start -->
             <div class="preview fl">
                 <div class="midpic">
-                    <a href="images/preview_l1.jpg" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
-                        <img src="images/preview_m1.jpg" alt="" />               <!-- 第一幅图片的中图 -->
+                    <a href="images/${requestScope.imgList[0]}" style="width: 800px;height: 800px;"  class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
+                        <img src="images/${requestScope.imgList[0]}" style="width: 350px;height: 350px;" alt="" />               <!-- 第一幅图片的中图 -->
                     </a>
                 </div>
 
@@ -329,26 +254,38 @@
                 <div class="smallpic">
                     <a href="javascript:;" id="backward" class="off"></a>
                     <a href="javascript:;" id="forward" class="on"></a>
-                    <div class="smallpic_wrap">
-                        <ul>
-                            <li class="cur">
-                                <a class="zoomThumbActive" href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: 'images/preview_m1.jpg',largeimage: 'images/preview_l1.jpg'}"><img src="images/preview_s1.jpg"></a>
-                            </li>
 
+                    <script type="text/javascript">
+                        $(function () {
+                            $("#imgUL li:first").attr("class","cur");
+                            $("#imgUL li:first a").attr("class","zoomThumbActive");
+                        })
+                    </script>
+
+
+                    <div class="smallpic_wrap">
+                        <ul id="imgUL">
+                            <c:forEach items="${requestScope.imgList}" var="img" varStatus="i">
+                            <li>
+                                <a href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: '<%=path%>/images/${img}',largeimage: '<%=path%>/images/${img}'}">
+                                    <img style="width: 50px; height: 50px;" src="<%=path%>/images/${img}">
+                                </a>
+                            </li>
+                            </c:forEach>
                         </ul>
                     </div>
 
                 </div>
             </div>
             <!-- 图片预览区域 end -->
-
+<%--            </c:forEach>--%>
             <!-- 商品基本信息区域 start -->
             <div class="goodsinfo fl ml10">
                 <ul>
                     <li><span>商品编号： </span>971344</li>
-                    <li class="market_price"><span>定价：</span><em>￥199.00</em></li>
-                    <li class="shop_price"><span>本店价：</span> <strong>￥99.00</strong> <a href="">(降价通知)</a></li>
-                    <li><span>上架时间：</span>2012-09-12</li>
+                    <li class="market_price"><span>定价：</span><em>￥499.00</em></li>
+                    <li class="shop_price"><span>本店价：</span> <strong>${sessionScope.productXi.price}</strong> <a>(降价通知)</a></li>
+                    <li><span>销售：</span>${sessionScope.productXi.sale}</li>
                     <li class="star"><span>商品评分：</span> <strong></strong><a href="">(已有21人评价)</a></li> <!-- 此处的星级切换css即可 默认为5星 star4 表示4星 star3 表示3星 star2表示2星 star1表示1星 -->
                 </ul>
                 <form action="" method="post" class="choose">
@@ -357,7 +294,7 @@
                             <dl>
                                 <dt>颜色：</dt>
                                 <dd>
-                                    <a class="selected" href="javascript:;">白色 <input type="radio" name="color" value="白色" checked="checked" /></a>
+                                    <a class="selected" href="javascript:;">${sessionScope.productXi.value} <input type="radio" name="color" value="白色" checked="checked" /></a>
 
                                     <input type="hidden" name="" value="" />
                                 </dd>
@@ -402,209 +339,47 @@
 
         <div style="clear:both;"></div>
 
-        <!-- 商品详情 start -->
-        <div class="detail">
-            <div class="detail_hd">
-                <ul>
-                    <li class="on"><span>商品评价</span></li>
-                    <li><span>售后保障</span></li>
-                </ul>
-            </div>
-            <div class="detail_bd">
+        </div>
+    <!-- 商品详情 start -->
+    <div class="detail">
+        <div class="detail_hd">
+            <ul>
+                <li class="on"><span>商品介绍</span></li>
+                <li ><span>售后保障</span></li>
+            </ul>
+        </div>
+        <div class="detail_bd">
+            <!-- 商品介绍 start -->
+            <div class="introduce detail_div none">
+                
 
-                <!-- 商品评论 start -->
-                <div class="comment detail_div mt10">
-                    <div class="comment_summary">
-                        <div class="rate fl">
-                            <strong><em>90</em>%</strong> <br />
-                            <span>好评度</span>
-                        </div>
-                        <div class="percent fl">
-                            <dl>
-                                <dt>好评（90%）</dt>
-                                <dd><div style="width:90px;"></div></dd>
-                            </dl>
-                            <dl>
-                                <dt>中评（5%）</dt>
-                                <dd><div style="width:5px;"></div></dd>
-                            </dl>
-                            <dl>
-                                <dt>差评（5%）</dt>
-                                <dd><div style="width:5px;" ></div></dd>
-                            </dl>
-                        </div>
-                        <div class="buyer fl">
-                            <dl>
-                                <dt>买家印象：</dt>
-                                <dd><span>码数大</span><em>(1953)</em></dd>
-                                <dd><span>外观漂亮</span><em>(786)</em></dd>
-                                <dd><span>物流快</span><em>(659)</em></dd>
-
-                            </dl>
-                        </div>
-                    </div>
-
-                    <div class="comment_items mt10">
-                        <div class="user_pic">
-                            <dl>
-                                <dt><a href=""><img src="images/user1.gif" alt="" /></a></dt>
-                                <dd><a href="">乖乖</a></dd>
-                            </dl>
-                        </div>
-                        <div class="item">
-                            <div class="title">
-                                <span>2013-03-11 22:18</span>
-                                <strong class="star star5"></strong> <!-- star5表示5星级 start4表示4星级，以此类推 -->
-                            </div>
-                            <div class="comment_content">
-                                <dl>
-                                    <dt>心得：</dt>
-                                    <dd>东西挺好，挺满意的！</dd>
-                                </dl>
-                                <dl>
-                                    <dt>优点：</dt>
-                                    <dd>颜色挺喜欢的</dd>
-                                </dl>
-                                <dl>
-                                    <dt>不足：</dt>
-                                    <dd>暂时还没发现缺点哦！</dd>
-                                </dl>
-                                <dl>
-                                    <dt>购买日期：</dt>
-                                    <dd>2013-11-24</dd>
-                                </dl>
-                            </div>
-                            <div class="btns">
-                                <a href="" class="reply">回复(0)</a>
-                                <a href="" class="useful">有用(0)</a>
-                            </div>
-                        </div>
-                        <div class="cornor"></div>
-                    </div>
-
-                    <div class="comment_items mt10">
-                        <div class="user_pic">
-                            <dl>
-                                <dt><a href=""><img src="images/user2.jpg" alt="" /></a></dt>
-                                <dd><a href="">小宝贝</a></dd>
-                            </dl>
-                        </div>
-                        <div class="item">
-                            <div class="title">
-                                <span>2013-10-01 14:10</span>
-                                <strong class="star star4"></strong> <!-- star5表示5星级 start4表示4星级，以此类推 -->
-                            </div>
-                            <div class="comment_content">
-                                <dl>
-                                    <dt>心得：</dt>
-                                    <dd>外观漂亮。</dd>
-                                </dl>
-                                <dl>
-                                    <dt>颜色：</dt>
-                                    <dd>白色</dd>
-                                </dl>
-                                <dl>
-                                    <dt>购买日期：</dt>
-                                    <dd>2013-11-20</dd>
-                                </dl>
-                            </div>
-                            <div class="btns">
-                                <a href="" class="reply">回复(0)</a>
-                                <a href="" class="useful">有用(0)</a>
-                            </div>
-                        </div>
-                        <div class="cornor"></div>
-                    </div>
-
-                    <div class="comment_items mt10">
-                        <div class="user_pic">
-                            <dl>
-                                <dt><a href=""><img src="images/user3.jpg" alt="" /></a></dt>
-                                <dd><a href="">天使</a></dd>
-                            </dl>
-                        </div>
-                        <div class="item">
-                            <div class="title">
-                                <span>2013-03-11 22:18</span>
-                                <strong class="star star5"></strong> <!-- star5表示5星级 start4表示4星级，以此类推 -->
-                            </div>
-                            <div class="comment_content">
-                                <dl>
-                                    <dt>心得：</dt>
-                                    <dd>挺好的，物超所值，速度挺好。</dd>
-                                </dl>
-                                <dl>
-                                    <dt>优点：</dt>
-                                    <dd>颜色很正</dd>
-                                </dl>
-                                <dl>
-                                    <dt>不足：</dt>
-                                    <dd>暂时还没发现缺点哦！</dd>
-                                </dl>
-                                <dl>
-                                    <dt>购买日期：</dt>
-                                    <dd>2013-11-24</dd>
-                                </dl>
-                            </div>
-                            <div class="btns">
-                                <a href="" class="reply">回复(0)</a>
-                                <a href="" class="useful">有用(0)</a>
-                            </div>
-                        </div>
-                        <div class="cornor"></div>
-                    </div>
-
-                    <!-- 分页信息 start -->
-                    <div class="page mt20">
-                        <a href="">首页</a>
-                        <a href="">上一页</a>
-                        <a href="">1</a>
-                        <a href="">2</a>
-                        <a href="" class="cur">3</a>
-                        <a href="">4</a>
-                        <a href="">5</a>
-                        <a href="">下一页</a>
-                        <a href="">尾页</a>
-                    </div>
-                    <!-- 分页信息 end -->
-
-                    <!--  评论表单 start-->
-                    <div class="comment_form mt20">
-                        <form action="">
-                            <ul>
-                                <li>
-                                    <label for=""> 评分：</label>
-                                    <input type="radio" name="grade"/> <strong class="star star5"></strong>
-                                    <input type="radio" name="grade"/> <strong class="star star4"></strong>
-                                    <input type="radio" name="grade"/> <strong class="star star3"></strong>
-                                    <input type="radio" name="grade"/> <strong class="star star2"></strong>
-                                    <input type="radio" name="grade"/> <strong class="star star1"></strong>
-                                </li>
-
-                                <li>
-                                    <label for="">评价内容：</label>
-                                    <textarea name="" id="" cols="" rows=""></textarea>
-                                </li>
-                                <li>
-                                    <label for="">&nbsp;</label>
-                                    <input type="submit" value="提交评论"  class="comment_btn"/>
-                                </li>
-                            </ul>
-                        </form>
-                    </div>
-                    <!--  评论表单 end-->
-
+                <div class="attr mt15">
+                    <ul>
+                        <li><span>商品名称：</span>${sessionScope.productXi.name}</li>
+                        <li><span>商品产地：</span>中国大陆</li>
+                        <li><span>商品规格：</span>全型号</li>
+                        <li><span></span></li>
+                    </ul>
                 </div>
-                <!-- 商品评论 end -->
+                <div class="desc mt10">
+                    <!-- 此处的内容 一般是通过在线编辑器添加保存到数据库，然后直接从数据库中读出 -->
+                    <img src="images/${requestScope.imgList[3]}" alt="" />
+                    <p style="height:10px;"></p>
+                    <img src="images/${requestScope.imgList[4]}" alt="" />
+                    <p style="height:10px;"></p>
+                    <img src="images/${requestScope.imgList[5]}" alt="" />
+                    <p style="height:10px;"></p>
+                    <img src="images/${requestScope.imgList[6]}" alt="" />
+                    <p style="height:10px;"></p>
+                </div>
+            </div>
+            <!-- 商品介绍 end -->
+
+
+            <!-- 商品评论 end -->
 
                 <!-- 售后保障 start -->
                 <div class="after_sale mt15 none detail_div">
-                    <div>
-                        <p>本产品全国联保，享受三包服务，质保期为：一年质保 <br />如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7日内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！</p>
-                        <p>售后服务电话：800-898-9006 <br />品牌官方网站：http://www.lenovo.com.cn/</p>
-
-                    </div>
-
                     <div>
                         <h3>服务承诺：</h3>
                         <p>本商城向您保证所售商品均为正品行货，京东自营商品自带机打发票，与商品一起寄送。凭质保证书及京东商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由本商城联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。本商城还为您提供具有竞争力的商品价格和运费政策，请您放心购买！</p>
@@ -642,23 +417,23 @@
     <div class="bnav1">
         <h3><b></b> <em>购物指南</em></h3>
         <ul>
-            <li><a href="">购物流程</a></li>
-            <li><a href="">会员介绍</a></li>
-            <li><a href="">团购/机票/充值/点卡</a></li>
-            <li><a href="">常见问题</a></li>
-            <li><a href="">大家电</a></li>
-            <li><a href="">联系客服</a></li>
+            <li><a >购物流程</a></li>
+            <li><a >会员介绍</a></li>
+            <li><a >团购/机票/充值/点卡</a></li>
+            <li><a >常见问题</a></li>
+            <li><a >大家电</a></li>
+            <li><a >联系客服</a></li>
         </ul>
     </div>
 
     <div class="bnav2">
         <h3><b></b> <em>配送方式</em></h3>
         <ul>
-            <li><a href="">上门自提</a></li>
-            <li><a href="">快速运输</a></li>
-            <li><a href="">特快专递（EMS）</a></li>
-            <li><a href="">如何送礼</a></li>
-            <li><a href="">海外购物</a></li>
+            <li><a >上门自提</a></li>
+            <li><a >快速运输</a></li>
+            <li><a >特快专递（EMS）</a></li>
+            <li><a >如何送礼</a></li>
+            <li><a >海外购物</a></li>
         </ul>
     </div>
 
@@ -666,35 +441,35 @@
     <div class="bnav3">
         <h3><b></b> <em>支付方式</em></h3>
         <ul>
-            <li><a href="">货到付款</a></li>
-            <li><a href="">在线支付</a></li>
-            <li><a href="">分期付款</a></li>
-            <li><a href="">邮局汇款</a></li>
-            <li><a href="">公司转账</a></li>
+            <li><a >货到付款</a></li>
+            <li><a >在线支付</a></li>
+            <li><a >分期付款</a></li>
+            <li><a >邮局汇款</a></li>
+            <li><a >公司转账</a></li>
         </ul>
     </div>
 
     <div class="bnav4">
         <h3><b></b> <em>售后服务</em></h3>
         <ul>
-            <li><a href="">退换货政策</a></li>
-            <li><a href="">退换货流程</a></li>
-            <li><a href="">价格保护</a></li>
-            <li><a href="">退款说明</a></li>
-            <li><a href="">返修/退换货</a></li>
-            <li><a href="">退款申请</a></li>
+            <li><a >退换货政策</a></li>
+            <li><a >退换货流程</a></li>
+            <li><a >价格保护</a></li>
+            <li><a >退款说明</a></li>
+            <li><a >返修/退换货</a></li>
+            <li><a >退款申请</a></li>
         </ul>
     </div>
 
     <div class="bnav5">
         <h3><b></b> <em>特色服务</em></h3>
         <ul>
-            <li><a href="">夺宝岛</a></li>
-            <li><a href="">DIY装机</a></li>
-            <li><a href="">延保服务</a></li>
-            <li><a href="">家电下乡</a></li>
-            <li><a href="">京东礼品卡</a></li>
-            <li><a href="">能效补贴</a></li>
+            <li><a >夺宝岛</a></li>
+            <li><a >DIY装机</a></li>
+            <li><a >延保服务</a></li>
+            <li><a >家电下乡</a></li>
+            <li><a >京东礼品卡</a></li>
+            <li><a >能效补贴</a></li>
         </ul>
     </div>
 </div>
@@ -704,26 +479,26 @@
 <!-- 底部版权 start -->
 <div class="footer w1210 bc mt10">
     <p class="links">
-        <a href="">关于我们</a> |
-        <a href="">联系我们</a> |
-        <a href="">人才招聘</a> |
-        <a href="">商家入驻</a> |
-        <a href="">千寻网</a> |
-        <a href="">奢侈品网</a> |
-        <a href="">广告服务</a> |
-        <a href="">移动终端</a> |
-        <a href="">友情链接</a> |
-        <a href="">销售联盟</a> |
-        <a href="">京西论坛</a>
+        <a >关于我们</a> |
+        <a>联系我们</a> |
+        <a >人才招聘</a> |
+        <a >商家入驻</a> |
+        <a >千寻网</a> |
+        <a >奢侈品网</a> |
+        <a >广告服务</a> |
+        <a >移动终端</a> |
+        <a >友情链接</a > |
+        <a >销售联盟</a> |
+        <a >京西论坛</a>
     </p>
     <p class="copyright">
         © 2005-2013 京东网上商城 版权所有，并保留所有权利。  ICP备案证书号:京ICP证070359号
     </p>
     <p class="auth">
-        <a href=""><img src="images/xin.png" alt="" /></a>
-        <a href=""><img src="images/kexin.jpg" alt="" /></a>
-        <a href=""><img src="images/police.jpg" alt="" /></a>
-        <a href=""><img src="images/beian.gif" alt="" /></a>
+        <a ><img src="images/xin.png" alt="" /></a>
+        <a ><img src="images/kexin.jpg" alt="" /></a>
+        <a ><img src="images/police.jpg" alt="" /></a>
+        <a ><img src="images/beian.gif" alt="" /></a>
     </p>
 </div>
 <!-- 底部版权 end -->

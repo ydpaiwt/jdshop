@@ -20,36 +20,36 @@ public class  RegisterServlet extends HttpServlet {
                 this.response = resp;
 
                 String method = request.getParameter("method");
-                if(method.equals("toRegister")){
-                        this.toRegister();
-                }
 
-                if (method.equals("register")){
+                if (method.equals("register")) {
                         this.register();
                 }
-
+                if (method.equals("toRegister")) {
+                        this.toRegister();
+                }
         }
 
-        //注册
         private void register() throws IOException {
-//        request.setCharacterEncoding("utf-8");
-                String name = request.getParameter("name");
-                String pwd = request.getParameter("pwd");
-                boolean istrue = service.register(name,pwd);
-                if (istrue){
+                String name = request.getParameter("username");
+                String pwd = request.getParameter("userpwd");
+                boolean istrue = service.register(name, pwd);
+                if (istrue) {
                         //注册成功
                         response.sendRedirect("index.jsp");
-                }else {
+                } else {
                         //注册失败
                         response.sendRedirect("registerServlet?method=toRegister");
                 }
         }
+
         //去注册
-        private void toRegister() throws IOException{
+        private void toRegister() throws IOException {
                 response.sendRedirect("registerV/register.jsp");
         }
+
         @Override
         protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
                 doGet(req,resp);
         }
 }
+
