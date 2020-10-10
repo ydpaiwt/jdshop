@@ -29,7 +29,7 @@ public class LoginFilter implements Filter {
 
         if (user != null){
             filterChain.doFilter(request,response);
-        }else if (url.indexOf("index.jsp") != -1 || url.indexOf(".jpg") != -1 || url.indexOf("login.jsp") != -1 || url.indexOf("loginServlet") != -1){
+        }else if (url.indexOf("index.jsp") != -1 || url.indexOf(".jpg") != -1 || url.indexOf("login.jsp") != -1 || url.indexOf("loginServlet") != -1 || url.indexOf("mainServlet") !=-1 || url.indexOf("goods.jsp")!= -1){
             filterChain.doFilter(request,response);
         }
     }
