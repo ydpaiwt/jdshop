@@ -6,20 +6,32 @@ package com.cn.sxzx.jdteam.javaBean.pojo;
  */
 public class Cart {
     private int id;
+    private String product_img;
     private String product_name;
     private String color;
     private String size;
     private double price = 0.0;
+    private int number;
     private int user_id;
 
     public Cart() {
     }
 
-    public Cart(String product_name, String color, String size, double price,int user_id) {
+    public Cart(String product_name, String color, String size, double price, int user_id) {
         this.product_name = product_name;
         this.color = color;
         this.size = size;
         this.price = price;
+        this.user_id = user_id;
+    }
+
+    public Cart(String product_img, String product_name, String color, String size, double price, int number, int user_id) {
+        this.product_img = product_img;
+        this.product_name = product_name;
+        this.color = color;
+        this.size = size;
+        this.price = price;
+        this.number = number;
         this.user_id = user_id;
     }
 
@@ -29,6 +41,17 @@ public class Cart {
         this.color = color;
         this.size = size;
         this.price = price;
+        this.user_id = user_id;
+    }
+
+    public Cart(int id, String product_img, String product_name, String color, String size, double price, int number, int user_id) {
+        this.id = id;
+        this.product_img = product_img;
+        this.product_name = product_name;
+        this.color = color;
+        this.size = size;
+        this.price = price;
+        this.number = number;
         this.user_id = user_id;
     }
 
@@ -76,6 +99,22 @@ public class Cart {
         return user_id;
     }
 
+    public String getProduct_img() {
+        return product_img;
+    }
+
+    public void setProduct_img(String product_img) {
+        this.product_img = product_img;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
     public void setUser_id(int user_id) {
         this.user_id = user_id;
     }
@@ -84,10 +123,12 @@ public class Cart {
     public String toString() {
         return "Cart{" +
                 "id=" + id +
+                ", product_img='" + product_img + '\'' +
                 ", product_name='" + product_name + '\'' +
                 ", color='" + color + '\'' +
                 ", size='" + size + '\'' +
                 ", price=" + price +
+                ", number=" + number +
                 ", user_id=" + user_id +
                 '}';
     }

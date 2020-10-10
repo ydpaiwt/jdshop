@@ -13,12 +13,13 @@ public class LoginDao {
 
         public User login(String name, String pwd)  {
             String sql = "select id,name,password from user where name = ? and password = ?";
+            ResultSet resultSet = null;
             conn = JDBC.getConnection();
             try {
                 prepStat = conn.prepareStatement(sql);
                 prepStat.setString(1, name);
                 prepStat.setString(2, pwd);
-                ResultSet resultSet = prepStat.executeQuery();
+                resultSet = prepStat.executeQuery();
                 if (resultSet.next()) {
                     int id = resultSet.getInt("id");
                     String uname = resultSet.getString("name");
@@ -29,11 +30,7 @@ public class LoginDao {
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
-                try {
-                    conn.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
+                JDBC.close(resultSet,prepStat,conn);
             }
             return null;
         }

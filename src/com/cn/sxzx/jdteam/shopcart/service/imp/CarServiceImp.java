@@ -27,4 +27,13 @@ public class CarServiceImp implements CartService {
     public void addCart(Cart cart) {
         dao.addCart(cart);
     }
+
+    @Override
+    public double getTotal(List<Cart> cartList) {
+        int total = 0;
+        for (Cart cart :cartList) {
+            total += cart.getNumber()*cart.getPrice();
+        }
+        return total;
+    }
 }

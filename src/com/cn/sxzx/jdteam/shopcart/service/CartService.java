@@ -15,4 +15,6 @@ public interface CartService {
     List<Cart> showCart(int user_id);
 
     void addCart(Cart cart);
+
+    double getTotal(List<Cart> cartList);
 }

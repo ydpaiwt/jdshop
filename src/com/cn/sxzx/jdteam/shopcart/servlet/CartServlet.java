@@ -33,6 +33,8 @@ public class CartServlet extends HttpServlet {
         }else if(method.equals("deleteCart")){
             this.deleteCart();
             this.showCart();
+        }else if (method.equals("showCart")){
+            this.showCart();
         }
     }
     //展示购物车
@@ -41,6 +43,8 @@ public class CartServlet extends HttpServlet {
         User user = (User)request.getSession().getAttribute("user");
         int user_id = user.getId();
         List<Cart> cartList = service.showCart(user_id);
+        double total = service.getTotal(cartList);
+        request.setAttribute("total",total);
         request.setAttribute("cartList",cartList);
         request.getRequestDispatcher("/flow1.jsp").forward(request,response);
 
@@ -48,12 +52,14 @@ public class CartServlet extends HttpServlet {
     //添加购物车
     private void addCart() {
         String name = request.getParameter("name");
+        String image = request.getParameter("image");
         String color = request.getParameter("color");
         String size = request.getParameter("size");
         double price = Double.parseDouble(request.getParameter("price"));
+        int amount = Integer.parseInt(request.getParameter("amount"));
         User user = (User)request.getSession().getAttribute("user");
         int user_id = user.getId();
-        Cart cart = new Cart(name,color,size,price,user_id);
+        Cart cart = new Cart(image,name,color,size,price,amount,user_id);
         service.addCart(cart);
     }
     //删除购物车

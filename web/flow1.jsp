@@ -18,7 +18,11 @@
 
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/cart1.js"></script>
-
+    <script type="text/javascript">
+        $(function () {
+            $("#total").text(${requestScope.total});
+        });
+    </script>
 </head>
 <body>
 <!-- 顶部导航 start -->
@@ -77,15 +81,15 @@
         <tbody>
         <c:forEach items="${requestScope.cartList}" var="cart">
             <tr>
-                <td class="col1"><a href=""><img src="images/cart_goods1.jpg" alt="" /></a>  <strong><a href="">${cart.product_name}</a></strong></td>
+                <td class="col1"><img src="images/${cart.product_img}" alt="" /> <strong>${cart.product_name}</strong></td>
                 <td class="col2"> <p>颜色：${cart.color}</p> <p>尺码：${cart.size}</p> </td>
                 <td class="col3">￥<span>${cart.price}</span></td>
                 <td class="col4">
                     <a href="javascript:;" class="reduce_num"></a>
-                    <input type="text" name="amount" value="1" class="amount"/>
+                    <input type="text" name="amount" value="${cart.number}" class="amount"/>
                     <a href="javascript:;" class="add_num"></a>
                 </td>
-                <td class="col5">￥<span>${cart.price}</span></td>
+                <td class="col5">￥<span>${cart.price*cart.number}</span></td>
                 <td class="col6"><a href="cartServlet?method=deleteCart&id=${cart.id}">删除</a></td>
             </tr>
         </c:forEach>

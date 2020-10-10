@@ -17,15 +17,17 @@ public class CartDao {
     PreparedStatement ps = null;
     //添加商品信息
     public void addCart(Cart cart){
-        String sql = "insert into cart(product_name,color,size,price,user_id) values(?,?,?,?,?)";
+        String sql = "insert into cart(product_img,product_name,color,size,price,number,user_id) values(?,?,?,?,?,?,?)";
         conn = JDBC.getConnection();
         try {
             ps = conn.prepareStatement(sql);
-            ps.setString(1,cart.getProduct_name());
-            ps.setString(2,cart.getColor());
-            ps.setString(3,cart.getSize());
-            ps.setDouble(4,cart.getPrice());
-            ps.setInt(5,cart.getUser_id());
+            ps.setString(1,cart.getProduct_img());
+            ps.setString(2,cart.getProduct_name());
+            ps.setString(3,cart.getColor());
+            ps.setString(4,cart.getSize());
+            ps.setDouble(5,cart.getPrice());
+            ps.setInt(6,cart.getNumber());
+            ps.setInt(7,cart.getUser_id());
             int i = ps.executeUpdate();
             if (i>0){
                 System.out.println("添加成功");
@@ -69,12 +71,14 @@ public class CartDao {
             rest = ps.executeQuery();
             while (rest.next()){
                 int id = rest.getInt("id");
+                String product_image = rest.getString("product_img");
                 String product_name = rest.getString("product_name");
                 String color = rest.getString("color");
                 String size = rest.getString("size");
                 double price = rest.getDouble("price");
+                int number = rest.getInt("number");
                 int user_id1 = rest.getInt("user_id");
-                Cart cart = new Cart(id,product_name,color,size,price,user_id1);
+                Cart cart = new Cart(id,product_image,product_name,color,size,price,number,user_id1);
                 cartList.add(cart);
             }
             return cartList;

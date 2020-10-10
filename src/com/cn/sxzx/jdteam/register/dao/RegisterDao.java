@@ -37,11 +37,7 @@ public class RegisterDao {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            try {
-                conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            JDBC.close(prepStat,conn);
         }
         return false;
     }
