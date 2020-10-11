@@ -12,6 +12,6 @@
 .menu_wrap dt{background: #f1f1f1; height: 28px; line-height: 28px; font-weight: bolder; padding-left: 10px; margin-bottom: 1px; position: relative; cursor: pointer;}
 .menu_wrap dt b{display: block; width: 9px; height: 5px; overflow: hidden; background: url("../images/jdleft.png") -64px 0 no-repeat; position: absolute; left:180px; top:12px;}
 .menu_wrap dt b.off{background-position: -64px -6px;}
-.menu_wrap dd{line-height: 25px; padding-left: 10px;} 
+.menu_wrap dd{line-height: 25px; padding-left: 10px;}
 .menu_wrap dd.cur{font-weight: bold;}
 .menu_wrap dd b{font-family: Arial; color: #aaa; font-size: 14px; margin-right: 5px;}

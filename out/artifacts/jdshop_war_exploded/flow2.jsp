@@ -22,6 +22,12 @@
     <script type="text/javascript">
         $(function () {
             $("#total").text(${requestScope.total});
+            $("#submit").click(function () {
+                var form = $("form[id=myform]").serialize();
+                var url = "orderServlet?"+form;
+                $(this).attr("href",url);
+            });
+
         });
 
     </script>
@@ -35,7 +41,7 @@
         </div>
         <div class="topnav_right fr">
             <ul>
-                <li>您好，欢迎来到京西！[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </li>
+                <li>您好，欢迎来到京西！[<a href="login.jsp">登录</a>] [<a href="register.jsp">免费注册</a>] </li>
                 <li class="line">|</li>
                 <li>我的订单</li>
                 <li class="line">|</li>
@@ -52,7 +58,7 @@
 <!-- 页面头部 start -->
 <div class="header w990 bc mt15">
     <div class="logo w990">
-        <h2 class="fl"><a href="index.html"><img src="images/logo.png" alt="京西商城"></a></h2>
+        <h2 class="fl"><a href="index.jsp"><img src="images/logo.png" alt="京西商城"></a></h2>
         <div class="flow fr flow2">
             <ul>
                 <li>1.我的购物车</li>
@@ -84,7 +90,11 @@
             <div class="address_select none">
                 <ul>
                     <li class="cur">
-                        <input type="radio" name="address" checked="checked" />王超平 北京市 昌平区 建材城西路金燕龙办公楼一层 13555555555
+
+                        <form action="orderServlet" id="myform" method="post" >
+                            <input type="hidden" name="method" value="toOrder">
+                            <input type="radio" name="address" checked="checked" value="洼港潮平"/>王超平 北京市 昌平区 建材城西路金燕龙办公楼一层 13555555555
+                        </form>
                         <a href="">设为默认地址</a>
                         <a href="">编辑</a>
                         <a href="">删除</a>
@@ -176,7 +186,7 @@
     </div>
 
     <div class="fillin_ft">
-        <a href="flow3.jsp"><span>提交订单</span></a>
+        <a id="submit"><span>提交订单</span></a>
         <p>应付总额：￥<strong id="total"></strong>元</p>
 
     </div>

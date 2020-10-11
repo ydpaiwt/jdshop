@@ -38,7 +38,6 @@ public class OrderServlet extends HttpServlet {
 
         if (method.equals("toOrder")){
             this.addOrder();
-            this.showOrder();
         }
 
         if (method.equals("showOrder")){
@@ -58,7 +57,7 @@ public class OrderServlet extends HttpServlet {
 //    }
 
     //点击提交订单后添加订单
-    private void addOrder() {
+    private void addOrder() throws IOException {
         User user = (User)request.getSession().getAttribute("user");
         int user_id = user.getId();
         CartService cartService = new CarServiceImp();
@@ -68,26 +67,26 @@ public class OrderServlet extends HttpServlet {
             String product_img = cart.getProduct_img();
             String product_name = cart.getProduct_name();
             int number = cart.getNumber();
-            String consignee = user.getName();
+            String consignee = request.getParameter("address");
             double total = cart.getPrice()*cart.getNumber();
             String pay_data = Time_get.getTime();
             String status = "待发货";
             Order_ order = new Order_(order_code,product_img,product_name,number,consignee,total,pay_data,user_id,status);
             service.addOrder(order);
         }
-        double total = service.getTotal(cartList);
+        response.sendRedirect("flow3.jsp");
     }
 
     private void showOrder() throws ServletException, IOException {
         User user = (User)request.getSession().getAttribute("user");
         int user_id = user.getId();
         int pageNow = Integer.parseInt(request.getParameter("pageNow"));
-        List<Order_> order_itemPoList = service.showOrder(user_id,pageNow);
+        List<Order_> orderList = service.showOrder(user_id,pageNow);
         //总页数
         int pageCount = service.pageCount();
         request.setAttribute("pageCount", pageCount);
         request.setAttribute("pageNow", pageNow);
-        request.setAttribute("order_itemPoList", order_itemPoList);
+        request.setAttribute("orderList", orderList);
         request.getRequestDispatcher("orderV/order.jsp").forward(request, response);
     }
 

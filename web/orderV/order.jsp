@@ -81,39 +81,26 @@
                     <b></b>
                 </dt>
                 <dd>
-                    <div class="prompt">
-                        您好，请<a href="">登录</a>
-                    </div>
+<%--                    <div class="prompt">--%>
+<%--                        您好，请<a href="loginServlet?method=toLogin">登录</a>--%>
+<%--                    </div>--%>
                     <div class="uclist mt10">
                         <ul class="list1 fl">
                             <li><a href="">用户信息></a></li>
-                            <li><a href="">我的订单></a></li>
                             <li><a href="">收货地址></a></li>
-                            <li><a href="">我的收藏></a></li>
                         </ul>
 
                         <ul class="fl">
-                            <li><a href="">我的留言></a></li>
-                            <li><a href="">我的红包></a></li>
-                            <li><a href="">我的评论></a></li>
-                            <li><a href="">资金管理></a></li>
+                            <li><a href="orderServlet?method=toOrder">我的订单></a></li>
                         </ul>
 
                     </div>
                     <div style="clear:both;"></div>
-                    <div class="viewlist mt10">
-                        <h3>最近浏览的商品：</h3>
-                        <ul>
-                            <li><a href=""><img src="./images/view_list1.jpg" alt="" /></a></li>
-                            <li><a href=""><img src="./images/view_list2.jpg" alt="" /></a></li>
-                            <li><a href=""><img src="./images/view_list3.jpg" alt="" /></a></li>
-                        </ul>
-                    </div>
                 </dd>
             </dl>
         </div>
         <!-- 用户中心 end-->
-
+<div class="menu"></div>
         <!-- 购物车 start -->
         <div class="cart fl">
             <dl>
@@ -137,15 +124,45 @@
     <div class="crumb w1210">
         <h2><span>> 我的订单</span></h2>
     </div>
+    <!-- 左侧导航菜单 start -->
+    <div class="menu fl">
+
+        <div class="menu_wrap">
+<%--            <dl>--%>
+<%--                <dt>订单中心 <b></b></dt>--%>
+<%--                <dd class="cur"><b>.</b><a href="">我的订单</a></dd>--%>
+<%--                <dd><b>.</b><a href="">我的关注</a></dd>--%>
+<%--                <dd><b>.</b><a href="">浏览历史</a></dd>--%>
+<%--                <dd><b>.</b><a href="">我的团购</a></dd>--%>
+<%--            </dl>--%>
+
+            <dl>
+                <dt>账户中心 <b></b></dt>
+                <dd><b>.</b><a href="">账户信息</a></dd>
+<%--                <dd><b>.</b><a href="">账户余额</a></dd>--%>
+<%--                <dd><b>.</b><a href="">消费记录</a></dd>--%>
+<%--                <dd><b>.</b><a href="">我的积分</a></dd>--%>
+                <dd><b>.</b><a href="">收货地址</a></dd>
+            </dl>
+
+<%--            <dl>--%>
+<%--                <dt>订单中心 <b></b></dt>--%>
+<%--                <dd><b>.</b><a href="">返修/退换货</a></dd>--%>
+<%--                <dd><b>.</b><a href="">取消订单记录</a></dd>--%>
+<%--                <dd><b>.</b><a href="">我的投诉</a></dd>--%>
+<%--            </dl>--%>
+        </div>
+    </div>
+    <!-- 左侧导航菜单 end -->
 
     <!-- 右侧内容区域 start -->
-    <div class="content fl ml10">
-        <div class="order_bd mt10">
-            <table class="orders">
+    <div class="main w1210 bc mt10">
+        <div class="main w1210 bc mt10">
+            <table>
                 <thead>
                 <tr>
-                    <th width="20%">订单号</th>
-                    <th width="30%">订单商品</th>
+                    <th width="15%">订单号</th>
+                    <th width="35%">订单商品</th>
                     <th width="5%">数量</th>
                     <th width="10%">收货人</th>
                     <th width="10%">订单金额</th>
@@ -153,25 +170,26 @@
                     <th width="10%">订单状态</th>
                 </tr>
                 </thead>
-                <c:forEach items="${requestScope.order_itemPoList}" var="order">
+                <c:forEach items="${requestScope.orderList}" var="order">
                 <tbody>
                 <tr>
-                    <td>${order.order_po.order_code}</td>
-                    <td>${order.product_imagePo.product_src}</td>
-                    <td>${order.userPo.name}</td>
-                    <td>${order.productPo.price}</td>
-                    <td>${order.order_po.pay_date}</td>
-                    <td>${order.order_po.status}</td>
-                    <td><a href="orderServlet?method=deleteOrder&id=${order.id}">删除</a></td>
+                    <td>${order.order_code}</td>
+                    <td><img src="images/${order.product_img}"/> <strong>${order.product_name}</strong> </td>
+                    <td>${order.number}</td>
+                    <td>${order.consignee}</td>
+                    <td>${order.total}</td>
+                    <td>${order.pay_data}</td>
+                    <td>${order.status}</td>
                 </tr>
                 </tbody>
                 </c:forEach>
             </table>
+
             <c:if test="${requestScope.pageNow > 1}">
-                <a href="orderServlet?method=showOrder&pageNow=${pageNow - 1}">上一页</a>
+                <a href="orderServlet?method=showOrder&pageNow=${pageNow - 1}" align="center">上一页</a>
             </c:if>
             <c:if test="${requestScope.pageNow < requestScope.pageCount}">
-                <a href="orderServlet?method=showOrder&pageNow=${pageNow + 1}">下一页</a>
+                <a href="orderServlet?method=showOrder&pageNow=${pageNow + 1}" align="center">下一页</a>
             </c:if>
         </div>
     </div>

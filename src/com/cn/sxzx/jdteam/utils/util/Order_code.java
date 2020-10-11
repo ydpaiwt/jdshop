@@ -19,9 +19,9 @@ public class Order_code {
             char num1 = (char) rdGet;                      //int转换char
             String dd = Character.toString(num1);
             n += dd;
-        } while (n.length() < 8);// 设定长度，此处假定长度小于8
-        String r1= (((Math.random()*9+1)*100000)+"").substring(0, 6);
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+        } while (n.length() < 4);// 设定长度，此处假定长度小于4
+        String r1= (((Math.random()*9+1)*1000)+"").substring(0, 3);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMM");
         String SNDate = sdf.format(new Date());
         String orderCode = r1 + "M" + SNDate + "R" + n.toUpperCase();
         return orderCode;

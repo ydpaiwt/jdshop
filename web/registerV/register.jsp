@@ -73,7 +73,6 @@
 			usernameErrorSpan.innerText = "";
 		}
 
-
 			window.onload = function testPwd(){
 				var pwdx = document.getElementById("pwd_test");
 				var userpwd = document.getElementById("userpwd");
@@ -127,7 +126,6 @@
 			pwdErrorSpan.innerText = "";
 		}
 
-
 		// 给提交按钮绑定鼠标单击事件
 		var submitBtnElt = document.getElementById("submitBtn");
 		submitBtn.onclick = function(){
@@ -138,8 +136,6 @@
 
 			userpwd2Elt.focus();
 			userpwd2Elt.blur();
-
-
 
 			// 当所有表单项都是合法的时候,提交表单
 			if(usernameErrorSpan.innerText == "" && pwdErrorSpan.innerText == ""){

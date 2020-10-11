@@ -33,10 +33,10 @@ public class OrderDao {
                 int number = rest.getInt("number");
                 String consignee = rest.getString("consignee");
                 double total = rest.getDouble("total");
-                String pay_date = rest.getString("pay_date");
+                String pay_data = rest.getString("pay_data");
                 int user_id1 = rest.getInt("user_id");
                 String status = rest.getString("status");
-                Order_ order = new Order_(order_code,product_img,product_name,number,consignee,total,pay_date,user_id1,status);
+                Order_ order = new Order_(order_code,product_img,product_name,number,consignee,total,pay_data,user_id1,status);
                 orderList.add(order);
             }
             return orderList;
