@@ -54,6 +54,16 @@
                     });*/
                 }else {
                     alert("请先登录！");
+                    location.href="loginServlet?method=toLogin";
+                }
+            });
+            $("a[id=cart]").click(function () {
+                var user = "${sessionScope.user}";
+                if (user){
+                    location.href="cartServlet?method=showCart";
+                }else {
+                    alert("请先去登录！");
+                    $(this).attr("href","loginServlet?method=toLogin");
                 }
             });
         });
@@ -143,13 +153,15 @@
         <div class="cart fl">
             <dl>
                 <dt>
-                    <a href="cartServlet?method=showCart">去购物车结算</a>
+                    <a id="cart">去购物车结算</a>
                     <b></b>
                 </dt>
                 <dd>
+                    <c:if test="${sessionScope.productNumber ==0}">
                     <div class="prompt">
                         购物车中还没有商品，赶紧选购吧！
                     </div>
+                    </c:if>
                 </dd>
             </dl>
         </div>

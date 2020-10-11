@@ -23,7 +23,6 @@
             $("#total").text(${requestScope.total});
             $("a[id=reduce_num]").click(function () {
                 var cart_id = $(this).attr("cart_num");
-                alert(cart_id);
                 $.ajax({
                     url:"cartServlet",
                     data:{"method":"reduceCartNum","cart_id":cart_id},
@@ -39,7 +38,6 @@
             });
             $("a[id=add_num]").click(function () {
                 var cart_id = $(this).attr("cart_num");
-                alert(cart_id);
                 $.ajax({
                     url:"cartServlet",
                     data:{"method":"addCartNum","cart_id":cart_id},
@@ -82,7 +80,7 @@
 <!-- 页面头部 start -->
 <div class="header w990 bc mt15">
     <div class="logo w990">
-        <h2 class="fl"><a href="index.jsp"><img src="images/logo.png" alt="京西商城"></a></h2>
+        <h2 class="fl"><a href="index.jsp"><img src="images/logo.png" alt="京东商城"></a></h2>
         <div class="flow fr">
             <ul>
                 <li class="cur">1.我的购物车</li>
@@ -136,7 +134,7 @@
     </table>
     <div class="cart_btn w990 bc mt10">
         <a href="index.jsp" class="continue">继续购物</a>
-        <a href="cartServlet?method=tocheck" class="checkout">结 算</a>
+        <a href="cartServlet?method=toCheck" class="checkout">结 算</a>
     </div>
 </div>
 <!-- 主体部分 end -->

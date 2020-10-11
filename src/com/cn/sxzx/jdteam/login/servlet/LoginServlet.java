@@ -3,6 +3,7 @@ package com.cn.sxzx.jdteam.login.servlet;
 import com.cn.sxzx.jdteam.javaBean.pojo.User;
 import com.cn.sxzx.jdteam.login.service.LoginService;
 import com.cn.sxzx.jdteam.login.service.imp.LoginServiceImp;
+import com.cn.sxzx.jdteam.shopcart.dao.CartDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -38,8 +39,12 @@ public class LoginServlet extends HttpServlet {
          String name = request.getParameter("name");
          String pwd = request.getParameter("pwd");
          User users = service.login(name,pwd);
+         CartDao dao = new CartDao();
+         int productNumber = dao.getProductNumber(users.getId());
+         request.getSession().setAttribute("productNumber",productNumber);
         if (users != null){
             //登录成功
+
             request.getSession().setAttribute("user",users);
             response.sendRedirect("index.jsp");
         }else {

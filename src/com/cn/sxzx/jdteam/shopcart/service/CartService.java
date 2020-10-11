@@ -21,4 +21,6 @@ public interface CartService {
     void reduceCartNum(int id);
 
     void addCartNum(int id);
+
+    int getProductNumber(int user_id);
 }

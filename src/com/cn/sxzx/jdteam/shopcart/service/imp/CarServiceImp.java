@@ -61,4 +61,9 @@ public class CarServiceImp implements CartService {
         cart.setNumber(cart.getNumber()+1);
         dao.updateCartNumber(cart);
     }
+
+    @Override
+    public int getProductNumber(int user_id) {
+        return dao.getProductNumber(user_id);
+    }
 }

@@ -167,4 +167,24 @@ public class CartDao {
         }
         return null;
     }
+    //查询购物车商品数量
+    public int getProductNumber(int user_id){
+        String sql = "select count(id) as allNum from cart where user_id = ?";
+        ResultSet rest = null;
+        conn = JDBC.getConnection();
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1,user_id);
+            rest = ps.executeQuery();
+            if (rest.next()){
+                int allNum = rest.getInt("allNum");
+                return allNum;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBC.close(rest,ps,conn);
+        }
+        return 0;
+    }
 }

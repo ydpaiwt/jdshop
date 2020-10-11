@@ -18,6 +18,20 @@
   <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 
   <script type="text/javascript" src="js/jsstyle.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("a[id=cart]").click(function () {
+          var user = "${sessionScope.user}";
+          if (user){
+            location.href="cartServlet?method=showCart";
+          }else {
+            alert("请先去登录！");
+            $(this).attr("href","loginServlet?method=toLogin");
+          }
+      });
+
+    });
+  </script>
 
 </head>
 
@@ -99,7 +113,7 @@
 
             <div class="vip"></div>
 
-            <a href="">会员俱乐部</a>
+            <a href="#">会员俱乐部</a>
 
           </div>
 
@@ -111,7 +125,7 @@
 
             <div class="bjd"></div>
 
-            <a href="">企业频道</a>
+            <a href="#">企业频道</a>
 
           </div>
 
@@ -121,7 +135,7 @@
 
           <div class="cun">
 
-            <a href="" class="dong">手机京东</a>
+            <a href="#" class="dong">手机京东</a>
 
             <div class="phonetu"></div>
 
@@ -129,7 +143,7 @@
 
           </div>
 
-          <div class="erwei">
+         <%-- <div class="erwei">
 
             <div class="shoudan"></div>
 
@@ -157,7 +171,7 @@
 
             <div class="andr"></div>
 
-          </div>
+          </div>--%>
 
         </li>
 
@@ -175,15 +189,15 @@
 
                 <ul>
 
-                  <li><a href="">帮助中心</a></li>
+                  <li><a href="#">帮助中心</a></li>
 
-                  <li><a href="">售后服务</a></li>
+                  <li><a href="#">售后服务</a></li>
 
-                  <li><a href="">在线客服</a></li>
+                  <li><a href="#">在线客服</a></li>
 
-                  <li><a href="">投诉中心</a></li>
+                  <li><a href="#">投诉中心</a></li>
 
-                  <li><a href="">客服邮箱</a></li>
+                  <li><a href="#">客服邮箱</a></li>
 
                 </ul>
 
@@ -211,27 +225,27 @@
 
             <div class="tesemain">
 
-              <a href="">京东通信</a>
+              <a href="#">京东通信</a>
 
-              <a href="">校园之星</a>
+              <a href="#">校园之星</a>
 
-              <a href="">视频购物</a>
+              <a href="#">视频购物</a>
 
-              <a href="">京东社区</a>
+              <a href="#">京东社区</a>
 
-              <a href="">在线读书</a>
+              <a href="#">在线读书</a>
 
-              <a href="">装机大师</a>
+              <a href="#">装机大师</a>
 
-              <a href="">京东E卡　</a>
+              <a href="#">京东E卡　</a>
 
-              <a href="">家装城</a>
+              <a href="#">家装城</a>
 
-              <a href="">搭配购　</a>
+              <a href="#">搭配购　</a>
 
-              <a href="">我喜欢　</a>
+              <a href="#">我喜欢　</a>
 
-              <a href="">游戏社区</a>
+              <a href="#">游戏社区</a>
 
             </div>
 
@@ -239,9 +253,9 @@
 
             <div class="tesemain1">
 
-              <a href="">企业采购</a>
+              <a href="#">企业采购</a>
 
-              <a href="">办公直通车</a>
+              <a href="#">办公直通车</a>
 
             </div>
 
@@ -249,7 +263,7 @@
 
             <div class="tesemain2">
 
-              <a href="">English Site</a>
+              <a href="#">English Site</a>
 
             </div>
 
@@ -377,18 +391,21 @@
 
     <div class="chetu"></div>
 
-    <a href="cartServlet?method=showCart">去购物车结算</a>
+    <a id="cart">去购物车结算</a>
 
     <div class="jianleft"></div>
 
-    <div class="num">
+<%--    <c:if test="${sessionScope.productNumber >0}">--%>
+<%--    <div class="num">--%>
 
-      <div class="numright"></div>
+<%--      <div class="numright"></div>--%>
 
-      <div class="numzi"><span>0</span></div>
+<%--      <div class="numzi"><span>${sessionScope.productNumber}</span></div>--%>
 
-    </div>
+<%--    </div>--%>
+<%--    </c:if>--%>
 
+    <c:if test="${sessionScope.productNumber ==0}">
     <div class="hideche">
 
       <div class="kongche"></div>
@@ -396,7 +413,7 @@
       <span>购物车中还没有商品，赶紧选购吧！</span>
 
     </div>
-
+    </c:if>
   </div>
 
   <div class="jubao"></div>
