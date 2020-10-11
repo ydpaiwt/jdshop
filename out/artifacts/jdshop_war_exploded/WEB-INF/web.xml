@@ -42,6 +42,14 @@
         <servlet-name>cartServlet</servlet-name>
         <url-pattern>/cartServlet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>orderServlet</servlet-name>
+        <servlet-class>com.cn.sxzx.jdteam.order.servlet.OrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>orderServlet</servlet-name>
+        <url-pattern>/orderServlet</url-pattern>
+    </servlet-mapping>
 
     <!--<filter>
         <filter-name>loginFilter</filter-name>
@@ -54,5 +62,13 @@
         <dispatcher>FORWARD</dispatcher>
     </filter-mapping>-->
 
+    <servlet>
+        <servlet-name>userServlet</servlet-name>
+        <servlet-class>com.cn.sxzx.jdteam.user.servlet.UserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userServlet</servlet-name>
+        <url-pattern>/userServlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>

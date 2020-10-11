@@ -47,7 +47,7 @@
 
         <div class="xing"></div>
 
-        <a href="">收藏京东</a>
+        <a href="#">收藏京东</a>
 
       </li>
 
@@ -55,44 +55,27 @@
 
         <div class="erwei"></div>
 
-        <a href="" class="aa">关注京东
+        <a href="#" class="aa">关注京东
 
           <!-- 将二维图添加进a标签里 -->
 
           <div class="erweitu"></div>
-
         </a>
-
       </li>
-
-
-
       <li>
-
         <div class="didian"></div>
-
-        <strong style="padding-left: 20px">北京</strong><a href="" style="padding-left: 0px">[更换]</a>
-
+          <strong style="padding-left: 20px">山西</strong>
       </li>
-
-
-
     </ul>
 
 
 
     <div id="hello">
-
 				<span>您好，欢迎来到京东！
-
 				<a href="loginServlet?method=toLogin">[登陆]</a><a href="registerServlet?method=toRegister">[免费注册]</a>
 
 				</span>
-
     </div>
-
-
-
     <div class="topright">
 
       <ul>
@@ -311,19 +294,16 @@
 
     <div class="mytu"></div>
 
-    <a href="">我的京东</a>
+      <a href="">我的京东</a>
 
     <div class="jiantou"></div>
-
 
 
     <div class="myjdhide">
 
       <div class="hello">
 
-        <span>您好，请</span>
-
-        <a href="">登录</a>
+        <span>您好，请</span><a href="loginServlet?method=toLogin">登录</a>
 
       </div>
 
@@ -333,15 +313,9 @@
 
           <ul>
 
-            <li><a href="">待处理订单</a></li>
+            <li><a href="">用户信息></a></li>
 
-            <li><a href="">咨询回复</a></li>
-
-            <li><a href="">降价商品</a></li>
-
-            <li><a href="">返修退换货</a></li>
-
-            <li><a href="">优惠券</a></li>
+            <li><a href="">用户地址></a></li>
 
           </ul>
 
@@ -351,33 +325,9 @@
 
           <ul>
 
-            <li><a href="">我的关注></a></li>
-
-            <li><a href="">我的京豆></a></li>
-
-            <li><a href="">我的理财></a></li>
-
-            <li><a href="">我的白条></a></li>
+            <li><a href="">我的订单></a></li>
 
           </ul>
-
-        </div>
-
-      </div>
-
-      <div class="hidebot">
-
-        <div class="bottop">
-
-          <span>最近浏览的商品:</span>
-
-          <a href="">查看浏览历史></a>
-
-        </div>
-
-        <div class="botdown">
-
-          <span>「暂无数据」</span>
 
         </div>
 
