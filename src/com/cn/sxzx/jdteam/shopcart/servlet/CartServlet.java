@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 /**
@@ -29,17 +30,30 @@ public class CartServlet extends HttpServlet {
         String method = request.getParameter("method");
         if (method.equals("toCart")){
             this.addCart();
-            this.showCart();
         }else if(method.equals("deleteCart")){
             this.deleteCart();
             this.showCart();
         }else if (method.equals("showCart")){
             this.showCart();
+        }else if (method.equals("reduceCartNum")){
+            this.reduceCartNum();
+        }else if (method.equals("addCartNum")){
+            this.addCartNum();
         }
     }
+
+    private void addCartNum() {
+        int id = Integer.parseInt(request.getParameter("cart_id"));
+        service.addCartNum(id);
+    }
+
+    private void reduceCartNum() {
+        int id = Integer.parseInt(request.getParameter("cart_id"));
+        service.reduceCartNum(id);
+    }
+
     //展示购物车
     private void showCart() throws IOException, ServletException {
-//        int user_id = Integer.parseInt(request.getParameter("user_id"));
         User user = (User)request.getSession().getAttribute("user");
         int user_id = user.getId();
         List<Cart> cartList = service.showCart(user_id);
@@ -50,7 +64,7 @@ public class CartServlet extends HttpServlet {
 
     }
     //添加购物车
-    private void addCart() {
+    private void addCart() throws IOException {
         String name = request.getParameter("name");
         String image = request.getParameter("image");
         String color = request.getParameter("color");
@@ -60,7 +74,15 @@ public class CartServlet extends HttpServlet {
         User user = (User)request.getSession().getAttribute("user");
         int user_id = user.getId();
         Cart cart = new Cart(image,name,color,size,price,amount,user_id);
-        service.addCart(cart);
+        boolean istrue = service.addCart(cart);
+        response.setContentType("utf-8");
+        PrintWriter out = response.getWriter();
+        if (istrue){
+            out.println("添加成功！");
+        }
+        out.flush();
+        out.close();
+
     }
     //删除购物车
     private void deleteCart(){

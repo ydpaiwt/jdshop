@@ -38,15 +38,25 @@
             $("#add_submit").click(function () {
                 var user = "${sessionScope.user.name}";
                 if (user){
-                    alert(5615);
-                    $("#myform").submit(function () {
-                        alert("添加成功");
-                    });
+                    var form = $("form[id=myform]").serialize();
+                    $.ajax({
+                            url:"cartServlet?"+form,
+                            type:"post",
+                            success:function (data) {
+                                alert("添加成功！");
+                            },
+                            error:function () {
+
+                            }
+                        });
+                    /*$("form[id=myform]").submit(function () {
+                        alert("添加成功！");
+                    });*/
                 }else {
                     alert("请先登录！");
                 }
             });
-        })
+        });
     </script>
 </head>
 <body>
@@ -133,7 +143,7 @@
         <div class="cart fl">
             <dl>
                 <dt>
-                    <a href="">去购物车结算</a>
+                    <a href="cartServlet?method=showCart">去购物车结算</a>
                     <b></b>
                 </dt>
                 <dd>
@@ -296,12 +306,10 @@
                     <input type="hidden" name="method" value="toCart">
                     <input type="hidden" name="name" value="${sessionScope.productXi.name}">
                     <input type="hidden" name="price" value="${sessionScope.productXi.price}">
+                    <input type="hidden" name="image" value="${requestScope.imgList[0]}">
                     <ul>
                         <li><span>商品编号： </span>971344</li>
-                        <li class="market_price"><span>定价：</span><em>￥499.00</em></li>
-                        <li class="shop_price"><span>本店价：</span> <strong>${sessionScope.productXi.price}</strong> <a>(降价通知)</a></li>
-                        <li><span>销售：</span>${sessionScope.productXi.sale}</li>
-                        <li class="star"><span>商品评分：</span> <strong></strong><a href="">(已有21人评价)</a></li> <!-- 此处的星级切换css即可 默认为5星 star4 表示4星 star3 表示3星 star2表示2星 star1表示1星 -->
+                        <li class="shop_price"><span>价格：</span> <strong>${sessionScope.productXi.price}</strong> <a>(降价通知)</a></li>
                     </ul>
 
                     <ul>

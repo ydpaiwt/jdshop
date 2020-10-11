@@ -16,7 +16,7 @@ public class CartDao {
     Statement state= null;
     PreparedStatement ps = null;
     //添加商品信息
-    public void addCart(Cart cart){
+    public boolean addCart(Cart cart){
         String sql = "insert into cart(product_img,product_name,color,size,price,number,user_id) values(?,?,?,?,?,?,?)";
         conn = JDBC.getConnection();
         try {
@@ -30,13 +30,14 @@ public class CartDao {
             ps.setInt(7,cart.getUser_id());
             int i = ps.executeUpdate();
             if (i>0){
-                System.out.println("添加成功");
+                return true;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             JDBC.close(ps,conn);
         }
+        return false;
 
     }
 
@@ -89,5 +90,81 @@ public class CartDao {
         }
         return null;
 
+    }
+
+    public Cart selectCardName(Cart cart) {
+        String sql = "select * from cart where product_name = ?";
+        ResultSet rest = null;
+        conn = JDBC.getConnection();
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setString(1,cart.getProduct_name());
+            rest = ps.executeQuery();
+            while (rest.next()){
+                int id = rest.getInt("id");
+                String product_image = rest.getString("product_img");
+                String product_name = rest.getString("product_name");
+                String color = rest.getString("color");
+                String size = rest.getString("size");
+                double price = rest.getDouble("price");
+                int number = rest.getInt("number");
+                int user_id = rest.getInt("user_id");
+                Cart cart1 = new Cart(id,product_image,product_name,color,size,price,number,user_id);
+                return cart1;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBC.close(rest,ps,conn);
+        }
+        return null;
+    }
+
+    public boolean updateCartNumber(Cart cart1) {
+        String sql = "update cart set number = ? where id =?";
+        conn = JDBC.getConnection();
+        int i = 0;
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1,cart1.getNumber());
+            ps.setInt(2,cart1.getId());
+            i = ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBC.close(ps,conn);
+        }
+        if (i>0){
+            return true;
+        }
+        return false;
+    }
+
+    public Cart selectCardID(int id) {
+        String sql = "select * from cart where id = ?";
+        ResultSet rest = null;
+        conn = JDBC.getConnection();
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1,id);
+            rest = ps.executeQuery();
+            while (rest.next()){
+                int id1 = rest.getInt("id");
+                String product_image = rest.getString("product_img");
+                String product_name = rest.getString("product_name");
+                String color = rest.getString("color");
+                String size = rest.getString("size");
+                double price = rest.getDouble("price");
+                int number = rest.getInt("number");
+                int user_id = rest.getInt("user_id");
+                Cart cart1 = new Cart(id1,product_image,product_name,color,size,price,number,user_id);
+                return cart1;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBC.close(rest,ps,conn);
+        }
+        return null;
     }
 }

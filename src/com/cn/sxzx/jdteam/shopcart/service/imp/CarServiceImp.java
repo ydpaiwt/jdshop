@@ -24,8 +24,15 @@ public class CarServiceImp implements CartService {
     }
 
     @Override
-    public void addCart(Cart cart) {
-        dao.addCart(cart);
+    public boolean addCart(Cart cart) {
+         Cart cart1 = dao.selectCardName(cart);
+         if (cart1!=null){
+             cart1.setNumber(cart1.getNumber()+cart.getNumber());
+             return dao.updateCartNumber(cart1);
+         }else {
+             return dao.addCart(cart);
+         }
+
     }
 
     @Override
@@ -35,5 +42,23 @@ public class CarServiceImp implements CartService {
             total += cart.getNumber()*cart.getPrice();
         }
         return total;
+    }
+
+    @Override
+    public void reduceCartNum(int id) {
+        Cart cart = dao.selectCardID(id);
+        if (cart.getNumber()==1){
+            cart.setNumber(1);
+        }else {
+            cart.setNumber(cart.getNumber()-1);
+        }
+        dao.updateCartNumber(cart);
+    }
+
+    @Override
+    public void addCartNum(int id) {
+        Cart cart = dao.selectCardID(id);
+        cart.setNumber(cart.getNumber()+1);
+        dao.updateCartNumber(cart);
     }
 }

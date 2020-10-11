@@ -377,7 +377,7 @@
 
     <div class="chetu"></div>
 
-    <a href="">去购物车结算</a>
+    <a href="cartServlet?method=showCart">去购物车结算</a>
 
     <div class="jianleft"></div>
 

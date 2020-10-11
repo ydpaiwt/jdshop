@@ -43,7 +43,7 @@
         <url-pattern>/cartServlet</url-pattern>
     </servlet-mapping>
 
-    <filter>
+    <!--<filter>
         <filter-name>loginFilter</filter-name>
         <filter-class>com.cn.sxzx.jdteam.filter.LoginFilter</filter-class>
     </filter>
@@ -52,7 +52,7 @@
         <url-pattern>/*</url-pattern>
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>FORWARD</dispatcher>
-    </filter-mapping>
+    </filter-mapping>-->
 
 
 </web-app>

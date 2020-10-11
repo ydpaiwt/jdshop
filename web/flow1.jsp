@@ -21,6 +21,36 @@
     <script type="text/javascript">
         $(function () {
             $("#total").text(${requestScope.total});
+            $("a[id=reduce_num]").click(function () {
+                var cart_id = $(this).attr("cart_num");
+                $.ajax({
+                    url:"cartServlet",
+                    data:{"method":"reduceCartNum","cart_id":cart_id},
+                    type:"post",
+                    success:function (data) {
+
+                    },
+                    error:function () {
+
+                    },
+                    dataType:"json"
+                });
+            });
+            $("a[id=add_num]").click(function () {
+                var cart_id = $(this).attr("cart_num");
+                $.ajax({
+                    url:"cartServlet",
+                    data:{"method":"addCartNum","cart_id":cart_id},
+                    type:"post",
+                    success:function (data) {
+
+                    },
+                    error:function () {
+
+                    },
+                    dataType:"json"
+                });
+            });
         });
     </script>
 </head>
@@ -81,13 +111,15 @@
         <tbody>
         <c:forEach items="${requestScope.cartList}" var="cart">
             <tr>
-                <td class="col1"><img src="images/${cart.product_img}" alt="" /> <strong>${cart.product_name}</strong></td>
+                <td class="col1"><img src="images/${cart.product_img}" alt="" /> <strong id="product_name">${cart.product_name}</strong></td>
                 <td class="col2"> <p>颜色：${cart.color}</p> <p>尺码：${cart.size}</p> </td>
                 <td class="col3">￥<span>${cart.price}</span></td>
                 <td class="col4">
-                    <a href="javascript:;" class="reduce_num"></a>
+<%--                    <input type="button" class="reduce_num" id="reduce_num">--%>
+                    <a href="javascript:;" class="reduce_num" id="reduce_num" cart_num="${cart.id}"  ></a>
                     <input type="text" name="amount" value="${cart.number}" class="amount"/>
-                    <a href="javascript:;" class="add_num"></a>
+                    <a href="javascript:;" class="add_num" id="add_num" cart_num="${cart.id}"></a>
+<%--                    <input type="button" class="add_num" id="add_num">--%>
                 </td>
                 <td class="col5">￥<span>${cart.price*cart.number}</span></td>
                 <td class="col6"><a href="cartServlet?method=deleteCart&id=${cart.id}">删除</a></td>

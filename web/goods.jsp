@@ -38,15 +38,25 @@
             $("#add_submit").click(function () {
                 var user = "${sessionScope.user.name}";
                 if (user){
-                    alert(5615);
-                    $("form[id=myform]").submit(function () {
+                    var form = $("form[id=myform]").serialize();
+                    $.ajax({
+                            url:"cartServlet?"+form,
+                            type:"post",
+                            success:function (data) {
+                                alert("添加成功！");
+                            },
+                            error:function () {
+
+                            }
+                        });
+                    /*$("form[id=myform]").submit(function () {
                         alert("添加成功！");
-                    });
+                    });*/
                 }else {
                     alert("请先登录！");
                 }
             });
-        })
+        });
     </script>
 </head>
 <body>
@@ -133,7 +143,7 @@
         <div class="cart fl">
             <dl>
                 <dt>
-                    <a href="">去购物车结算</a>
+                    <a href="cartServlet?method=showCart">去购物车结算</a>
                     <b></b>
                 </dt>
                 <dd>
