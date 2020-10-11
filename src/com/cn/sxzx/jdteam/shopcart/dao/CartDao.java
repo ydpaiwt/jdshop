@@ -93,12 +93,13 @@ public class CartDao {
     }
 
     public Cart selectCardName(Cart cart) {
-        String sql = "select * from cart where product_name = ?";
+        String sql = "select * from cart where product_name = ? and user_id = ?";
         ResultSet rest = null;
         conn = JDBC.getConnection();
         try {
             ps = conn.prepareStatement(sql);
             ps.setString(1,cart.getProduct_name());
+            ps.setInt(2,cart.getUser_id());
             rest = ps.executeQuery();
             while (rest.next()){
                 int id = rest.getInt("id");

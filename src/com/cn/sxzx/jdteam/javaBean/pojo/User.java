@@ -6,7 +6,7 @@ public class User {
     private String name;      //用户名称
     private String password;       //用户密码
     private String realname;     //真实姓名
-    private String sex;      //性别(0-男,1-女)
+    private String sex;
     private String phone;
     private String email;
 
