@@ -2,26 +2,41 @@ package com.cn.sxzx.jdteam.javaBean.pojo;
 
 //订单表
 public class Order_ {
-    private int id;        //唯一索引ID
-    private String order_code;      //订单号
-    private String address_id;      //地址id
-    private String user_message;      //用户备注的信息
-    private String create_date;        //订单创建时间
-    private String pay_date;        //订单支付时间
-    private String delivery_date;     //发货日期
-    private String confirm_date;       //确认收货的日期
-    private int user_id;          //对应的用户ID
-    private String status;      //订单状态
+    private int id;
+    private String order_code;
+    private String product_img;
+    private String product_name;
+    private int number;
+    private String consignee;
+    private double total;
+    private String pay_data;
+    private int user_id;
+    private String status;
 
     public Order_() {
     }
 
+    public Order_(String order_code, String product_img, String product_name, int number, String consignee, double total, String pay_data, int user_id, String status) {
+        this.order_code = order_code;
+        this.product_img = product_img;
+        this.product_name = product_name;
+        this.number = number;
+        this.consignee = consignee;
+        this.total = total;
+        this.pay_data = pay_data;
+        this.user_id = user_id;
+        this.status = status;
+    }
 
-    public Order_(int id, String order_code, String address_id, String user_message, String create_date, String pay_date, String delivery_date, String confirm_date, int user_id, String status) {
+    public Order_(int id, String order_code, String product_img, String product_name, int number, String consignee, double total, String pay_data, int user_id, String status) {
         this.id = id;
         this.order_code = order_code;
-        this.address_id = address_id;
-        this.pay_date = pay_date;
+        this.product_img = product_img;
+        this.product_name = product_name;
+        this.number = number;
+        this.consignee = consignee;
+        this.total = total;
+        this.pay_data = pay_data;
         this.user_id = user_id;
         this.status = status;
     }
@@ -42,22 +57,53 @@ public class Order_ {
         this.order_code = order_code;
     }
 
-    public String getAddress_id() {
-        return address_id;
+    public String getProduct_img() {
+        return product_img;
     }
 
-    public void setAddress_id(String address_id) {
-        this.address_id = address_id;
+    public void setProduct_img(String product_img) {
+        this.product_img = product_img;
     }
 
-    public String getPay_date() {
-        return pay_date;
+    public String getProduct_name() {
+        return product_name;
     }
 
-    public void setPay_date(String pay_date) {
-        this.pay_date = pay_date;
+    public void setProduct_name(String product_name) {
+        this.product_name = product_name;
     }
 
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public String getConsignee() {
+        return consignee;
+    }
+
+    public void setConsignee(String consignee) {
+        this.consignee = consignee;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
+
+    public String getPay_data() {
+        return pay_data;
+    }
+
+    public void setPay_data(String pay_data) {
+        this.pay_data = pay_data;
+    }
 
     public int getUser_id() {
         return user_id;
@@ -80,11 +126,12 @@ public class Order_ {
         return "Order_{" +
                 "id=" + id +
                 ", order_code='" + order_code + '\'' +
-                ", user_message='" + user_message + '\'' +
-                ", create_date='" + create_date + '\'' +
-                ", pay_date='" + pay_date + '\'' +
-                ", delivery_date='" + delivery_date + '\'' +
-                ", confirm_date='" + confirm_date + '\'' +
+                ", product_img='" + product_img + '\'' +
+                ", product_name='" + product_name + '\'' +
+                ", number=" + number +
+                ", consignee='" + consignee + '\'' +
+                ", total=" + total +
+                ", pay_data='" + pay_data + '\'' +
                 ", user_id=" + user_id +
                 ", status='" + status + '\'' +
                 '}';

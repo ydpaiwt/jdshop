@@ -1,7 +1,8 @@
 package com.cn.sxzx.jdteam.order.service.imp;
 
-import com.cn.sxzx.jdteam.javaBean.po.Order_itemPo;
+
 import com.cn.sxzx.jdteam.javaBean.pojo.Cart;
+import com.cn.sxzx.jdteam.javaBean.pojo.Order_;
 import com.cn.sxzx.jdteam.order.dao.OrderDao;
 import com.cn.sxzx.jdteam.order.service.OrderService;
 
@@ -14,11 +15,10 @@ import java.util.List;
 public class OrderServiceImp implements OrderService {
     OrderDao dao = new OrderDao();
     @Override
-    public List<Order_itemPo> showOrder(int pageNow) {
+    public List<Order_> showOrder(int user_id,int pageNow) {
         pageNow = (pageNow - 1) * OrderService.pageSize;
-        return dao.showOrder(pageNow,OrderService.pageSize);
+        return dao.showOrder(user_id,pageNow,OrderService.pageSize);
     }
-
     @Override
     public int pageCount() {
         int pageCount = 0;
@@ -31,20 +31,16 @@ public class OrderServiceImp implements OrderService {
         return pageCount;
     }
 
+    @Override
+    public void addOrder(Order_ order) {
+        dao.addOrder(order);
+    }
+
 //    @Override
-//    public void delete(int id) {
-//        dao.deleteOrder(id);
+//    public List<Cart> showCart(int user_id) {
+//        return null;
 //    }
 
-    @Override
-    public void addOrder() {
-
-    }
-
-    @Override
-    public List<Cart> showCart(int user_id) {
-        return dao.showCart(user_id);
-    }
 
     @Override
     public double getTotal(List<Cart> cartList) {
