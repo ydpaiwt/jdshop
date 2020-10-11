@@ -1,10 +1,8 @@
-package com.cn.sxzx.jdteam.javaBean.pojo;
+package com.cn.sxzx.jdteam.javaBean.po;
 
-//订单表
-public class Order_ {
+public class Order_Po {
     private int id;        //唯一索引ID
     private String order_code;      //订单号
-    private String address_id;      //地址id
     private String user_message;      //用户备注的信息
     private String create_date;        //订单创建时间
     private String pay_date;        //订单支付时间
@@ -13,17 +11,33 @@ public class Order_ {
     private int user_id;          //对应的用户ID
     private String status;      //订单状态
 
-    public Order_() {
-    }
-
-
-    public Order_(int id, String order_code, String address_id, String user_message, String create_date, String pay_date, String delivery_date, String confirm_date, int user_id, String status) {
+    public Order_Po(int id, String order_code, String user_message, String create_date, String pay_date, String delivery_date, String confirm_date, int user_id, String status) {
         this.id = id;
         this.order_code = order_code;
-        this.address_id = address_id;
+        this.user_message = user_message;
+        this.create_date = create_date;
+        this.pay_date = pay_date;
+        this.delivery_date = delivery_date;
+        this.confirm_date = confirm_date;
+        this.user_id = user_id;
+        this.status = status;
+    }
+
+    public Order_Po(int id, String order_code, String pay_date, int user_id, String status) {
+        this.id = id;
+        this.order_code = order_code;
         this.pay_date = pay_date;
         this.user_id = user_id;
         this.status = status;
+    }
+
+    public Order_Po(String order_code, String pay_date, String status) {
+        this.order_code = order_code;
+        this.pay_date = pay_date;
+        this.status = status;
+    }
+
+    public Order_Po() {
     }
 
     public int getId() {
@@ -42,12 +56,20 @@ public class Order_ {
         this.order_code = order_code;
     }
 
-    public String getAddress_id() {
-        return address_id;
+    public String getUser_message() {
+        return user_message;
     }
 
-    public void setAddress_id(String address_id) {
-        this.address_id = address_id;
+    public void setUser_message(String user_message) {
+        this.user_message = user_message;
+    }
+
+    public String getCreate_date() {
+        return create_date;
+    }
+
+    public void setCreate_date(String create_date) {
+        this.create_date = create_date;
     }
 
     public String getPay_date() {
@@ -58,6 +80,21 @@ public class Order_ {
         this.pay_date = pay_date;
     }
 
+    public String getDelivery_date() {
+        return delivery_date;
+    }
+
+    public void setDelivery_date(String delivery_date) {
+        this.delivery_date = delivery_date;
+    }
+
+    public String getConfirm_date() {
+        return confirm_date;
+    }
+
+    public void setConfirm_date(String confirm_date) {
+        this.confirm_date = confirm_date;
+    }
 
     public int getUser_id() {
         return user_id;
@@ -77,7 +114,7 @@ public class Order_ {
 
     @Override
     public String toString() {
-        return "Order_{" +
+        return "Order_Po{" +
                 "id=" + id +
                 ", order_code='" + order_code + '\'' +
                 ", user_message='" + user_message + '\'' +

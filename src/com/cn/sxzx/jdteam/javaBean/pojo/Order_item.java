@@ -19,6 +19,10 @@ public class Order_item {
         this.number = number;
     }
 
+    public Order_item(int id) {
+        this.id=id;
+    }
+
     public int getId() {
         return id;
     }
