@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
@@ -471,19 +472,23 @@
 					<ul>
 						<li>
 							<label>用户名：</label>
-							<strong>diamondwang</strong>
+							<strong>${requestScope.user.name}</strong>
 						</li>
 						<li>
-							<label>昵称：</label>
-							<input type="text" class="txt" value="diamondwang"/>
+							<label>真实姓名：</label>
+							<input type="text" class="txt" value="${requestScope.user.realname}"/>
+						</li>
+						<li>
+							<label>性别：</label>
+							<strong>${requestScope.user.sex}</strong>
 						</li>
 						<li>
 							<label>邮箱：</label>
-							<strong>dw@163.com</strong>
+							<input type="text" class="txt" value="${requestScope.user.email}" />
 						</li>
 						<li>
 							<label>手机号码：</label>
-							<input type="text" class="txt" value="13333333333" />
+							<input type="text" class="txt" value="${requestScope.user.phone}" />
 						</li>
 						<li>
 							<label>&nbsp;</label>

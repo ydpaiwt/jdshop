@@ -145,8 +145,6 @@
 			if(usernameErrorSpan.innerText == "" && pwdErrorSpan.innerText == ""){
 				// 获取表单对象
 				var userFormElt = document.getElementById("userForm");
-				// 可以在这里设置action,也可以不在这里.
-				userFormElt.action = "http://localhost:8080/jd/save";
 				// 提交表单
 				userFormElt.submit();
 			}
@@ -193,7 +191,7 @@
 		</div>
 		<div class="login_bd">
 			<div class="login_form fl">
-				<form action="<%=path%>/registerServlet" method="post">
+				<form action="<%=path%>/registerServlet" method="post" id="userForm">
 					<input type="hidden" name="method" value="register">
 					<ul>
 						<li>
@@ -217,7 +215,7 @@
 						</li>
 						<li>
 							<label >&nbsp;</label>
-							<input type="submit" onclick="" value="" class="login_btn" id="submitBtn" />
+							<input type="button" onclick="" value="&nbsp;" class="login_btn" id="submitBtn" />
 						</li>
 					</ul>
 				</form>

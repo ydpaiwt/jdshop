@@ -63,11 +63,10 @@
 						<li>
 							<label >密码：</label>
 							<input type="password" class="txt" name="pwd" />
-							<a href="">忘记密码?</a>
 						</li>
 						<li>
 							<label >&nbsp;</label>
-							<input type="checkbox" class="chb"  /> 保存登录信息
+							<input type="checkbox" class="chb" checked /> 保存登录信息
 						</li>
 						<li>
 							<label >&nbsp;</label>

@@ -22,8 +22,9 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         this.request = req;
         this.response = resp;
-
+        request.setCharacterEncoding("utf-8");
         String method = request.getParameter("method");
+        System.out.println(method);
         if(method.equals("toLogin")){
             this.toLogin();
         }
@@ -35,13 +36,9 @@ public class LoginServlet extends HttpServlet {
     }
 
     private void login() throws IOException {
-        //request.setCharacterEncoding("utf-8");
          String name = request.getParameter("name");
          String pwd = request.getParameter("pwd");
          User users = service.login(name,pwd);
-         CartDao dao = new CartDao();
-         int productNumber = dao.getProductNumber(users.getId());
-         request.getSession().setAttribute("productNumber",productNumber);
         if (users != null){
             //登录成功
 
@@ -49,7 +46,7 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("index.jsp");
         }else {
             //登录失败
-            response.sendRedirect("loginServlet?method=toLogin");
+            response.sendRedirect("loginV/login.jsp");
         }
     }
 

@@ -133,7 +133,7 @@
                     </div>
                     <div class="uclist mt10">
                         <ul class="list1 fl">
-                            <li><a href="mainServlet?method=toUser">用户信息></a></li>
+                            <li><a href="userServlet?method=toUser">用户信息></a></li>
                             <li><a href="">收货地址></a></li>
                         </ul>
 
@@ -320,34 +320,33 @@
                     <input type="hidden" name="price" value="${sessionScope.productXi.price}">
                     <input type="hidden" name="image" value="${requestScope.imgList[0]}">
                     <ul>
-                        <li><span>商品编号： </span>971344</li>
-                        <li class="shop_price"><span>价格：</span> <strong>${sessionScope.productXi.price}</strong> <a>(降价通知)</a></li>
-                    </ul>
+                        <li><span>编号： </span>971344</li>
 
+
+                        <li class="shop_price"><span>价格：</span> <strong>${sessionScope.productXi.price}</strong></li>
+                    </ul>
                     <ul>
                         <li class="product">
                             <dl>
                                 <dt>颜色：</dt>
                                 <dd>
                                     <a class="selected" href="javascript:;">${sessionScope.productXi.value} <input type="radio" name="color" value="白色" checked="checked" /></a>
-
                                     <input type="hidden" name="" value="" />
                                 </dd>
                             </dl>
                         </li>
-
                         <li class="product">
+                            <dl>
+                                <dt>尺码：</dt>
+                                <dd>
+                                    <a class="selected" href="javascript:;">XL<input type="radio" name="size" value="XL" checked="checked" /></a>
+                                    <input type="hidden" name="" value="" />
+                                </dd>
+                            </dl>
                         </li>
-                        <dl>
-                            <dt>尺码：</dt>
-                            <dd>
-                                <a class="selected" href="javascript:;">XL<input type="radio" name="size" value="XL" checked="checked" /></a>
-                                <input type="hidden" name="" value="" />
-                            </dd>
-                        </dl>
                         <li>
                             <dl>
-                                <dt>购买数量：</dt>
+                                <dt>购买数：</dt>
                                 <dd>
                                     <a href="javascript:;" id="reduce_num"></a>
                                     <input type="text" name="amount" value="1" class="amount"/>

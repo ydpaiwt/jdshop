@@ -13,8 +13,9 @@ public class UserDao {
     Connection conn=null;
     Statement state= null;
     PreparedStatement ps = null;
+    //展示用户信息
     public User showUser(int user_id) {
-        String sql = "select * from user where user_id = ?";
+        String sql = "select * from user where id = ?";
         ResultSet rest = null;
         conn= JDBC.getConnection();
         try {
@@ -28,7 +29,8 @@ public class UserDao {
                 String sex = rest.getString("sex");
                 String realname = rest.getString("realname");
                 String phone = rest.getString("phone");
-                User user = new User(id,name,password,sex,realname,phone);
+                String email = rest.getString("email");
+                User user = new User(id,name,password,sex,realname,phone,email);
                 return user;
             }
         } catch (SQLException e) {

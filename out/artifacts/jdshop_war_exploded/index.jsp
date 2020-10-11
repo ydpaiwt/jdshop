@@ -357,11 +357,8 @@
 
     <c:if test="${sessionScope.productNumber ==0}">
     <div class="hideche">
-
       <div class="kongche"></div>
-
       <span>购物车中还没有商品，赶紧选购吧！</span>
-
     </div>
     </c:if>
   </div>
@@ -410,16 +407,15 @@
 
                 <dt><a href="mainServlet?method=toGoods&id=2&product_id=2">女装</a></dt>
 
-                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">当季热卖</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=29&product_id=29">当季热卖</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">新品推荐</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=30&product_id=30">新品推荐</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">商场同款</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=31&product_id=31">商场同款</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">时尚套装</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=32&product_id=32">时尚套装</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">设计师/潮牌</a></dd>
-
+                <dd><a href="mainServlet?method=toGoods&id=33&product_id=33">设计师/潮牌</a></dd>
               </dl>
 
             </div>
@@ -444,15 +440,15 @@
 
 
 
-                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">GAP</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=29&product_id=29">GAP</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">NIKE</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=30&product_id=30">NIKE</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">KAPPA</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=31&product_id=31">KAPPA</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">PUMA</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=32&product_id=32">PUMA</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">Addides</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=33&product_id=33">Addides</a></dd>
 
                 <dd><a href="mainServlet?method=toGoods&id=2&product_id=2">FAIL</a></dd>
 
@@ -489,15 +485,15 @@
 
                 <dt><a href="mainServlet?method=toGoods&id=1&product_id=1">男装</a></dt>
 
-                <dd><a href="mainServlet?method=toGoods&id=1&product_id=1">衬衫</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=21&product_id=21">衬衫</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=1&product_id=1">牛仔衣</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=22&product_id=22">牛仔衣</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=1&product_id=1">POLO衫</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=23&product_id=23">POLO衫</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=1&product_id=1">真皮皮衣</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=27&product_id=27">真皮皮衣</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=1&product_id=1">唐装/中山装</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=28&product_id=28">唐装/中山装</a></dd>
 
               </dl>
 
@@ -511,17 +507,17 @@
 
               <ul>
 
-                <li><a href="mainServlet?method=toGoods&id=1&product_id=1">GAP</a></li>
+                <li><a href="mainServlet?method=toGoods&id=21&product_id=21">GAP</a></li>
 
-                <li><a href="mainServlet?method=toGoods&id=1&product_id=1">MIKE</a></li>
+                <li><a href="mainServlet?method=toGoods&id=22&product_id=22">MIKE</a></li>
 
-                <li><a href="mainServlet?method=toGoods&id=1&product_id=1">Addides</a></li>
+                <li><a href="mainServlet?method=toGoods&id=23&product_id=23">Addides</a></li>
 
-                <li><a href="mainServlet?method=toGoods&id=1&product_id=1">FAIL</a></li>
+                <li><a href="mainServlet?method=toGoods&id=27&product_id=27">FAIL</a></li>
 
-                <li><a href="mainServlet?method=toGoods&id=1&product_id=1">PUMA</a></li>
+                <li><a href="mainServlet?method=toGoods&id=28&product_id=28">PUMA</a></li>
 
-                <li><a href="mainServlet?method=toGoods&id=1&product_id=1">KAAPA</a></li>
+                <li><a href="mainServlet?method=toGoods&id=22&product_id=22">KAAP</a></li>
 
               </ul>
 
@@ -568,15 +564,16 @@
                 <dt><a href="mainServlet?method=toGoods&id=3&product_id=3">帽子</a></dt>
 
 
-                <dd><a href="mainServlet?method=toGoods&id=3&product_id=3">鸭舌帽</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=34&product_id=34">鸭舌帽</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=3&product_id=3">棒球帽</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=35&product_id=35">棒球帽</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=3&product_id=3">毛线帽</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=36&product_id=36">毛线帽</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=3&product_id=3">贝雷帽</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=37&product_id=37">贝雷帽</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=3&product_id=3">遮阳帽</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=38&product_id=38">遮阳帽</a></dd>
+
 
               </dl>
 
@@ -605,15 +602,9 @@
 
                 <dt><a href="mainServlet?method=toGoods&id=4&product_id=4">眼镜</a></dt>
 
-                <dd><a href="mainServlet?method=toGoods&id=4&product_id=4">太阳镜</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=39&product_id=39">太阳镜</a></dd>
 
-                <dd><a href="mainServlet?method=toGoods&id=4&product_id=4">游泳镜</a></dd>
-
-                <dd><a href="mainServlet?method=toGoods&id=4&product_id=4">光学镜架</a></dd>
-
-                <dd><a href="mainServlet?method=toGoods&id=4&product_id=4">防辐射眼镜</a></dd>
-
-                <dd><a href="mainServlet?method=toGoods&id=4&product_id=4">老花镜</a></dd>
+                <dd><a href="mainServlet?method=toGoods&id=40&product_id=40">游泳镜</a></dd>
 
               </dl>
 
@@ -629,21 +620,21 @@
 
               <ul>
 
-                <li><a href="mainServlet?method=toGoods&id=4&product_id=4">暴龙旗舰店</a></li>
+                <li><a href="mainServlet?method=toGoods&id=34&product_id=34">暴龙旗舰店</a></li>
 
-                <li><a href="mainServlet?method=toGoods&id=4&product_id=4">LV旗舰店</a></li>
+                <li><a href="mainServlet?method=toGoods&id=35&product_id=35">LV旗舰店</a></li>
 
-                <li><a href="mainServlet?method=toGoods&id=4&product_id=4">香奈儿旗舰店</a></li>
+                <li><a href="mainServlet?method=toGoods&id=36&product_id=36">香奈儿旗舰店</a></li>
 
-                <li><a href="mainServlet?method=toGoods&id=4&product_id=4">HP旗舰店</a></li>
+                <li><a href="mainServlet?method=toGoods&id=37&product_id=37">HP旗舰店</a></li>
 
-                <li><a href="mainServlet?method=toGoods&id=3&product_id=3">王大夫旗舰店</a></li>
+                <li><a href="mainServlet?method=toGoods&id=38&product_id=38">王大夫旗舰店</a></li>
 
-                <li><a href="mainServlet?method=toGoods&id=3&product_id=3">ThinkPad旗舰店</a></li>
+                <li><a href="mainServlet?method=toGoods&id=39&product_id=39">ThinkPad旗舰店</a></li>
 
-                <li><a href="mainServlet?method=toGoods&id=3&product_id=3">周大福旗舰店</a></li>
+                <li><a href="mainServlet?method=toGoods&id=36&product_id=36">周大福旗舰店</a></li>
 
-                <li><a href="mainServlet?method=toGoods&id=3&product_id=3">暴雪旗舰店</a></li>
+                <li><a href="mainServlet?method=toGoods&id=40&product_id=40">暴雪旗舰店</a></li>
 
 
               </ul>
@@ -747,11 +738,11 @@
 
         <ul>
 
-          <li><a href="mainServlet?method=toGoods&id=2&product_id=2"><img src="images/c1.jpg" alt="" /></a></li>
+          <li><a href="mainServlet?method=toGoods&id=3&product_id=3"><img src="images/c1.jpg" alt="" /></a></li>
 
-          <li><a href="mainServlet?method=toGoods&id=1&product_id=1"><img src="images/c2.jpg" alt="" /></a></li>
+          <li><a href="mainServlet?method=toGoods&id=2&product_id=2"><img src="images/c2.jpg" alt="" /></a></li>
 
-          <li style="border-right:none"><a href="mainServlet?method=toGoods&id=2&product_id=2"><img src="images/c3.jpg" alt="" /></a></li>
+          <li style="border-right:none"><a href="mainServlet?method=toGoods&id=4&product_id=4"><img src="images/c3.jpg" alt="" /></a></li>
 
           <li><img src="images/c10.jpg" alt="" /></li>
 
@@ -1195,17 +1186,15 @@
 
       <div class="zhe">
 
-        <h3>品牌街</h3>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=33&product_id=33">基础通勤款</a></div>
 
-        <div class="life1"><a href="mainServlet?method=toGoods&id=2&product_id=2">基础通勤款</a></div>
-
-        <div class="life1"><a href="mainServlet?method=toGoods&id=2&product_id=2" style="color:#E4393C">全场低至4折</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=33&product_id=33" style="color:#E4393C">全场低至4折</a></div>
 
         <ul>
 
-        <li><a href="mainServlet?method=toGoods&id=2&product_id=2">更多品牌</a></li>
+          <li><a href="mainServlet?method=toGoods&id=33&product_id=33">更多品牌</a></li>
 
-        <li><a href="mainServlet?method=toGoods&id=2&product_id=2">进入品牌街</a></li>
+          <li><a href="mainServlet?method=toGoods&id=33&product_id=33">进入品牌街</a></li>
 
       </ul>
 
@@ -1261,7 +1250,7 @@
 
         <h3>今日团购</h3>
 
-        <div class="life1"><a href="mainServlet?method=toGoods&id=3&product_id=3">秋冬必备</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=37&product_id=37">秋冬必备</a></div>
 
         <div class="life1" style="margin-top:20px">贝雷帽<span style="font-size:25px;color:red;font-weight:700">￥45</span></div>
 
@@ -1281,10 +1270,9 @@
 
         <h3>京东首发</h3>
 
-        <div class="life1"><a href="mainServlet?method=toGoods&id=3&product_id=3">保暖时尚</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=36&product_id=36">保暖时尚</a></div>
 
-        <div class="life1"><a href="mainServlet?method=toGoods&id=3&product_id=3" style="background:red;color:white;padding:2px 2px">明星同款</a></div>
-
+        <div class="life1"><a href="mainServlet?method=toGoods&id=36&product_id=36" style="background:red;color:white;padding:2px 2px">明星同款</a></div>
       </div>
 
     </div>
@@ -1297,9 +1285,9 @@
 
         <h3>潮牌</h3>
 
-        <div class="life1"><a href="mainServlet?method=toGoods&id=1&product_id=1">中国风醒狮</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=22&product_id=22">中国风醒狮</a></div>
 
-        <div class="life1"><a href="mainServlet?method=toGoods&id=1&product_id=1" style="color:#E4393C">免费疯抢ing</a></div>
+        <div class="life1"><a href="mainServlet?method=toGoods&id=22&product_id=22" style="color:#E4393C">免费疯抢ing</a></div>
 
       </div>
 
@@ -1331,9 +1319,9 @@
 
           <h3>条纹长袖</h3>
 
-          <div class="life1"><a href="mainServlet?method=toGoods&id=2&product_id=2">挂脖心机</a></div>
+          <div class="life1"><a href="mainServlet?method=toGoods&id=31&product_id=31">挂脖心机</a></div>
 
-          <div class="life1"><a href="mainServlet?method=toGoods&id=2&product_id=2" style="color:red">露肩显瘦</a></div>
+          <div class="life1"><a href="mainServlet?method=toGoods&id=31&product_id=31" style="color:red">露肩显瘦</a></div>
 
         </div>
 

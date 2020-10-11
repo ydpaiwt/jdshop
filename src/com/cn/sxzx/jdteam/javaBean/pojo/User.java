@@ -5,9 +5,10 @@ public class User {
     private int id;     //唯一的索引ID
     private String name;      //用户名称
     private String password;       //用户密码
-    private String sex;      //性别(0-男,1-女)
     private String realname;     //真实姓名
+    private String sex;      //性别(0-男,1-女)
     private String phone;
+    private String email;
 
 
     public User() {
@@ -19,20 +20,23 @@ public class User {
         this.password = password;
     }
 
-    public User(String name, String sex, String realname, String phone) {
+    public User(String name, String password, String realname, String sex, String phone, String email) {
         this.name = name;
-        this.sex = sex;
+        this.password = password;
         this.realname = realname;
+        this.sex = sex;
         this.phone = phone;
+        this.email = email;
     }
 
-    public User(int id, String name, String password, String sex, String realname,String phone) {
+    public User(int id, String name, String password, String sex, String realname, String phone, String email) {
         this.id = id;
         this.name = name;
         this.password = password;
         this.sex = sex;
         this.realname = realname;
         this.phone = phone;
+        this.email = email;
     }
 
     public int getId() {
@@ -83,15 +87,24 @@ public class User {
         this.phone = phone;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
-                ", sex='" + sex + '\'' +
                 ", realname='" + realname + '\'' +
+                ", sex='" + sex + '\'' +
                 ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 }
