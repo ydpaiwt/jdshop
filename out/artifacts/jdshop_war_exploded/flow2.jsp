@@ -7,9 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--<%--%>
-<%--    String contextPath = request.getContextPath();--%>
-<%--%>--%>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -22,7 +19,12 @@
 
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/cart2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#total").text(${requestScope.total});
+        });
 
+    </script>
 </head>
 <body>
 <!-- 顶部导航 start -->
@@ -83,6 +85,13 @@
                 <ul>
                     <li class="cur">
                         <input type="radio" name="address" checked="checked" />王超平 北京市 昌平区 建材城西路金燕龙办公楼一层 13555555555
+                        <a href="">设为默认地址</a>
+                        <a href="">编辑</a>
+                        <a href="">删除</a>
+                    </li>
+                    <li>
+                        <input type="radio" name="address"  />王超平 湖北省 武汉市  武昌 关山光谷软件园1号201 13333333333
+                        <a href="">设为默认地址</a>
                         <a href="">编辑</a>
                         <a href="">删除</a>
                     </li>
@@ -105,7 +114,7 @@
                                 <option value="">武汉</option>
                             </select>
 
-                            <select name="" >
+                            <select name="" id="">
                                 <option value="">请选择</option>
                                 <option value="">朝阳区</option>
                                 <option value="">东城区</option>
@@ -114,7 +123,7 @@
                                 <option value="">昌平区</option>
                             </select>
 
-                            <select name="" id="">
+                            <select name="" >
                                 <option value="">请选择</option>
                                 <option value="">西二旗</option>
                                 <option value="">西三旗</option>
@@ -131,7 +140,7 @@
                         </li>
                     </ul>
                 </form>
-                <a href="" class="confirm_btn"><span>确认收货人信息</span></a>
+                <a href="" class="confirm_btn"><span>保存收货人信息</span></a>
             </div>
         </div>
         <!-- 收货人信息  end-->
@@ -150,22 +159,16 @@
                 </tr>
                 </thead>
                 <tbody>
+                <c:forEach items="${requestScope.cartList}" var="cart">
                 <tr>
-                    <td class="col1"><a href=""><img src="images/cart_goods1.jpg" alt="" /></a>  <strong><a href="">【1111购物狂欢节】惠JackJones杰克琼斯纯羊毛菱形格</a></strong></td>
-                    <td class="col2"> <p>颜色：073深红</p> <p>尺码：170/92A/S</p> </td>
-                    <td class="col3">￥499.00</td>
-                    <td class="col4"> 1</td>
-                    <td class="col5"><span>￥499.00</span></td>
+                    <td class="col1"><img src="images/${cart.product_img}" alt="" />  <strong>${cart.product_name}</strong></td>
+                    <td class="col2"> <p>颜色：${cart.color}</p> <p>尺码：${cart.size}</p> </td>
+                    <td class="col3">￥${cart.price}</td>
+                    <td class="col4"> ${cart.number}</td>
+                    <td class="col5"><span>${cart.number*cart.price}</span></td>
                 </tr>
-                <tr>
-                    <td class="col1"><a href=""><img src="images/cart_goods2.jpg" alt="" /></a> <strong><a href="">九牧王王正品新款时尚休闲中长款茄克EK01357200</a></strong></td>
-                    <td class="col2"> <p>颜色：淡蓝色</p> <p>尺码：165/88</p></td>
-                    <td class="col3">￥1102.00</td>
-                    <td class="col4">1</td>
-                    <td class="col5"><span>￥1102.00</span></td>
-                </tr>
+                </c:forEach>
                 </tbody>
-
             </table>
         </div>
         <!-- 商品清单 end -->
@@ -174,7 +177,7 @@
 
     <div class="fillin_ft">
         <a href="flow3.jsp"><span>提交订单</span></a>
-        <p>应付总额：<strong>￥5076.00元</strong></p>
+        <p>应付总额：￥<strong id="total"></strong>元</p>
 
     </div>
 </div>

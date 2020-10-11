@@ -39,7 +39,19 @@ public class CartServlet extends HttpServlet {
             this.reduceCartNum();
         }else if (method.equals("addCartNum")){
             this.addCartNum();
+        }else if (method.equals("toCheck")){
+            this.toCheck();
         }
+    }
+
+    private void toCheck() throws ServletException, IOException {
+        User user = (User)request.getSession().getAttribute("user");
+        int user_id = user.getId();
+        List<Cart> cartList = service.showCart(user_id);
+        double total = service.getTotal(cartList);
+        request.setAttribute("total",total);
+        request.setAttribute("cartList",cartList);
+        request.getRequestDispatcher("/flow2.jsp").forward(request,response);
     }
 
     private void addCartNum() {
@@ -57,9 +69,11 @@ public class CartServlet extends HttpServlet {
         User user = (User)request.getSession().getAttribute("user");
         int user_id = user.getId();
         List<Cart> cartList = service.showCart(user_id);
+        int productNumber = service.getProductNumber(user_id);
         double total = service.getTotal(cartList);
         request.setAttribute("total",total);
         request.setAttribute("cartList",cartList);
+        request.getSession().setAttribute("productNumber",productNumber);
         request.getRequestDispatcher("/flow1.jsp").forward(request,response);
 
     }
@@ -75,7 +89,7 @@ public class CartServlet extends HttpServlet {
         int user_id = user.getId();
         Cart cart = new Cart(image,name,color,size,price,amount,user_id);
         boolean istrue = service.addCart(cart);
-        response.setContentType("utf-8");
+        response.setCharacterEncoding("utf-8");
         PrintWriter out = response.getWriter();
         if (istrue){
             out.println("添加成功！");

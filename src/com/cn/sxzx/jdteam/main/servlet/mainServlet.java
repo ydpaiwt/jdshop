@@ -36,10 +36,6 @@ public class mainServlet extends HttpServlet {
             if(method.equals("toGoods")){
                 this.toGoods();
             }
-//        String method2 = request.getParameter("method2");
-//            if(method2.equals("toGoods2")){
-//                this.toGoods2();
-//            }
     }
         private void toGoods() throws IOException, ServletException {
             int id = Integer.parseInt(request.getParameter("id"));
@@ -50,13 +46,4 @@ public class mainServlet extends HttpServlet {
             request.getSession().setAttribute("productXi",productXi);
             request.getRequestDispatcher("goods.jsp").forward(request,response);
         }
-//        private void toGoods2() throws IOException, ServletException {
-//            int id = Integer.parseInt(request.getParameter("id"));
-//            int product_id = Integer.parseInt(request.getParameter("product_id"));
-//            ProductXi productXi = service.getGoods(id);
-//            List<String> imgList=service.getGoodImgs(product_id);
-//            request.getSession().setAttribute("img",imgList.get(0));
-//            request.getSession().setAttribute("productXi",productXi);
-//            request.getRequestDispatcher("goods2.jsp").forward(request,response);
-//        }
 }

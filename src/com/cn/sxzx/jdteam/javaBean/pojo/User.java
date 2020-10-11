@@ -5,35 +5,28 @@ public class User {
     private int id;     //唯一的索引ID
     private String name;      //用户名称
     private String password;       //用户密码
+    private String sex;      //性别(0-男,1-女)
     private String realname;     //真实姓名
-    private int state;       //状态(0-没登录,1-登录)
-    private String birthday;     //生日
-    private String userInfo;     //个人简介
-    private int sex;      //性别(0-男,1-女)
+    private String phone;
+
 
     public User() {
     }
 
-    public User(String name, String password) {
+    public User(String name, String sex, String realname,String phone) {
         this.name = name;
-        this.password = password;
-    }
-
-    public User(int id, String name, String password) {
-        this.id = id;
-        this.name = name;
-        this.password = password;
-    }
-
-    public User(int id, String name, String password, String realname, int state, String birthday, String userInfo, int sex) {
-        this.id = id;
-        this.name = name;
-        this.password = password;
-        this.realname = realname;
-        this.state = state;
-        this.birthday = birthday;
-        this.userInfo = userInfo;
         this.sex = sex;
+        this.realname = realname;
+        this.phone = phone;
+    }
+
+    public User(int id, String name, String password, String sex, String realname,String phone) {
+        this.id = id;
+        this.name = name;
+        this.password = password;
+        this.sex = sex;
+        this.realname = realname;
+        this.phone = phone;
     }
 
     public int getId() {
@@ -60,6 +53,14 @@ public class User {
         this.password = password;
     }
 
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
     public String getRealname() {
         return realname;
     }
@@ -68,36 +69,12 @@ public class User {
         this.realname = realname;
     }
 
-    public int getState() {
-        return state;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setState(int state) {
-        this.state = state;
-    }
-
-    public String getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
-    }
-
-    public String getUserInfo() {
-        return userInfo;
-    }
-
-    public void setUserInfo(String userInfo) {
-        this.userInfo = userInfo;
-    }
-
-    public int getSex() {
-        return sex;
-    }
-
-    public void setSex(int sex) {
-        this.sex = sex;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     @Override
@@ -106,11 +83,9 @@ public class User {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
+                ", sex='" + sex + '\'' +
                 ", realname='" + realname + '\'' +
-                ", state=" + state +
-                ", birthday='" + birthday + '\'' +
-                ", userInfo='" + userInfo + '\'' +
-                ", sex=" + sex +
+                ", phone='" + phone + '\'' +
                 '}';
     }
 }
