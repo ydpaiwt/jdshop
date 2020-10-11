@@ -1,7 +1,8 @@
 package com.cn.sxzx.jdteam.order.service;
 
-import com.cn.sxzx.jdteam.javaBean.po.Order_itemPo;
+
 import com.cn.sxzx.jdteam.javaBean.pojo.Cart;
+import com.cn.sxzx.jdteam.javaBean.pojo.Order_;
 
 import java.util.List;
 
@@ -12,15 +13,14 @@ import java.util.List;
 public interface OrderService {
     int pageSize = 3 ;
 
-    List<Order_itemPo> showOrder(int pageNow);
+    List<Order_> showOrder(int user_id,int pageNow);
 
     int pageCount();
 
-//    void delete(int i);
 
-    void addOrder();
+    void addOrder(Order_ order);
 
-    List<Cart> showCart(int user_id);
+//    List<Cart> showCart(int user_id);
 
     double getTotal(List<Cart> cartList);
 }
