@@ -63,11 +63,7 @@
         </div>
         <div class="topnav_right fr">
             <ul>
-                <li>您好，欢迎来到京西！[<a href="login.jsp">登录</a>] [<a href="register.jsp">免费注册</a>] </li>
-                <li class="line">|</li>
-                <li>我的订单</li>
-                <li class="line">|</li>
-                <li>客户服务</li>
+                <li>您好，欢迎来到京西！</li>
 
             </ul>
         </div>

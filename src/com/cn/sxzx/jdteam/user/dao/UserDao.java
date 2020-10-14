@@ -40,4 +40,22 @@ public class UserDao {
         }
         return null;
     }
+
+    public void updateUser(User user1) {
+        String sql = "update user set realname = ?,sex = ?,phone = ?,email = ? where id = ?";
+        conn = JDBC.getConnection();
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setString(1,user1.getRealname());
+            ps.setString(2,user1.getSex());
+            ps.setString(3,user1.getPhone());
+            ps.setString(4,user1.getEmail());
+            ps.setInt(5,user1.getId());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBC.close(null,ps,conn);
+        }
+    }
 }

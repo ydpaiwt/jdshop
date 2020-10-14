@@ -20,9 +20,8 @@ public class User {
         this.password = password;
     }
 
-    public User(String name, String password, String realname, String sex, String phone, String email) {
-        this.name = name;
-        this.password = password;
+    public User(int id, String realname, String sex, String phone, String email) {
+        this.id = id;
         this.realname = realname;
         this.sex = sex;
         this.phone = phone;
@@ -38,6 +37,7 @@ public class User {
         this.phone = phone;
         this.email = email;
     }
+
 
     public int getId() {
         return id;

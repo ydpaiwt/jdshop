@@ -1,5 +1,9 @@
 package com.cn.sxzx.jdteam.shopcart.servlet;
 
+import com.cn.sxzx.jdteam.address.service.AddService;
+import com.cn.sxzx.jdteam.address.service.imp.AddServiceImp;
+import com.cn.sxzx.jdteam.address.servlet.AddServlet;
+import com.cn.sxzx.jdteam.javaBean.pojo.Address;
 import com.cn.sxzx.jdteam.javaBean.pojo.Cart;
 import com.cn.sxzx.jdteam.javaBean.pojo.Product;
 import com.cn.sxzx.jdteam.javaBean.pojo.User;
@@ -49,6 +53,9 @@ public class CartServlet extends HttpServlet {
         int user_id = user.getId();
         List<Cart> cartList = service.showCart(user_id);
         double total = service.getTotal(cartList);
+        AddService addService = new AddServiceImp();
+        List<Address> addressList = addService.selectCon(user_id);
+        request.setAttribute("addressList",addressList);
         request.setAttribute("total",total);
         request.setAttribute("cartList",cartList);
         request.getRequestDispatcher("/flow2.jsp").forward(request,response);

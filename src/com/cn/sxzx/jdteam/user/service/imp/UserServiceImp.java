@@ -15,4 +15,9 @@ public class UserServiceImp implements UserService {
     public User showUser(int user_id) {
         return dao.showUser(user_id);
     }
+
+    @Override
+    public void updateUser(User user1) {
+        dao.updateUser(user1);
+    }
 }

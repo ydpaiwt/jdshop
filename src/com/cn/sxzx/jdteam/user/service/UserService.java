@@ -8,4 +8,6 @@ import com.cn.sxzx.jdteam.javaBean.pojo.User;
  */
 public interface UserService {
     User showUser(int user_id);
+
+    void updateUser(User user1);
 }

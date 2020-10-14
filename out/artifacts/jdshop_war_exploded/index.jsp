@@ -29,6 +29,42 @@
             $(this).attr("href","loginServlet?method=toLogin");
           }
       });
+      $("a[id=order]").click(function () {
+        var user = "${sessionScope.user}";
+        if (user){
+          location.href="orderServlet?method=showOrder&pageNow=1";
+        }else {
+          alert("请先去登录！");
+          $(this).attr("href","loginServlet?method=toLogin");
+        }
+      });
+      $("a[id=order1]").click(function () {
+        var user = "${sessionScope.user}";
+        if (user){
+          location.href="orderServlet?method=showOrder&pageNow=1";
+        }else {
+          alert("请先去登录！");
+          $(this).attr("href","loginServlet?method=toLogin");
+        }
+      });
+      $("a[id=user]").click(function () {
+        var user = "${sessionScope.user}";
+        if (user){
+          location.href="userServlet?method=toUser";
+        }else {
+          alert("请先去登录！");
+          $(this).attr("href","loginServlet?method=toLogin");
+        }
+      });
+      $("a[id=address]").click(function () {
+        var user = "${sessionScope.user}";
+        if (user){
+          location.href="addServlet?method=selectadd";
+        }else {
+          alert("请先去登录！");
+          $(this).attr("href","loginServlet?method=toLogin");
+        }
+      });
 
     });
   </script>
@@ -84,7 +120,7 @@
 
           <div class="cun">
 
-            <a href="">我的订单</a>
+            <a id="order1">我的订单</a>
 
           </div>
 
@@ -284,7 +320,7 @@
 
       <input type="text" class="kuang" value="跨界" style="color:#999;font-size:14px" />
 
-      <div class="souzi"><a href="">搜索</a></div>
+      <div class="souzi"><a href="#">搜索</a></div>
 
     </div>
 
@@ -294,7 +330,7 @@
 
     <div class="mytu"></div>
 
-      <a href="">我的京东</a>
+      <a href="#">我的京东</a>
 
     <div class="jiantou"></div>
 
@@ -313,9 +349,9 @@
 
           <ul>
 
-            <li><a href="">用户信息></a></li>
+            <li><a href="userServlet?method=toUser" id="user">用户信息></a></li>
 
-            <li><a href="">用户地址></a></li>
+            <li><a id="address">用户地址></a></li>
 
           </ul>
 
@@ -325,7 +361,7 @@
 
           <ul>
 
-            <li><a href="">我的订单></a></li>
+            <li><a id="order">我的订单></a></li>
 
           </ul>
 
@@ -422,7 +458,7 @@
 
             <div class="hideright">
 
-              <div class="tu1">
+              <%--<div class="tu1">
 
                 <a href=""><img width="194px" height="70px" src="images/b1.jpg" alt="" /></a>
 
@@ -432,7 +468,7 @@
 
                 <a href=""><img width="194px" height="70px" src="images/b2.jpg" alt="" /></a>
 
-              </div>
+              </div>--%>
 
               <dl class="dlright">
 
@@ -521,11 +557,7 @@
 
               </ul>
 
-
-
-              </dl>
-
-              <div class="tu2">
+              <%--<div class="tu2">
 
                 <a href=""><img width="194px" height="70px" src="images/b7.jpg" alt="" /></a>
 
@@ -535,7 +567,7 @@
 
                 <a href=""><img width="194px" height="70px" src="images/b8.jpg" alt="" /></a>
 
-              </div>
+              </div>--%>
 
             </div>
 
@@ -740,7 +772,7 @@
 
           <li><a href="mainServlet?method=toGoods&id=3&product_id=3"><img src="images/c1.jpg" alt="" /></a></li>
 
-          <li><a href="mainServlet?method=toGoods&id=2&product_id=2"><img src="images/c2.jpg" alt="" /></a></li>
+          <li><a href="mainServlet?method=toGoods&id=2&product_id=2 "><img src="images/c2.jpg" alt="" /></a></li>
 
           <li style="border-right:none"><a href="mainServlet?method=toGoods&id=4&product_id=4"><img src="images/c3.jpg" alt="" /></a></li>
 

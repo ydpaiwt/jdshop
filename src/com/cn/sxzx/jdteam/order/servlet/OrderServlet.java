@@ -32,10 +32,6 @@ public class OrderServlet extends HttpServlet {
         this.response = response;
         String method = request.getParameter("method");
 
-//        if (method.equals("showCart")){
-//            this.showCart();
-//        }
-
         if (method.equals("toOrder")){
             this.addOrder();
         }
@@ -45,16 +41,6 @@ public class OrderServlet extends HttpServlet {
         }
 
     }
-//    //获取购物车信息
-//    private void showCart() throws ServletException, IOException {
-//        User user = (User)request.getSession().getAttribute("user");
-//        int user_id = user.getId();
-//        List<Cart> cartList = service.showCart(user_id);
-//        double total = service.getTotal(cartList);
-//        request.setAttribute("total",total);
-//        request.setAttribute("cartList",cartList);
-//        request.getRequestDispatcher("/flow1.jsp").forward(request,response);
-//    }
 
     //点击提交订单后添加订单
     private void addOrder() throws IOException {

@@ -22,10 +22,17 @@
     <script type="text/javascript">
         $(function () {
             $("#total").text(${requestScope.total});
-            $("#submit").click(function () {
-                var form = $("form[id=myform]").serialize();
-                var url = "orderServlet?"+form;
-                $(this).attr("href",url);
+            $("#submit").click(function(){
+                var address = "${requestScope.addressList}";
+                if (address.length!=0){
+                    var form = $("form[id=myform]").serialize();
+                    var url = "orderServlet?"+form;
+                    location.href = url;
+                }else {
+                    alert("请设置收货信息！");
+                    location.href="addServlet?method=selectadd";
+                }
+
             });
 
         });
@@ -41,11 +48,7 @@
         </div>
         <div class="topnav_right fr">
             <ul>
-                <li>您好，欢迎来到京西！[<a href="login.jsp">登录</a>] [<a href="register.jsp">免费注册</a>] </li>
-                <li class="line">|</li>
-                <li>我的订单</li>
-                <li class="line">|</li>
-                <li>客户服务</li>
+                <li>您好，欢迎来到京西!</li>
 
             </ul>
         </div>
@@ -81,77 +84,19 @@
     <div class="fillin_bd">
         <!-- 收货人信息  start-->
         <div class="address">
-            <h3>收货人信息 <a href="javascript:;" id="address_modify">[修改]</a></h3>
-            <div class="address_info">
-                <p>王超平  13555555555 </p>
-                <p>北京 昌平区 西三旗 建材城西路金燕龙办公楼一层 </p>
-            </div>
-
-            <div class="address_select none">
                 <ul>
-                    <li class="cur">
+                    <c:forEach items="${requestScope.addressList}" var="address">
+                        <li class="cur">
+                            <form action="orderServlet" id="myform" method="post" >
+                                <input type="hidden" name="method" value="toOrder">
+                                <input type="radio" name="address" value="${address.consignee}"/>${address.consignee}  ${address.address}  ${address.mobile}
+                            </form>
+                            <a href="">删除</a>
+                        </li>
+                    </c:forEach>
 
-                        <form action="orderServlet" id="myform" method="post" >
-                            <input type="hidden" name="method" value="toOrder">
-                            <input type="radio" name="address" checked="checked" value="洼港潮平"/>王超平 北京市 昌平区 建材城西路金燕龙办公楼一层 13555555555
-                        </form>
-                        <a href="">设为默认地址</a>
-                        <a href="">编辑</a>
-                        <a href="">删除</a>
-                    </li>
-                    <li>
-                        <input type="radio" name="address"  />王超平 湖北省 武汉市  武昌 关山光谷软件园1号201 13333333333
-                        <a href="">设为默认地址</a>
-                        <a href="">编辑</a>
-                        <a href="">删除</a>
-                    </li>
-                    <li><input type="radio" name="address" class="new_address"  />使用新地址</li>
+                    <li><input type="button" name="address" class="new_address" value="使用新地址"/></li>
                 </ul>
-                <form action="" class="none" name="address_form">
-                    <ul>
-                        <li>
-                            <label for=""><span>*</span>收 货 人：</label>
-                            <input type="text" name="" class="txt" />
-                        </li>
-                        <li>
-                            <label for=""><span>*</span>所在地区：</label>
-                            <select name="" >
-                                <option value="">请选择</option>
-                                <option value="">北京</option>
-                                <option value="">上海</option>
-                                <option value="">天津</option>
-                                <option value="">重庆</option>
-                                <option value="">武汉</option>
-                            </select>
-
-                            <select name="" id="">
-                                <option value="">请选择</option>
-                                <option value="">朝阳区</option>
-                                <option value="">东城区</option>
-                                <option value="">西城区</option>
-                                <option value="">海淀区</option>
-                                <option value="">昌平区</option>
-                            </select>
-
-                            <select name="" >
-                                <option value="">请选择</option>
-                                <option value="">西二旗</option>
-                                <option value="">西三旗</option>
-                                <option value="">三环以内</option>
-                            </select>
-                        </li>
-                        <li>
-                            <label for=""><span>*</span>详细地址：</label>
-                            <input type="text" name="" class="txt address"  />
-                        </li>
-                        <li>
-                            <label for=""><span>*</span>手机号码：</label>
-                            <input type="text" name="" class="txt" />
-                        </li>
-                    </ul>
-                </form>
-                <a href="" class="confirm_btn"><span>保存收货人信息</span></a>
-            </div>
         </div>
         <!-- 收货人信息  end-->
 

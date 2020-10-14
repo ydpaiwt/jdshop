@@ -6,12 +6,19 @@ public class Address {
     private String consignee;   //收货人姓名
     private String address;     //详细地址
     private String mobile;      //收货人电话
-    private String user_id;     //用户id
+    private int user_id;     //用户id
 
     public Address() {
     }
 
-    public Address(int id, String consignee, String address, String mobile, String user_id) {
+    public Address(String consignee, String address, String mobile, int user_id) {
+        this.consignee = consignee;
+        this.address = address;
+        this.mobile = mobile;
+        this.user_id = user_id;
+    }
+
+    public Address(int id, String consignee, String address, String mobile, int user_id) {
         this.id = id;
         this.consignee = consignee;
         this.address = address;
@@ -51,11 +58,11 @@ public class Address {
         this.mobile = mobile;
     }
 
-    public String getUser_id() {
+    public int getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(String user_id) {
+    public void setUser_id(int user_id) {
         this.user_id = user_id;
     }
 }

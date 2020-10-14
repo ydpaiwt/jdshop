@@ -78,12 +78,7 @@
         </div>
         <div class="topnav_right fr">
             <ul>
-                <li>您好，欢迎来到京西！[<a href="loginServlet?method=toLogin">登录</a>] [<a href="registerServlet?method=toRegister">免费注册</a>] </li>
-                <li class="line">|</li>
-                <li>我的订单</li>
-                <li class="line">|</li>
-                <li>客户服务</li>
-
+                <li>您好，欢迎来到京西！</li>
             </ul>
         </div>
     </div>
@@ -134,11 +129,11 @@
                     <div class="uclist mt10">
                         <ul class="list1 fl">
                             <li><a href="userServlet?method=toUser">用户信息></a></li>
-                            <li><a href="">收货地址></a></li>
+                            <li><a href="addServlet?method=selectadd">收货地址></a></li>
                         </ul>
 
                         <ul class="fl">
-                            <li><a href="">我的订单></a></li>
+                            <li><a href="orderServlet?method=showOrder&pageNow=1">我的订单></a></li>
                         </ul>
 
                     </div>
